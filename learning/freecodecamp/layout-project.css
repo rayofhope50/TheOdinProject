@@ -3,7 +3,17 @@ html {
     margin: auto;
     
 }
-
+button {
+    padding: 5px 20px;
+    color: white;
+    background-color: #3882f6;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+}
+button:hover {
+    cursor: pointer;
+}
 
 ul, a {
     list-style: none;
@@ -74,6 +84,7 @@ p {
 
 .second {
     text-align: center;
+    padding-bottom: 48px;
 }
 .pix2 {
 width:150px; 
@@ -85,7 +96,6 @@ border: solid blue;
 .pix {
     max-width: 200px;
     padding: 0;
-
 }
 .gallery {
     display: flex;
@@ -97,4 +107,44 @@ h3 {
     font-size: 36px;
     font-weight: bolder;
     color: #1f2937;
+}
+
+.three {
+    padding-bottom: 48px;
+    background-color: #e5e7eb;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 90px;
+    align-items: center;
+
+}
+
+.quote {
+    max-width: 800px;
+    font-size: 36px;
+    font-style: italic;
+    color: #1f2937;
+}
+
+.thor {
+    align-self: flex-end;
+    font-weight: bold;    
+    padding-right: 200px;
+}
+
+.call {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #3882f6;
+    margin: 48px 200px;
+    padding: 30px;
+    margin-left: 25%;
+    margin-right: 25%;
+    flex-grow: 0; 
+    border-radius: 15px;
+}
+
+.button{
+    border: 2px solid white;
 }
