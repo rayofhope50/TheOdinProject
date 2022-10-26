@@ -56,7 +56,7 @@ p {
     justify-content: space-between;
 
 }
-img {
+.chilli {
     height: 200px;
     width: 400px;
 }
@@ -70,4 +70,31 @@ img {
     max-width: 500px;
     margin-right: 50px;
 
+}
+
+.second {
+    text-align: center;
+}
+.pix2 {
+width:150px; 
+height:150px;
+border-radius: 20px;
+border: solid blue;
+}
+
+.pix {
+    max-width: 200px;
+    padding: 0;
+
+}
+.gallery {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 50px;
+}
+
+h3 {
+    font-size: 36px;
+    font-weight: bolder;
+    color: #1f2937;
 }
