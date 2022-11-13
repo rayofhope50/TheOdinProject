@@ -1,2 +1,1 @@
-# TheOdinProject
-Projects from TOP and freeCodeCamp
+My practice projects
