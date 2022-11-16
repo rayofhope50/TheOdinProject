@@ -3,6 +3,10 @@
     margin: 0;
     border: 0;
 }
+.photo2 {
+    display: none;
+    border-radius: 10px 10px 0 0;
+}
 
 html {
     background-color: hsl(30, 38%, 92%);
@@ -26,7 +30,7 @@ section {
     padding: 1rem 1.5rem 0 1.5rem;    
 }
 
-.photo {
+.photo1 {
     border-radius: 10px 0 0 10px;
 }
 
@@ -65,4 +69,24 @@ p {
     text-align: center;
     padding: 0.8rem 3rem 0.8rem 3rem;
     border-radius: 10px;
+}
+
+@media only screen and (max-width: 375px) {
+    section {
+        display: flex;
+        flex-direction: column;
+        max-width: 375px;
+        margin: 2rem 1rem 0 1rem;
+    }
+    .photo1 {
+        display: none;
+    }
+    .photo2 {
+        display: flex;
+    }
+    .button {
+        padding: 0.8rem 6rem 0.8rem 6rem;
+        margin-bottom: 1rem;
+       
+    }
 }
