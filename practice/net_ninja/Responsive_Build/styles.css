@@ -1,0 +1,71 @@
+/*  Variables*/
+:root {
+    --primary: #FFC636;
+    --secondary: #0A0B5b;
+
+}
+/* reset */
+body, p, a , ul, li {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+li {
+    list-style-type: none;
+}
+/* base styles */
+body {
+    background-color: var(--secondary);
+    overflow-x: hidden;
+    font-family: 'Rubik Regular';
+}
+
+.button {
+    background: none;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+    padding: 6px 12px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.6);
+    display: inline-block;
+}
+button:hover {
+    color: #222;
+    background: var(--primary);
+}
+input, textarea {
+    background: rgba(255, 255, 255, 0.5);
+    padding: 10px 16px;
+    border-radius: 20px;
+    border: 2px solid #9893D8;
+    color: #f2f2f2;
+}
+ /* fonts */
+
+ @font-face {
+    font-family: 'Rubik Regular';
+    src: url(images/fonts/Rubik-Regular.ttf);
+ }
+
+ h1, h2, h3, h4 {
+    color: #fffbff;
+    font-weight: normal;
+ }  
+ p, a, li {
+    color: #9893D8;
+ }
+ /* mobile styles */
+
+ /* small tablet styles  */
+ @media screen and (min-width: 620px) {
+
+ }
+ /* large tablet and laptops styles  */
+ @media screen and (min-width: 960px) {
+    
+}
+ /* desktop styles  */
+ @media screen and (min-width: 1200px) {
+    
+}
