@@ -55,6 +55,22 @@ input, textarea {
  p, a, li {
     color: #9893D8;
  }
+
+ h1, h3 {
+    font-size: 1.25em;
+ }
+
+ h2 {
+    font-size: 1.6em;
+ }
+
+ h4 {
+    font-size: 1.125em;
+ }
+
+ .leading {
+    font-size: 1.125em;
+ }
  /* mobile styles */
 
  /* small tablet styles  */
