@@ -72,6 +72,25 @@ input, textarea {
     font-size: 1.125em;
  }
  /* mobile styles */
+ .grid {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+ }
+ .site-nav {
+    margin: 0 20px;
+ }
+ .site-nav ul {
+    display: none;
+ }
+
+ .site-nav h1 {
+    grid-column: 1/4;
+    grid-row: 1;
+    padding-bottom: 10px;
+    border-bottom: 3px solid var(--primary);
+ }
+
+ #welcome
 
  /* small tablet styles  */
  @media screen and (min-width: 620px) {
