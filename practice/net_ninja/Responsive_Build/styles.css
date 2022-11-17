@@ -173,6 +173,30 @@ projects h4 {
 #contact .button {
     margin-top: 10px;
 }
+
+footer {
+    padding: 30px 20px;
+    background-color: #14153d;
+    background-image: url(images/footer_image.png);
+    background-size: 40%;
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+footer .copyright {
+    grid-column: 1/3;
+    font-size: 0.8em;
+}
+footer .social {
+    grid-column: 7/9;
+    display: flex;
+    justify-content: flex-end;
+}
+footer li {
+    margin: 0 6px;
+}
+footer img {
+    width: 20px;
+}
  /* small tablet styles  */
  @media screen and (min-width: 620px) {
 
