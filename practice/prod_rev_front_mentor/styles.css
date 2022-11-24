@@ -1,92 +1,43 @@
-*{
+ :root {
+    --clr-primary-400: hsl(158, 36%, 37%);
+    --clr-secondary-200: hsl(30, 38%, 92%);
+
+    --clr-neutural-900: hsl(212, 21%, 14%);
+    --clr-neutral-400: hsl(228, 12%, 48%);
+    --clr-neutral-100: hsl(0, 0%, 100%);
+
+    --fw-regular: 500;
+    --fw-bold: 700;
+ }
+*, *::before, *::after {
     box-sizing: border-box;
+  }
+  
+  * {
     margin: 0;
-    border: 0;
-}
-.photo2 {
-    display: none;
-    border-radius: 10px 10px 0 0;
-}
-
-html {
-    background-color: hsl(30, 38%, 92%);
-    max-width: 1440px;    
-}
-h1 {
-    font-size: 1.5rem;
-    line-height: 1.5rem;
-    font-family: 'Fraunces', sans-serif;
-}
-
-section {
-    display: flex;
-    margin: 13rem auto;
-    max-width: 500px;
-    background-color: white;
-    border-radius: 10px;
-    font-family: 'Montserrat', sans-serif;
-}
-.description {
-    padding: 1rem 1.5rem 0 1.5rem;    
-}
-
-.photo1 {
-    border-radius: 10px 0 0 10px;
-}
-
-p {
-    color: gray;
-    font-size: 0.7rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    line-height: 1.3rem;
-}
-
-.price {
-    font-family: 'Fraunces', sans-serif;
-    font-weight: 700;
-    font-size: 1.5rem;
-    color: hsl(158, 36%, 37%);
-}
-.crossed {
-    text-decoration: line-through;
-    font-size: .83rem;
-    margin-right: 2rem;    
-    vertical-align: super;    
-    color: gray;
-}
-
-.top {
-    letter-spacing: 5px;
-}
-.actual {
-    margin: 1rem 0 1.5rem 0;
-}
-
-.button {
-    color: white;
-    background-color: hsl(158, 36%, 37%);
-    text-align: center;
-    padding: 0.8rem 3rem 0.8rem 3rem;
-    border-radius: 10px;
-}
-
-@media only screen and (max-width: 375px) {
-    section {
-        display: flex;
-        flex-direction: column;
-        max-width: 375px;
-        margin: 2rem 1rem 0 1rem;
-    }
-    .photo1 {
-        display: none;
-    }
-    .photo2 {
-        display: flex;
-    }
-    .button {
-        padding: 0.8rem 6rem 0.8rem 6rem;
-        margin-bottom: 1rem;
-       
-    }
-}
+  }
+  
+  html, body {
+    height: 100%;
+  }
+    body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  
+  input, button, textarea, select {
+    font: inherit;
+  }
+  
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  
+  #root, #__next {
+    isolation: isolate;
+  }
