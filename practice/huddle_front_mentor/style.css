@@ -40,7 +40,7 @@ ul, li, a {
 /* utilities */
 .flex-icons {
     display: flex;
-    border: 2px solid red;
+
     gap: 1rem; 
     align-content: center;
     justify-content: center;
@@ -82,13 +82,41 @@ body {
 .reg__button:is(:hover, :focus) {
     background-color: var(--clr-secondary);
     color: var(--clr-font);
+   
 }
-/* a>img:is(:hover, :focus) {
-    color: var(--clr-secondary);
-    /* color: var(--clr-font);
-} */
+a>img:is(:hover, :focus) {
+    filter: invert(81%) sepia(14%) saturate(7021%) hue-rotate(239deg) brightness(96%) contrast(89%);
+}
 
 a>img {
     height: 30px;
-    
+    filter:brightness(0) invert(100%);
+}
+
+@media (min-width: 1000px) {
+    body {
+        margin: 0 auto;
+        max-width: 1350px;
+        background-image: url(images/bg-desktop.svg);
+        padding: 2.5rem 3.5rem 2.5rem 3.5rem;
+    }
+    .welcome__logo {
+        height: 8%;
+        margin-bottom: 6rem;
+    }
+    .flex-group {
+        display: flex;
+        gap: 2rem;
+    }
+    .right-site {
+        text-align: left;
+    }
+    .reg__button {
+        margin-top: 1.5rem;
+        padding: 0.5rem 3rem 0.5rem 3rem;
+    }
+    .flex-icons {
+        justify-content: end;
+    }
+
 }
