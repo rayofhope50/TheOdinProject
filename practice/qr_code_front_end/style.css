@@ -1,4 +1,17 @@
+:root {
+    --clr-body: hsl(0, 0%, 100%);
+    --clr-background: hsl(212, 45%, 89%);
+    --clr-paragraph: hsl(220, 15%, 55%);
+    
 
+    --fs-paragraph: 15px;
+
+    --ff-main: 'Outfit', sans-serif;
+
+    --fw-main-400: 400;
+    --fw-bold-700: 700;
+
+}
 
 /* reset */
 *, *::before, *::after {
@@ -39,3 +52,35 @@
 
 /* utilities */
 /* main code */
+html {
+    background-color: var(--clr-background);
+}
+body {
+    margin: 5rem 1rem;
+    height: 500px;
+    padding: 1rem;
+    background-color: var(--clr-body);
+    border-radius: 16px;
+    text-align: center;
+    font-family: var(--ff-main);
+}
+
+.qr-code {
+    border-radius: 8px;
+    /* height: 290px; */
+}
+/* .flex {
+    display: flex;
+    justify-content: center;
+} */
+
+.qr__heading {
+    font-size: 1.5rem;
+    font-weight: var(--fw-bold-700);
+    line-height: 1.8rem;
+    margin: 1rem 0 0.5rem 0;
+}
+.qr__paragraph {
+    color: var(--clr-paragraph);
+    padding: 0 1rem 5rem 1rem;
+}
