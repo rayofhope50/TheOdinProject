@@ -54,10 +54,14 @@
 /* main code */
 html {
     background-color: var(--clr-background);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
 }
 body {
     max-width: 375px;
-    margin: 5rem auto;
+    
     height: 550px;
     padding: 1rem;
     background-color: var(--clr-body);
