@@ -1,0 +1,64 @@
+:root {
+    --clr-primary-blue: hsl(179, 62%, 43%);
+    --clr-primary-green:  hsl(71, 73%, 54%);
+    --clr-secondary-white: hsl(204, 43%, 93%);
+    --clr-secondary-gray: hsl(218, 22%, 67%);
+
+    --ff-karla: 'Karla', sans-serif;
+      
+    --fw-regular: 400;
+    --fw-bold: 700;
+ }
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
+}
+body {
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+h1, h2, h3 {
+    line-height: 1;
+}
+  
+#root, #__next {
+    isolation: isolate;
+}
+
+/* utilities */
+/* code */
+html {
+    background-color: var(--clr-secondary-white);
+    font-family: var(--ff-karla);   
+}
+body {
+    background-color: white;
+    padding: 1.5rem;
+}
+.welcome__top {
+    padding-bottom: 2rem;
+ 
+}
+.welcome__headder {
+    font-weight: bolder;
+}
