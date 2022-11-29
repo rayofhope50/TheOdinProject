@@ -46,19 +46,74 @@ h1, h2, h3 {
 }
 
 /* utilities */
+.padding {
+    padding: 1.5rem;
+}
 /* code */
 html {
     background-color: var(--clr-secondary-white);
     font-family: var(--ff-karla);   
+    padding: 4.5rem 1.5rem 4.5rem 1.5rem;
 }
 body {
-    background-color: white;
-    padding: 1.5rem;
+    background-color: white;    
+    /* height: 780px; */
+    border-radius: 5px;
 }
+
 .welcome__top {
-    padding-bottom: 2rem;
- 
+    padding-bottom: 1rem; 
 }
 .welcome__headder {
-    font-weight: bolder;
+    font-weight: var(--fw-bold);
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    color: var(--clr-primary-blue);
+}
+.welcome__text {
+    color: var(--clr-primary-green);
+    margin-bottom: 2rem;
+}
+.welcome__paragraph {
+    color: var(--clr-secondary-gray);
+    font-size: .8rem;
+    padding-bottom: 1rem;
+}
+.welcome__left {
+    background-color: var(--clr-primary-blue);
+    color: white;
+    width: 100%;
+}
+.welcome__left>p {
+    color: white;
+}
+.welcome__h2 {
+    padding-bottom: 0.8rem;
+}
+.price {
+    font-size: 2rem;
+}
+.flex {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.per__month {
+    color: var(--clr-secondary-white);
+    opacity: 0.4;
+}
+.button {
+    padding: 0.5rem 0 0.5rem 0;
+    width: 100%;
+    color: white;
+    background-color: var(--clr-primary-green);
+    border: none;
+    box-shadow: 0 0 5px gray;
+    border-radius: 5px;
+}
+.welcome_right {
+    background-color: hsl(179, 62%, 43%);
+    color: var(--clr-secondary-white);
+    opacity: 0.6;
+    border-radius: 0 0 5px 5px;
 }

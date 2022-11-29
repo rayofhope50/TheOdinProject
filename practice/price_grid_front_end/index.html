@@ -6,8 +6,8 @@
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
   <title>Frontend Mentor | Single Price Grid Component</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -18,7 +18,7 @@
 </head>
 <body>
   <div class="grid-group">
-    <div class="welcome__top">
+    <div class="welcome__top padding">
       <p class="welcome__headder">Join our community</p>
       <p class="welcome__text">30-day, hassle-free money back guarantee</p>
       <p class="welcome__paragraph">
@@ -27,22 +27,24 @@
       </p> 
     </div>
     
-    <div class="welcome__left">
+    <div class="welcome__left padding">
       <p class="welcome__h2">Monthly Subscription</p>
-      <span class="price">&dollar;29</span> <span class="per_month">per month</span>
-      <p class="welcome__paragraph>Full access for less than &dollar;1 a day</p>
+      <div class="flex">
+        <div class="price">&dollar;29</div> <div class="per__month">per month</div>
+      </div>
+      <p class="welcome__paragraph">Full access for less than &dollar;1 a day</p>
       <button class="button">Sign Up</button>      
     </div>
 
-    <div class="welcome_right">
+    <div class="welcome_right padding">
       <p class="welcome__h2">Why Us</p>
-      Tutorials by industry experts
-      Peer &amp; expert code review
+      <p>Tutorials by industry experts</p>
+      <p>Peer &amp; expert code review</p>
       Coding exercises
-      Access to our GitHub repos
-      Community forum
-      Flashcard decks
-      New videos every week
+      <p>Access to our GitHub repos</p>
+      <p>Community forum</p>
+      <p>Flashcard decks</p>
+      <p>New videos every week</p>
     </div> 
   </div>
   <footer>
