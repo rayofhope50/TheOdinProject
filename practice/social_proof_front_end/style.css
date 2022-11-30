@@ -1,0 +1,47 @@
+:root {
+    --clr-rev-box: hsl(300, 43%, 22%);
+    --clr-ver-buy: hsl(333, 80%, 67%);
+    --clr-star-box: hsl(303, 10%, 53%);
+    --clr-hero-text: hsl(303, 10%, 53%);
+    --clr-rev-box-text: hsl(0, 0%, 100%);
+
+    --ff-karla: 'League Spartan', sans-serif;
+      
+    --fw-regular: 400;
+    --fw-medium: 500;
+    --fw-bold: 700;
+ }
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+* {
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
+}
+body {
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+h1, h2, h3 {
+    line-height: 1;
+}
+  
+#root, #__next {
+    isolation: isolate;
+}
