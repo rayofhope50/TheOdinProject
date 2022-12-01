@@ -2,7 +2,7 @@
     --clr-rev-box: hsl(300, 43%, 22%);
     --clr-ver-buy: hsl(333, 80%, 67%);
     --clr-star-text: hsl(303, 10%, 53%);
-    --clr-star-box: hsla(302, 10%, 53%, 0.315);
+    --clr-star-box: hsla(302, 10%, 53%, 0.137);
     --clr-rev-box-text: hsl(0, 0%, 100%);
 
     --ff-karla: 'League Spartan', sans-serif;
@@ -47,8 +47,10 @@ h1, h2, h3 {
 }
 
 /* utilities */
- .flex, .flex-rev-title {
+ .flex-rev-title {
     display: flex;
+    align-items: center;
+    gap: 1rem;
 }
 
 .inline {
@@ -89,8 +91,23 @@ body {
     background-color: var(--clr-rev-box);
     margin: 1rem 0 1rem 0;
     padding: 2rem;
+    color: var(--clr-rev-box-text);
+    border-radius: 8px;
 }
 .rev__credentials>.profile__pic {
     height: 40px;
     border-radius: 50px;
+}
+.rev__name {
+    text-align: left; 
+    line-height: .5;
+    margin-top: .8rem;
+    font-weight: var(--fw-bold);
+}
+.rev__verified {
+    color:var(--clr-ver-buy);
+}
+.rev__text {
+    text-align: left;
+    margin-top: 1.5rem;
 }
