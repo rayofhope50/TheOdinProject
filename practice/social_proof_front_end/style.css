@@ -1,8 +1,8 @@
 :root {
     --clr-rev-box: hsl(300, 43%, 22%);
     --clr-ver-buy: hsl(333, 80%, 67%);
-    --clr-star-box: hsl(303, 10%, 53%);
-    --clr-hero-text: hsl(303, 10%, 53%);
+    --clr-star-text: hsl(303, 10%, 53%);
+    --clr-star-box: hsla(302, 10%, 53%, 0.315);
     --clr-rev-box-text: hsl(0, 0%, 100%);
 
     --ff-karla: 'League Spartan', sans-serif;
@@ -44,4 +44,53 @@ h1, h2, h3 {
   
 #root, #__next {
     isolation: isolate;
+}
+
+/* utilities */
+ .flex, .flex-rev-title {
+    display: flex;
+}
+
+.inline {
+    display: inline-block;
+}
+/* code */
+
+body {
+    text-align: center;
+    background-image: url(images/bg-pattern-top-mobile.svg), url(images/bg-pattern-bottom-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: left top, right bottom;
+    padding: 5rem 1rem 0 1rem;
+    font-family: var(--ff-karla);
+}
+.hero__title {
+    font-size: 2.5rem;
+    font-weight: var(--fw-bold);
+    line-height: .8;
+    color: var(--clr-rev-box);
+    margin-bottom: 2.5rem;
+}
+.hero__paragraph {
+    color: var(--clr-star-text);
+    margin-bottom: 2rem;
+}
+.star__rating {
+    background-color: var(--clr-star-box);
+    margin: 1rem 0 1rem 0;
+    border-radius: 4px;
+    padding: 0.5rem 0 0.5rem 0;
+}
+.star__text {
+    color: var(--clr-rev-box);
+    font-weight: var(--fw-bold);
+}
+.rev__box {
+    background-color: var(--clr-rev-box);
+    margin: 1rem 0 1rem 0;
+    padding: 2rem;
+}
+.rev__credentials>.profile__pic {
+    height: 40px;
+    border-radius: 50px;
 }
