@@ -81,19 +81,17 @@ body {
     font-size: 0.8rem;
     color: var(--clr-light-grey);
     border-radius: 4px;
-    position: relative;
     text-align: left;
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-     
+    flex-direction: column;            
 }  
 .card__title {
     text-align: left;
 }
 .card>img {
+    margin-top: 1rem;
     max-height: 50px;
-    border: 2px solid red;
+    align-self: flex-end;
 }
 .card__title {
     font-weight: var(--fw-bold);
@@ -117,14 +115,48 @@ body {
     border-top-style: solid;   
 }
 @media (min-width: 1000px) {
+    body {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
     .hero__title {
         max-width: 500px;
         margin: 0 auto;
     }
     .card {
-        max-width: 300px;
+        width: 380px;
+        height: 250px;
+        margin: 0;
+    }
+    .card>img {
+        margin-top: 3rem;
+        max-height: 80px;
     }
     .grid {
         display: grid;
+        grid-template-columns: 400px 400px 400px;
+        grid-template-rows: 250px 250px;
+    }
+    .grid-left {
+       margin-top: 8rem;
+       margin-right: 1rem;
+        
+    }
+    .grid-mid-top {
+        grid-row: 1;
+        grid-column: 2;
+    }
+    .grid-mid-btm {
+        grid-row: 2;
+        grid-column: 2;
+        margin-top: 1rem;
+     
+    }
+    .grid-right {
+      grid-column: 3;
+      margin-top: 8rem;
+    }
+    .attribution {
+        margin-top: 2rem;
     }
 }
