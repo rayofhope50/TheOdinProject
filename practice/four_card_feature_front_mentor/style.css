@@ -1,0 +1,130 @@
+:root {
+    --clr-team-build: hsl(0, 78%, 62%);
+    --clr-supervisor: hsl(180, 62%, 55%);
+    --clr-karma: hsl(34, 97%, 64%);
+    --clr-calculator: hsl(212, 86%, 64%);
+    --clr-dark-grey: hsl(234, 12%, 34%);
+    --clr-light-grey: hsl(229, 6%, 66%);
+    --clr-paragraphs: hsl(0, 0%, 98%);
+
+    --ff-poppins: 'Poppins', sans-serif;
+      
+    --fw-thin: 200;
+    --fw-medium: 400;
+    --fw-bold: 600;
+ }
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+* {
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
+}
+body {
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+h1, h2, h3 {
+    line-height: 1;
+}
+  
+#root, #__next {
+    isolation: isolate;
+}
+
+/* utilities */
+/* code */
+body {
+    font-family: var(--ff-poppins);
+    padding: 5rem 2rem 0 2rem;
+    text-align: center;
+    font-size: 15px;
+    /* background-color: var(--clr-light-grey); */
+}
+.hero__top {
+    font-size: 1.5rem;
+    font-weight: var(--fw-thin);
+    line-height: 1.7rem;
+}
+.hero__bold {
+    font-size: 1.5rem;
+    font-weight: var(--fw-bold);
+    color: var(--clr-dark-grey);
+    margin-bottom: .6rem;
+}
+.hero__text {
+    color: var(--clr-light-grey);
+    margin-bottom: 3.5rem;
+}
+.card {
+    background-color: white;
+    box-shadow: 0px 5px 20px lightgrey;    
+    margin: 1rem 0 1.5rem 0;
+    padding: 1rem 1.5rem 1.5rem 1.5rem;
+    font-size: 0.8rem;
+    color: var(--clr-light-grey);
+    border-radius: 4px;
+    position: relative;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+     
+}  
+.card__title {
+    text-align: left;
+}
+.card>img {
+    max-height: 50px;
+    border: 2px solid red;
+}
+.card__title {
+    font-weight: var(--fw-bold);
+    font-size: 1.2rem;
+    color: var(--clr-dark-grey);
+}
+.grid-left {
+    border-top-color: var(--clr-supervisor) ;
+    border-top-style: solid;   
+}
+.grid-mid-top {
+    border-top-color: var(--clr-team-build) ;
+    border-top-style: solid;   
+}
+.grid-mid-btm {
+    border-top-color: var(--clr-karma) ;
+    border-top-style: solid;   
+}
+.grid-right {
+    border-top-color: var(--clr-calculator) ;
+    border-top-style: solid;   
+}
+@media (min-width: 1000px) {
+    .hero__title {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    .card {
+        max-width: 300px;
+    }
+    .grid {
+        display: grid;
+    }
+}
