@@ -1,0 +1,50 @@
+:root {
+    --clr-right-title: hsl(35, 77%, 62%);
+    --clr-btn-act-tit: hsl(5, 85%, 63%);
+    --clr-background: hsl(36, 100%, 99%);
+    --clr-numbers: hsl(233, 8%, 79%);
+    --clr-dark-grey: hsl(236, 13%, 42%);
+    --clr-light-grey: hsl(240, 100%, 5%);
+    
+
+    --ff-inter: 'Inter', sans-serif;;
+      
+    --fw-medium: 400;
+    --fw-bold: 600;
+    --fw-ex-bold: 700;
+ }
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+* {
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
+}
+body {
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+h1, h2, h3 {
+    line-height: 1;
+}
+  
+#root, #__next {
+    isolation: isolate;
+}
