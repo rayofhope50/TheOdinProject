@@ -4,7 +4,7 @@
     --clr-background: hsl(36, 100%, 99%);
     --clr-numbers: hsl(233, 8%, 79%);
     --clr-dark-grey: hsl(236, 13%, 42%);
-    --clr-light-grey: hsl(240, 100%, 5%);
+    --clr-dark-blue: hsl(240, 100%, 5%);
     
 
     --ff-inter: 'Inter', sans-serif;;
@@ -22,6 +22,7 @@
 
 html, body {
     height: 100%;
+
 }
 body {
     line-height: 1.7;
@@ -47,4 +48,64 @@ h1, h2, h3 {
   
 #root, #__next {
     isolation: isolate;
+}
+html {
+    padding: 1.5rem 1rem 0 1rem;
+    font-size: 15px;
+    font-family: var(--ff-inter);
+}
+ul {
+    list-style-type: none;
+    padding-top: 7rem;
+}
+li {
+    padding: 0.8rem 0 0.5rem 0;
+    font-size: 1.5rem;
+}
+#chk {
+    visibility: hidden;
+    position: fixed;
+}
+.fa-bars, .fa-x {
+    font-size: 3rem;
+    position: fixed;
+    z-index: 2;
+    right: 0;
+    padding-right: 1.5rem;
+}
+.fa-x {
+    top: -50px;
+}
+.nav__bar {
+    background-color: white;
+    height: 100%;
+    position: absolute;
+    width: 280px;
+    transition: 0.5s;
+    transition-timing-function: linear;
+    -webkit-transform: translateX(150%);
+                        transform: translateX(150%);    
+    transition: transform 500ms linear;
+
+}
+#chk:checked ~.nav__bar {
+    -webkit-transform: translateX(30%);
+                        transform: translateX(30%);
+    transition: transform 500ms linear;
+}
+#chk:checked ~label > .fa-bars {
+    top: -50px;
+}
+#chk:checked ~label > .fa-x {
+    top: 22px;
+}
+.logo {
+    height: 30px;
+}
+.hero__img {
+    padding-top: 2rem;
+    /* height: 300px; */
+}
+#chk:checked < body {
+    background-color: black;
 }
