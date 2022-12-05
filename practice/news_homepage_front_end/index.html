@@ -5,8 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
-  
+
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <!-- font awesome -->
+  <script src="https://kit.fontawesome.com/4e6114881a.js" crossorigin="anonymous"></script>
+  <!-- font awesome -->
   
   <title>Frontend Mentor | News homepage</title>
 
@@ -17,43 +20,62 @@
   </style>
 </head>
 <body>
-
-  Home
-  New
-  Popular
-  Trending
-  Categories
-
-  The Bright Future of Web 3.0?
-
-  We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. 
-  But is it really fulfilling its promise?
-
-  Read more
-
-  New 
-
-  Hydrogen VS Electric Cars
-  Will hydrogen-fueled cars ever catch up to EVs?
-
-  The Downsides of AI Artistry
-  What are the possible adverse effects of on-demand AI image generation?
-
-  Is VC Funding Drying Up?
-  Private funding by VC firms is down 50% YOY. We take a look at what that means.
-
-  01
-  Reviving Retro PCs
-  What happens when old PCs are given modern upgrades?
-
-  02
-  Top 10 Laptops of 2022
-  Our best picks for various needs and budgets.
-
-  03
-  The Growth of Gaming
-  How the pandemic has sparked fresh opportunities.
-  
+  <div>
+    <i class="fa fa-bars" aria-hidden="true"></i>
+    <img src="assets/images/logo.svg">
+    <nav class="nav__bar">
+      <ul>
+        <li>Home</li>
+        <li>New</li>
+        <li>Popular</li>
+        <li>Trending</li>
+        <li>Categories</li>
+      </ul>
+    </nav>
+  </div>
+  <main class="grid">
+    <img class="hero__img" src="assets/images/image-web-3-desktop.jpg" alt="logo">
+    <p class="hero__title">The Bright Future of Web 3.0?</p>
+    <p class="hero__paragraph">
+      We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people.
+      But is it really fulfilling its promise?
+      <button class="button">Read more</button>
+    </p>
+    <section class="news__letter">
+      <p class="news__new">New</p>
+      <p class="news__title">Hydrogen VS Electric Cars</p>
+      <p class="news__text">Will hydrogen-fueled cars ever catch up to EVs?</p>      
+      <p class="news__title">The Downsides of AI Artistry</p>
+      <p class="news__text">What are the possible adverse effects of on-demand AI image generation?  </p>    
+      <p class="news__title">Is VC Funding Drying Up?</p>
+      <p class="news__text">Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
+      
+    </section>
+    <div class="art__1">
+      <img src="assets/images/image-retro-pcs.jpg" alt="image of retro pc">
+      <div class="art__context">
+        <p class="art__number">01</p>
+        <p class="art__title">Reviving Retro PCs</p>
+        <p class="art__paragraph">What happens when old PCs are given modern upgrades?</p>
+      </div>
+    </div>
+    <div class="art__1">
+      <img src="assets/images/image-top-laptops.jpg" alt="image of retro pc">
+      <div class="art__context">
+        <p class="art__number">02</p>
+        <p class="art__title">Top 10 Laptops of 2022</p>
+        <p class="art__paragraph">Our best picks for various needs and budgets.</p>
+      </div>
+    </div>
+    <div class="art__1">
+      <img src="assets/images/image-gaming-growth.jpg" alt="image of retro pc">
+      <div class="art__context">
+        <p class="art__number">03</p>
+        <p class="art__title">The Growth of Gaming</p>
+        <p class="art__paragraph">How the pandemic has sparked fresh opportunities.</p>
+      </div>
+    </div>
+</main>
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
