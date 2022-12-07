@@ -62,6 +62,10 @@ li {
     padding: 0.8rem 0 0.5rem 0;
     font-size: 1.5rem;
 }
+li:hover {
+    cursor: pointer;
+    color: var(--clr-btn-act-tit);
+}
 #chk {
     visibility: hidden;
     position: fixed;
@@ -133,6 +137,11 @@ li {
     background-color: var(--clr-btn-act-tit);
     color: white;
     font-weight: var(--fw-ex-bold);
+    
+}
+.button:hover {
+    cursor: pointer;
+    background-color: var(--clr-dark-blue);
 }
 .news__letter {
     background-color: var(--clr-dark-blue);
@@ -150,6 +159,10 @@ li {
     font-size: 1.4rem;
     font-weight: var(--fw-bold);
     padding: 1rem 0 1rem 0;
+}
+.news__title:hover {
+    cursor: pointer;
+    color: var(--clr-right-title);
 }
 hr {
     margin: 2rem 0 1rem 0;
