@@ -76,36 +76,41 @@ li {
 .fa-x {
     top: -50px;
 }
+.fa-bars {
+    top: 16px;
+}
 .nav__bar {
+    top: 0;
     background-color: white;
     height: 100%;
-    position: absolute;
+    position: fixed;
     width: 280px;
     transition: 0.5s;
     transition-timing-function: linear;
     -webkit-transform: translateX(150%);
                         transform: translateX(150%);    
     transition: transform 500ms linear;
+    
 
 }
 #chk:checked ~.nav__bar {
     -webkit-transform: translateX(30%);
                         transform: translateX(30%);
     transition: transform 500ms linear;
+    box-shadow: 0 0 0 600px rgba(0,0,0,.5);
 }
 #chk:checked ~label > .fa-bars {
     top: -50px;
 }
 #chk:checked ~label > .fa-x {
-    top: 22px;
+    top: 16px;
+    padding-right: 27px;
+
 }
 .logo {
     height: 30px;
 }
 .hero__img {
     padding-top: 2rem;
-    /* height: 300px; */
 }
-#chk:checked < body {
-    background-color: black;
-}
+
