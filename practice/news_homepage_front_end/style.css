@@ -68,7 +68,7 @@ li {
 }
 .fa-bars, .fa-x {
     font-size: 3rem;
-    position: fixed;
+    position: absolute;
     z-index: 2;
     right: 0;
     padding-right: 1.5rem;
@@ -83,7 +83,7 @@ li {
     top: 0;
     background-color: white;
     height: 100%;
-    position: fixed;
+    position: absolute;
     width: 280px;
     transition: 0.5s;
     transition-timing-function: linear;
@@ -97,7 +97,7 @@ li {
     -webkit-transform: translateX(30%);
                         transform: translateX(30%);
     transition: transform 500ms linear;
-    box-shadow: 0 0 0 600px rgba(0,0,0,.5);
+    box-shadow: 0 0 0 1600px rgba(0,0,0,.5);
 }
 #chk:checked ~label > .fa-bars {
     top: -50px;
@@ -113,4 +113,69 @@ li {
 .hero__img {
     padding-top: 2rem;
 }
+.hero__title {
+    font-size: 3rem;
+    font-weight: var(--fw-ex-bold);
+    line-height: 3rem;
+    padding: 2rem 0 2rem 0;
+}
+.hero__paragraph {
+    color: var(--clr-dark-grey);
+    
+}
+.button {
+    padding: 1rem 2rem 1rem 2rem;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    margin: 2rem 0 2rem 0;
+    border: none;
+    background-color: var(--clr-btn-act-tit);
+    color: white;
+    font-weight: var(--fw-ex-bold);
+}
+.news__letter {
+    background-color: var(--clr-dark-blue);
+    color: white;
+    padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+    margin-bottom: 5rem;
+  
+}
+.news__new {
+    font-size: 2rem;
+    font-weight: var(--fw-ex-bold);
+    color: var(--clr-right-title);
+}
+.news__title {
+    font-size: 1.4rem;
+    font-weight: var(--fw-bold);
+    padding: 1rem 0 1rem 0;
+}
+hr {
+    margin: 2rem 0 1rem 0;
+    height: 1px;
+}
+.art__1 {
+    display: flex;
+    gap: 1rem;
+    margin: 2rem 0 0 0;
 
+}
+.art__1 > img {
+    height: 130px;
+}
+.art__number {
+    font-size: 2.5rem;
+    font-weight: var(--fw-bold);
+    margin-top: -15px;
+    color: var(--clr-numbers);
+}
+.art__title {
+    color: var(--clr-dark-blue);
+    font-weight: var(--fw-ex-bold);
+    font-size: 1.3rem;
+    margin-bottom: .2rem;
+}
+.art__paragraph {
+    color: var(--clr-dark-grey);
+}
