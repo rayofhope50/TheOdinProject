@@ -118,14 +118,38 @@
 // console.log(String(23));
 //type coercion
 
-const favourite = Number(prompt("What's your favorite number?"));
-console.log(favourite);
-console.log(typeof favourite);
+// const favourite = Number(prompt("What's your favorite number?"));
+// console.log(favourite);
+// console.log(typeof favourite);
 
-if (favourite === 23) {
-    console.log("Cool! 23 is a grat number.");
-} else if (favourite === 7) {
-    console.log('7 is also a cool number');
-} else {
-    console.log('Number is not 23 nor 7');
-}
+// if (favourite === 23) {
+//     console.log("Cool! 23 is a grat number.");
+// } else if (favourite === 7) {
+//     console.log('7 is also a cool number');
+// } else {
+//     console.log('Number is not 23 nor 7');
+// }
+// const hadDriversLicence = true;
+// const hasGoodVision = true;
+
+// console.log(hadDriversLicence && hasGoodVision);
+// console.log(hadDriversLicence || hasGoodVision);
+// console.log(!hadDriversLicence);
+
+// const shouldDrive = hadDriversLicence && hasGoodVision;
+
+// if (shouldDrive) {
+//     console.log('Sarah is able to drive!');
+// } else {
+//     console.log('Someone else should drive...');
+// }
+
+// const isTired = false;
+// console.log(hadDriversLicence || hasGoodVision || isTired);
+
+// if (hadDriversLicence && hasGoodVision && !isTired) {
+//     console.log('Sarah is able to drive!');
+// } else {
+//     console.log('Someone else should drive...');
+// }
+
