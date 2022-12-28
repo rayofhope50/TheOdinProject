@@ -153,3 +153,26 @@
 //     console.log('Someone else should drive...');
 // }
 
+// const day = 'monday';
+// switch (day) {
+//     case 'monday': console.log('Plan course structure');
+//         console.log('Go to coding meetup');
+//         break;
+//     case 'tuesday': console.log('Prepare theory videos');
+//         break;
+//     case 'wednesday':
+//     case 'thursday': console.log('Plan course structure');
+//         console.log('Go to coding meetup');
+//         break;
+//     case 'friday': console.log('Plan course structure');
+//         console.log('Go to coding meetup');
+//         break;
+//     case 'saturday':
+//     case 'sunday': console.log('Plan course structure');
+//         console.log('Go to coding meetup');
+//         break;
+//     default:
+//         console.log('Not a valid day!');
+// }
+// const age = 15;
+// age >= 18 ? console.log('I like to drink wine') : console.log('I like to drink water');

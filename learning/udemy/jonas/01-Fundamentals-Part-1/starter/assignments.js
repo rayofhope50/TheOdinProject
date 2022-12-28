@@ -91,3 +91,31 @@
 //     console.log(`Koalas are the winner!`);
 // }
 // console.log(dolAverage, koalAverage);
+// const language = prompt('What language do you speak ?');
+
+// switch (language) {
+//     case 'chinese':
+//     case 'mandarin':
+//         alert('MOST number of native speakers!');
+//         break;
+//     case 'spanish':
+//         console.log('2nd place in number of native speakers');
+//         break;
+//     case 'english':
+//         console.log('3rd place');
+//         break;
+//     case 'hindi':
+//         console.log('Number 4');
+//         break;
+//     case 'arabic':
+//         console.log('5th most spoken language');
+//         break;
+//     default:
+//         alert(`${language} is also a great language :D`);
+// }
+// const population = 38456953;
+
+// population > 33000000 ? console.log("Poland's population is above average") : console.log("Poland's population is below average")
+// const bill = 300;
+
+// let tip = bill >= 50 && bill <= 300 ? console.log(`The bill was ${bill}$, the tip was ${bill * 0.15}$, and the total value is ${bill + (bill * 0.15)}$.`) : console.log(`The bill was ${bill}$, the tip was ${bill * 0.2}$, and the total value is ${bill + (bill * 0.2)}$.`);
