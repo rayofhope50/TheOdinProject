@@ -63,3 +63,24 @@
 // }
 // const percentage2 = percentageOfWorld2(countryPop);
 // console.log(percentage2);
+
+
+//arrow function
+// const calcAge3 = birthYear => 2037 - birthYear;
+// const age3 = calcAge3(1991);
+// console.log(age3);
+
+// const yearsUntilRetirement = (birthYear, firstName) => {
+//     const age = 2037 - birthYear;
+//     const retirement = 65 - age;
+//     // return retirement;
+//     return `${firstName} retires in ${retirement} years!`;
+// }
+
+// console.log(yearsUntilRetirement(1991, 'Ray'));
+
+// const percentageOfWorld3 = (countryPop, population) => {
+//     const percentage = (countryPop * 100) / population;
+//     return percentage;
+// }
+// console.log(percentageOfWorld3(38, 7900));
