@@ -49,3 +49,30 @@
 //     console.log(`${john.fullName} BMI (${john.BMI}) is higher than ${mark.fullName} BMI (${mark.BMI})`);
 // }
 
+// for (let i = 1; i <= 50; i++) {
+//     console.log(`Voter number ${i} is currently voting.`);
+// }
+
+// const population = 7990;
+// const populations = ['1229', '2324', 234, 124];
+// const percentages2 = [];
+
+// function percentageOfWorld1(countryPop) {
+//     return (countryPop * 100) / population;
+// }
+
+// for (let i = 0; i < populations.length; i++) {
+//     percentages2.push(percentageOfWorld1(populations[i]));
+// }
+
+const listOfNeighbours = [
+    ['Canada', 'Mexico'],
+    ['Spain'],
+    ['Norway', 'Sweden', 'Russia']
+];
+for (let i = 0; i < listOfNeighbours.length; i++) {
+    for (let k = 0; k < listOfNeighbours[i].length; k++) {
+        console.log(`Neighbour: ${listOfNeighbours[i][k]}`, i, k);
+
+    }
+}
