@@ -278,15 +278,65 @@
 //     ['Michael', 'Peter', 'Steven']
 // ];
 
-const jonas = {
-    firstName: 'Jonas',
-    lastName: 'Schmedtmann',
-    age: 2037 - 1991,
-    job: 'teacher',
-    friends: ['Michael', 'Peter', 'Steven']
-};
+// const jonas = {
+//     firstName: 'Jonas',
+//     lastName: 'Schmedtmann',
+//     age: 2037 - 1991,
+//     job: 'teacher',
+//     friends: ['Michael', 'Peter', 'Steven']
+// };
 
-////////// dot notation
-console.log(jonas.lastName);
-////////// bracket notation <- use this!
-console.log(jonas['lastName']);
+// ////////// dot notation
+// console.log(jonas.lastName);
+
+// ////////// bracket notation <- use this!
+// console.log(jonas['lastName']);
+
+// const namekey = 'Name';
+// console.log(jonas['first' + namekey]);
+// console.log(jonas['last' + namekey]);
+
+// const interestedIn = prompt('What do you want to know about jonas? Choose betweeen firstName, lastName, age, job and a list of friends.');
+
+// if (jonas[interestedIn]) {
+//     console.log(jonas[interestedIn]);
+// } else {
+//     console.log(`Wrong request!Choose betweeen firstName, lastName, age, job and friends.`);
+// }
+// jonas.location = 'Portugal';
+// jonas['twitter'] = '@jonasjfdsf';
+// console.log(jonas);
+
+///////// challange, this code check jonas looks for Sfriends and assesses whats after (.length/[0]/[2] ) BOOM
+// console.log(`Jonas has ${jonas['friends'].length} friends, and his best friend is called ${jonas['friends'][0]}`);
+
+
+
+// const jonas = {
+//     firstName: 'Jonas',
+//     lastName: 'Schmedtmann',
+//     birthYear: 1991,
+//     job: 'teacher',
+//     friends: ['Michael', 'Peter', 'Steven'],
+//     hasDriversLicence: false,
+//     // calcAge: function (birthYear) {
+//     // return 2037 - birthYear;
+//     // }
+
+//     // calcAge: function () {
+//     //     return 2037 - this.birthYear;
+//     // }
+
+//     calcAge: function () {
+//         this.age = 2023 - this.birthYear;
+//         return this.age;
+//     }
+// };
+// jonas.calcAge();
+// ;
+
+// console.log(`${jonas.firstName} is a ${jonas.age}-years old ${jonas.job}, and he has ${this.hasDriversLicence ? 'a' : 'no'} driver's licence.`);
+/////////////////////////F       O        R      LOOP
+// for (let rep = 1; rep <= 10; rep++) {
+//     console.log(`Lifting weights repetition ${rep}`);
+// }
