@@ -39,7 +39,6 @@
 
 // const age1 = calcAge1(1991);
 
-
 // const calcAge2 = function (birthYear) {
 //     return 2037 - birthYear;
 // }
@@ -50,20 +49,18 @@
 // const population = 7900;
 // const countryPop = 1441;
 
-
 // function percentageOfWorld1(countryPop) {
 //     return (countryPop * 100) / population;
 // }
 // const percentage = percentageOfWorld1(countryPop);
 // console.log(percentage);
-// // 
+// //
 
 // const percentageOfWorld2 = function (countryPop) {
 //     return (countryPop * 100) / population;
 // }
 // const percentage2 = percentageOfWorld2(countryPop);
 // console.log(percentage2);
-
 
 //arrow function
 // const calcAge3 = birthYear => 2037 - birthYear;
@@ -85,7 +82,6 @@
 // }
 // console.log(percentageOfWorld3(38, 7900));
 
-
 // function cutFruitPieces(fruit) {
 //     return fruit * 4;
 // }
@@ -97,7 +93,6 @@
 //     return juice;
 // }
 // console.log(fruitProcessor(2, 3));
-
 
 //calling in another function
 // const population = 7900;
@@ -253,29 +248,34 @@
 //     console.log(`Probably not a central European Country :D`);
 // }
 
-///////// Coding challange #2
+/////// Coding challange #2
 // let tip = 0;
 // const bills = [125, 555, 44];
 // function calcTip(value1) {
-//     if (value1 >= 50 && value1 <= 300) {
-//         tip = value1 * 0.15;
-
-//     } else {
-//         tip = value1 * 0.2;
-//     }
-//     return tip;
+//   if (value1 >= 50 && value1 <= 300) {
+//     tip = value1 * 0.15;
+//   } else {
+//     tip = value1 * 0.2;
+//   }
+//   return tip;
 // }
-// let tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2]),]
-// let total = [bills[0] + calcTip(bills[0]), bills[1] + calcTip(bills[1]), bills[2] + calcTip(bills[2])]
+// let tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
+
+// let total = [
+//   bills[0] + calcTip(bills[0]),
+//   bills[1] + calcTip(bills[1]),
+//   bills[2] + calcTip(bills[2]),
+// ];
+
 // console.log(total);
 
-//////////////// OBJECTS
+////////////// OBJECTS
 // const jonasArray = [
-//     'Jonas',
-//     'Schmedtmann',
-//     2037 - 1991,
-//     'teacher',
-//     ['Michael', 'Peter', 'Steven']
+//   'Jonas',
+//   'Schmedtmann',
+//   2037 - 1991,
+//   'teacher',
+//   ['Michael', 'Peter', 'Steven'],
 // ];
 
 // const jonas = {
@@ -309,8 +309,6 @@
 
 ///////// challange, this code check jonas looks for Sfriends and assesses whats after (.length/[0]/[2] ) BOOM
 // console.log(`Jonas has ${jonas['friends'].length} friends, and his best friend is called ${jonas['friends'][0]}`);
-
-
 
 // const jonas = {
 //     firstName: 'Jonas',
@@ -366,7 +364,7 @@
 // }
 // console.log(years, ages);
 
-// /////////////// C O N T I N U E             B R E A K 
+// /////////////// C O N T I N U E             B R E A K
 // console.log('___ONLY STINGS___')
 // for (let i = 0; i <= jonas.length - 1; i++) {
 //     if (typeof jonas[i] !== 'string') continue;
@@ -394,4 +392,18 @@
 //     for (let rep = 1; rep < 6; rep++) {
 //         console.log(`Lifting weight repetition ${rep}`);
 //     }
+// }
+
+// let rep = 1;
+// while (rep <= 10) {
+//     console.log(`Lifting weights repetition ${rep}.`);
+//     rep++;
+// }
+
+// let dice = Math.trunc(Math.random() * 6) + 1;
+
+// while (dice !== 6) {
+//     console.log(`Your rolloed a ${dice}`);
+//     dice = Math.trunc(Math.random() * 6) + 1;
+//     if (dice === 6) console.log(`Loop is about to end...`);
 // }

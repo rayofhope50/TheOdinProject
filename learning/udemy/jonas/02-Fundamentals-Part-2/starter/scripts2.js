@@ -1,4 +1,3 @@
-
 // let myCountry = {
 //     country: 'Poland',
 //     capital: 'Warsaw',
@@ -11,7 +10,7 @@
 //         return this.checkIsland;
 //     }
 // }
-
+// TODO
 // // console.log(`${myCountry['country']} has ${myCountry['population']} milion ${myCountry['language']}-speaking people, ${myCountry['neighbours'].length} neighbouring countries and a capital called ${myCountry['capital']}.`);
 
 // myCountry.describe();
@@ -65,14 +64,36 @@
 //     percentages2.push(percentageOfWorld1(populations[i]));
 // }
 
-const listOfNeighbours = [
-    ['Canada', 'Mexico'],
-    ['Spain'],
-    ['Norway', 'Sweden', 'Russia']
-];
-for (let i = 0; i < listOfNeighbours.length; i++) {
-    for (let k = 0; k < listOfNeighbours[i].length; k++) {
-        console.log(`Neighbour: ${listOfNeighbours[i][k]}`, i, k);
+// const listOfNeighbours = [
+//     ['Canada', 'Mexico'],
+//     ['Spain'],
+//     ['Norway', 'Sweden', 'Russia']
+// ];
+// for (let i = 0; i < listOfNeighbours.length; i++) {
+//     for (let k = 0; k < listOfNeighbours[i].length; k++) {
+//         console.log(`Neighbour: ${listOfNeighbours[i][k]}`, i, k);
 
-    }
-}
+//     }
+// }
+
+// const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+// const tips = [];
+// const totals = [];
+// let count = 0;
+// let tip = 0;
+// function calcTip(value1) {
+//     if (value1 >= 50 && value1 <= 300) {
+//         tip = value1 * 0.15;
+
+//     } else {
+//         tip = value1 * 0.2;
+//     }
+//     return tip;
+// }
+
+// while (count < bills.length) {
+//   tips.push(calcTip(bills[count]));
+//   totals.push(calcTip(bills[count]) + bills[count]);
+//   count++;
+// }
+// console.log(tips, totals);
