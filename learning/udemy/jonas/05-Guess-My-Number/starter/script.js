@@ -11,6 +11,8 @@ of the <p> */
 // document.querySelector('.score').textContent = 15;
 // document.querySelector('.guess').value = 15;
 
+const secretNumber = Math.trunc(Math.random() * 21);
+document.querySelector('.number').textContent = secretNumber;
 /////////////////////////// HANDLING CLICK EVENTS BUG
 // addEventListiner listens to action click after coma has to be
 // the specified function to perform
@@ -22,5 +24,8 @@ document.querySelector('.check').addEventListener('click', function () {
   //// value and work on that
   if (!guess) {
     document.querySelector('.message').textContent = `No Number!`;
+  } else if (guess === secretNumber) {
+    document.querySelector('.message').textContent = `Correct Number!!`;
+  } else if (guess > secretNumber) {
   }
 });
