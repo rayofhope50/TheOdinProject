@@ -133,15 +133,15 @@
 // console.log(yearsUntilRetirement(1991, 'Ray'));
 // console.log(yearsUntilRetirement(1905, 'Mike'));
 
-// //FUNCTION DECLARATION
+// //FUNCTION DECLARATION BUG
 // function calcAge(birthYear){
 //     return 2037 - birthYear;
 // }
-// //FUNCTION EXPRESSION
+// //FUNCTION EXPRESSION BUG
 // const calcAge = function(birthYear){
 //     return 2037 - birthYear;
 // }
-// //ARROW FUNCTION
+// //ARROW FUNCTION BUG
 // const calcAge = birthYear => 2037 - birthYear;
 
 // coding challange #1
@@ -172,7 +172,7 @@
 //     console.log(`Koalas won the competition with ${endScoreKoal} to ${endScoreDol} for Dolphins!`);
 // }
 
-// //ARRAYS
+// //ARRAYS BUG
 
 // const friends = ['Michael', 'Steven', 'Peter'];
 // console.log(friends[0]);
@@ -269,7 +269,7 @@
 
 // console.log(total);
 
-////////////// OBJECTS
+////////////// OBJECTS BUG
 // const jonasArray = [
 //   'Jonas',
 //   'Schmedtmann',
