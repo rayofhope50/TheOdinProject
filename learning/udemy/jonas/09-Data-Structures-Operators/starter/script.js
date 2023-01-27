@@ -1,5 +1,4 @@
 'use strict';
-
 // Data needed for a later exercise
 const flights =
   '_Delayed_Departure;fao93766109;txl2133758440;11:25+_Arrival;bru0943384722;fao93766109;11:45+_Delayed_Arrival;hel7439299980;fao93766109;12:05+_Departure;fao93766109;lis2323639855;12:30';
@@ -46,7 +45,143 @@ const restaurant = {
       `Here is your delicious pasta with ${ing1}, ${ing2} and ${ing3}.`
     );
   },
+  orderPizza: function (mainIngredient, ...otherIngredients) {
+    console.log(mainIngredient);
+    console.log(otherIngredients);
+  },
 };
+
+// const game = {
+//   team1: 'Bayern Munich',
+//   team2: 'Borrussia Dortmund',
+//   players: [
+//     [
+//       'Neuer',
+//       'Pavard',
+//       'Martinez',
+//       'Alaba',
+//       'Davies',
+//       'Kimmich',
+//       'Goretzka',
+//       'Coman',
+//       'Muller',
+//       'Gnarby',
+//       'Lewandowski',
+//     ],
+//     [
+//       'Burki',
+//       'Schulz',
+//       'Hummels',
+//       'Akanji',
+//       'Hakimi',
+//       'Weigl',
+//       'Witsel',
+//       'Hazard',
+//       'Brandt',
+//       'Sancho',
+//       'Gotze',
+//     ],
+//   ],
+//   score: '4:0',
+//   scored: ['Lewandowski', 'Gnarby', 'Lewandowski', 'Hummels'],
+//   date: 'Nov 9th, 2037',
+//   odds: {
+//     team1: 1.33,
+//     x: 3.25,
+//     team2: 6.5,
+//   },
+//   // 6. Write a function ('printGoals') that receives an arbitrary number of player names (NOT an array)
+//   // and prints each of them to the console, along with the number of goals that were scored in total (number of player names passed in)
+//   printGoals: function (...names) {
+//     console.log(...names);
+//     for (let i = 0; i < names.length; i++) {
+//       let score = 0;
+//       for (let j = 0; j < game.scored.length; j++) {
+//         if (names[i] === game.scored[j]) {
+//           score++;
+//         }
+//       }
+//       console.log(names[i], score);
+//     }
+//   },
+// };
+////// ################# BUG CHALLANGE ! BOOM DONE SHAKALAKA
+// const team1 = game.odds.team1;
+// const team2 = game.odds.team2;
+// const draw = game.odds.x;
+// const players1 = [...game.players[0]];
+// const players2 = [...game.players[1]];
+// const [gk, ...fieldPlayers] = game.players[0];
+// const allPlayers = [...game.players[0], ...game.players[1]];
+// let players1Final = game.players[0];
+// players1Final.push('Thiago', 'Coutinho', 'Perisic');
+// game.printGoals('Davies', 'Muller', 'Lewandowski', 'Kimmich');
+
+// const winner =
+//   (game.odds.team1 < game.odds.team2 &&
+//     `${game.team1} is more likely to win`) ||
+//   (game.odds.team2 < game.odds.team1 && `${game.team2} is more likely to win`);
+// console.log(winner);
+
+// console.log(pizza, risotto, otherFood);
+
+// const rest1 = {
+//   name: 'Capri',
+//   // numGuests: 20,
+//   numGuests: 0,
+// };
+
+// const rest2 = {
+//   name: 'La Piazza',
+//   owner: 'Giovanni Rossi',
+// };
+
+// // BUG OR ?? (null or udefined) assignment operator
+// // rest1.numGuests = rest1.numGuests || 10;
+// rest1.numGuests ??= 10;
+// // rest2.numGuests = rest2.numGuests || 10;
+// rest2.numGuests ||= 10;
+// console.log(rest1);
+// console.log(rest2);
+
+// // || AND && short-circuiting BUG BUG BUG
+// console.log(3 || 'Jonas');
+// console.log('' || 'Jonas');
+// console.log(true || 0);
+// console.log(undefined || null);
+// console.log(undefined || 0 || '' || 'Hello' || 23 || null);
+
+// // 1 )DESTRUCTURING BUG BUG BUG
+
+// // BUG SPREAD, because of right side of =
+// const arr = [1, 2, ...[3, 4]];
+
+// //BUG REST, because on LEFT side of =
+// const [a, b, ...others] = [1, 2, 3, 4, 5];
+// console.log(a, b, others);
+
+// const [pizza, , risotto, ...otherFood] = [
+//   ...restaurant.mainMenu,
+//   ...restaurant.starterMenu,
+// ];
+// console.log(pizza, risotto, otherFood);
+
+// // BUG Objects
+// const { sat, ...weekdays } = restaurant.openingHours;
+// console.log(sat);
+
+// // 2) Functions BUG BUG BUG
+// const add = function (...numbers) {
+//   let sum = 0;
+//   for (let i = 0; i < numbers.length; i++) sum += numbers[i];
+//   console.log(sum);
+// };
+// add(2, 3);
+// add(5, 2, 6, 4);
+// add(8, 1, 0, 3, 6, 4, 2);
+// const x = [23, 5, 7];
+// add(...x);
+// restaurant.orderPizza('mushrooms', 'onion', 'olives', 'spinach');
 
 // // BUG Spread Operator BUG
 // const arr = [7, 8, 9];
