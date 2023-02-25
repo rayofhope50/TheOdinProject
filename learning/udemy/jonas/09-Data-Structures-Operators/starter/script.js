@@ -52,6 +52,22 @@ console.log('Jonas Schmedtmann'.split(' '));
 const [firstName, lastName] = 'Jonas Schmedtmann'.split(' ');
 const newName = ['Mr.', firstName, lastName.toUpperCase()].join(' ');
 console.log(newName);
+
+const capitalizeName = function (name) {
+  const names = name.split(' ');
+  const namesUpper = [];
+  for (const n of names) {
+    namesUpper.push(n[0].toUpperCase() + n.slice(1));
+  }
+  console.log(namesUpper.join(' '));
+};
+capitalizeName('jessica ann smith davis');
+capitalizeName('jonas schmedtmann');
+capitalizeName('przemyslaw ray pracz');
+
+//// Padding a string
+const message = 'Go to gate 23!';
+console.log(message.padStart(25, '+').padEnd(35, '+'));
 // //// Working with Strings - Part 2
 // const airline = 'TAP Air Portugal';
 
