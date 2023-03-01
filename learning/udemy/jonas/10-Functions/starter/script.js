@@ -74,10 +74,43 @@
 //     console.log(`${greeting} ${name}`);
 //   };
 // };
-const greet = greeting => name => console.log(`${greeting} ${name}`);
+//
+///////// THIS METHODS BUG BUG BUG
+const lufthansa = {
+  airline: 'Lufthansa',
+  iataCode: 'LH',
+  bookings: [],
+  book(flightNum, name) {
+    console.log(
+      `${name} booked a seat on ${this.airline} flight ${this.iataCode}${flightNum}`
+    );
+    this.bookings.push({ flight: `${this.iataCode}${flightNum}`, name });
+  },
+};
+lufthansa.book(239, 'Jonas Schmedtmann');
+lufthansa.book(635, 'John Smith');
 
-const greeterHey = greet('Hey');
+const euroWings = {
+  airline: 'Eurowings',
+  iataCode: 'EW',
+  bookings: [],
+};
 
-greeterHey('Jonas');
-greeterHey('Steven');
-greet('Hello')('Jonas');
+/////// Because we assigned function to a const we need to use .call function because this key word doesn't work with reg expr but .call cals a function
+const book = lufthansa.book;
+book.call(euroWings, 23, 'Sarah Williams');
+console.log(euroWings);
+book.call(lufthansa, 239, 'Mary Cooper');
+console.log(lufthansa);
+
+const swiss = {
+  airline: 'Swiss Air Lines',
+  iataCode: 'LX',
+  bookings: [],
+};
+book.call(swiss, 583, 'Mary Cooper');
+
+//// Apply method passes arrays of data
+const flightData = [583, 'George Cooper'];
+book.apply(swiss, flightData);
+console.log(swiss);
