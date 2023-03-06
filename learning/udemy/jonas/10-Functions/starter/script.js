@@ -114,3 +114,27 @@ book.call(swiss, 583, 'Mary Cooper');
 const flightData = [583, 'George Cooper'];
 book.apply(swiss, flightData);
 console.log(swiss);
+
+//// BIND METHOD
+/// You are binding a function into a constnt and can use it by a name of a new const
+const bookEW = book.bind(euroWings);
+const bookLH = book.bind(lufthansa);
+const bookLX = book.bind(swiss);
+bookEW(23, 'Steven Williams');
+
+const bookEW23 = book.bind(euroWings, 23);
+bookEW23('Ray Pracz');
+
+//// with event listenres
+lufthansa.planes = 300;
+lufthansa.buyPlane = function () {
+  console.log(this);
+  this.planes++;
+  console.log(this.planes);
+};
+document
+  .querySelector('.buy')
+  .addEventListener('click', lufthansa.buyPlane.bind(lufthansa));
+//// Partial Application
+const addTax = (rate, value) => value + value * rate;
+console.log(addTax(0.1, 200));
