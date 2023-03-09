@@ -76,65 +76,70 @@
 // };
 //
 ///////// THIS METHODS BUG BUG BUG
-const lufthansa = {
-  airline: 'Lufthansa',
-  iataCode: 'LH',
-  bookings: [],
-  book(flightNum, name) {
-    console.log(
-      `${name} booked a seat on ${this.airline} flight ${this.iataCode}${flightNum}`
-    );
-    this.bookings.push({ flight: `${this.iataCode}${flightNum}`, name });
-  },
-};
-lufthansa.book(239, 'Jonas Schmedtmann');
-lufthansa.book(635, 'John Smith');
+// const lufthansa = {
+//   airline: 'Lufthansa',
+//   iataCode: 'LH',
+//   bookings: [],
+//   book(flightNum, name) {
+//     console.log(
+//       `${name} booked a seat on ${this.airline} flight ${this.iataCode}${flightNum}`
+//     );
+//     this.bookings.push({ flight: `${this.iataCode}${flightNum}`, name });
+//   },
+// };
+// lufthansa.book(239, 'Jonas Schmedtmann');
+// lufthansa.book(635, 'John Smith');
 
-const euroWings = {
-  airline: 'Eurowings',
-  iataCode: 'EW',
-  bookings: [],
-};
+// const euroWings = {
+//   airline: 'Eurowings',
+//   iataCode: 'EW',
+//   bookings: [],
+// };
 
-/////// Because we assigned function to a const we need to use .call function because this key word doesn't work with reg expr but .call cals a function
-const book = lufthansa.book;
-book.call(euroWings, 23, 'Sarah Williams');
-console.log(euroWings);
-book.call(lufthansa, 239, 'Mary Cooper');
-console.log(lufthansa);
+// /////// Because we assigned function to a const we need to use .call function because this key word doesn't work with reg expr but .call cals a function
+// const book = lufthansa.book;
+// book.call(euroWings, 23, 'Sarah Williams');
+// console.log(euroWings);
+// book.call(lufthansa, 239, 'Mary Cooper');
+// console.log(lufthansa);
 
-const swiss = {
-  airline: 'Swiss Air Lines',
-  iataCode: 'LX',
-  bookings: [],
-};
-book.call(swiss, 583, 'Mary Cooper');
+// const swiss = {
+//   airline: 'Swiss Air Lines',
+//   iataCode: 'LX',
+//   bookings: [],
+// };
+// book.call(swiss, 583, 'Mary Cooper');
 
-//// Apply method passes arrays of data
-const flightData = [583, 'George Cooper'];
-book.apply(swiss, flightData);
-console.log(swiss);
+// //// Apply method passes arrays of data
+// const flightData = [583, 'George Cooper'];
+// book.apply(swiss, flightData);
+// console.log(swiss);
 
-//// BIND METHOD
-/// You are binding a function into a constnt and can use it by a name of a new const
-const bookEW = book.bind(euroWings);
-const bookLH = book.bind(lufthansa);
-const bookLX = book.bind(swiss);
-bookEW(23, 'Steven Williams');
+// //// BIND METHOD
+// /// You are binding a function into a constnt and can use it by a name of a new const
+// const bookEW = book.bind(euroWings);
+// const bookLH = book.bind(lufthansa);
+// const bookLX = book.bind(swiss);
+// bookEW(23, 'Steven Williams');
 
-const bookEW23 = book.bind(euroWings, 23);
-bookEW23('Ray Pracz');
+// const bookEW23 = book.bind(euroWings, 23);
+// bookEW23('Ray Pracz');
 
-//// with event listenres
-lufthansa.planes = 300;
-lufthansa.buyPlane = function () {
-  console.log(this);
-  this.planes++;
-  console.log(this.planes);
-};
-document
-  .querySelector('.buy')
-  .addEventListener('click', lufthansa.buyPlane.bind(lufthansa));
-//// Partial Application
-const addTax = (rate, value) => value + value * rate;
-console.log(addTax(0.1, 200));
+// //// with event listenres
+// lufthansa.planes = 300;
+// lufthansa.buyPlane = function () {
+//   console.log(this);
+//   this.planes++;
+//   console.log(this.planes);
+// };
+// document
+//   .querySelector('.buy')
+//   .addEventListener('click', lufthansa.buyPlane.bind(lufthansa));
+// //// Partial Application
+// const addTax = (rate, value) => value + value * rate;
+// console.log(addTax(0.1, 200));
+
+// const addVAT = addTax.bind(null, 0.23);
+// // addTax = value => value + value * rate;
+// console.log(addVAT(100));
+// console.log(addVAT(23));
