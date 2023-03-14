@@ -22,8 +22,20 @@ const restaurant = {
       close: 24,
     },
   },
-  orderDelivery: function (obj) {
-    console.log(obj);
+  orderDelivery: function ({
+    starterIndex = 1,
+    mainIndex = 0,
+    time = '20:00',
+    address,
+  }) {
+    console.log(
+      `Order received! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`
+    );
+  },
+  orderPasta: function (ing1, ing2, ing3) {
+    console.log(
+      `Here is your delicious pasta with ${ing1}, ${ing2} and ${ing3}`
+    );
   },
 };
 
@@ -58,35 +70,63 @@ const restaurant = {
 
 //// Destructure objects BUG BUG BUG
 
-const { name, openingHours, categories } = restaurant;
-console.log(name, openingHours, categories);
+// const { name, openingHours, categories } = restaurant;
+// console.log(name, openingHours, categories);
 
-const {
-  name: restaurantName,
-  openingHours: hours,
-  categories: tags,
-} = restaurant;
-console.log(restaurantName, hours, tags);
+// const {
+//   name: restaurantName,
+//   openingHours: hours,
+//   categories: tags,
+// } = restaurant;
+// console.log(restaurantName, hours, tags);
 
-const { menu = [], starterMenu: starters = [] } = restaurant;
-console.log(menu, starters);
+// const { menu = [], starterMenu: starters = [] } = restaurant;
+// console.log(menu, starters);
 
-//// MUTATING OBJECT VARIABLES BUG
-let a = 111;
-let b = 999;
-const obj = { a: 23, b: 7, c: 14 };
-({ a, b } = obj);
-console.log(a, b);
+// //// MUTATING OBJECT VARIABLES BUG
+// let a = 111;
+// let b = 999;
+// const obj = { a: 23, b: 7, c: 14 };
+// ({ a, b } = obj);
+// console.log(a, b);
 
-// Nested objects
-const {
-  fri: { open: o, close: c },
-} = openingHours;
-console.log(o, c);
+// // Nested objects
+// const {
+//   fri: { open: o, close: c },
+// } = openingHours;
+// console.log(o, c);
 
-restaurant.orderDelivery({
-  time: '22:30',
-  address: 'Via del Sole, 21',
-  mainIndex: 2,
-  starterIndex: 2,
-});
+// restaurant.orderDelivery({
+//   time: '22:30',
+//   address: 'Via del Sole, 21',
+//   mainIndex: 2,
+//   starterIndex: 2,
+// });
+const arr = [7, 8, 9];
+const badNewArr = [1, 2, arr[0], arr[1], arr[2]];
+console.log(badNewArr);
+const newArr = [1, 2, ...arr];
+console.log(newArr);
+const newMenu = [...restaurant.mainMenu, 'Gnocci'];
+console.log(newMenu);
+//// Copy array (shallow)
+const mainMenuCopy = [...restaurant.mainMenu];
+
+// join 2 arrays
+const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
+console.log(menu);
+// iterables: arrays, strings, maps, sets
+const str = 'Jonas';
+const letters = [...str, '', 'S.'];
+console.log(letters);
+
+// const ingredients = [
+//   prompt("Let's make pasta! Ingredient 1?"),
+//   prompt('Ingredient 2?'),
+//   prompt('Ingredient 3?'),
+// ];
+// console.log(ingredients);
+// restaurant.orderPasta(...ingredients);
+
+const newRestaurant = { foundedIn: 1998, ...restaurant, founder: 'Guideppe' };
+console.log(newRestaurant);
