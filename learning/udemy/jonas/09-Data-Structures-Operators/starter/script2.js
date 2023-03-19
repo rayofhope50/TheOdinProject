@@ -166,9 +166,30 @@ const restaurant = {
 // add(...x);
 // restaurant.orderPizza('mushrooms', 'ketchup', 'olives');
 
-// && || operators chort circuting BUG BUG BUG
-console.log(undefined || 0 || '' || 'Hello' || 23 || null);
-const guests1 = restaurant.numGuests ? restaurant.numGuests : 10;
-console.log(guests1);
-const guests2 = restaurant.numGuests || 10;
-console.log(guests2);
+// // && || operators chort circuting BUG BUG BUG
+// console.log(undefined || 0 || '' || 'Hello' || 23 || null);
+// const guests1 = restaurant.numGuests ? restaurant.numGuests : 10;
+// console.log(guests1);
+// const guests2 = restaurant.numGuests || 10;
+// console.log(guests2);
+// restaurant.numGuests = 0;
+// const guests = restaurant.numGuests || 10;
+// console.log(guests);
+// /// BUG NULLISH ASSIGNMENT OP SKIPS || PROBLEM WIETH 0
+// const guestsRight = restaurant.numGuests ?? 10;
+// console.log(guestsRight);
+// const rest1 = {
+//   name: 'Capri',
+//   numGuests: 20,
+// };
+// const rest2 = {
+//   name: 'La Piazza',
+//   owner: 'Giovanni Rossi',
+// };
+
+// rest1.numGuests = rest1.numGuests || 10;
+// rest2.numGuests = rest2.numGuests || 10;
+// console.log(rest1.numGuests, rest2.numGuests);
+// rest1.owner &&= 'Annonymus';
+// rest2.owner &&= 'Annonymus';
+// console.log(rest1.owner, rest2.owner);
