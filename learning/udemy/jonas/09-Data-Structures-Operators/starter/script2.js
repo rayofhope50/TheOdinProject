@@ -226,25 +226,110 @@ const restaurant = {
 //   console.log(`On ${key} we open ar ${open} and close at ${close}`);
 // }
 
-// BUG SETS BUG
-const orderSet = new Set([
-  'Pasta',
-  'Pizza',
-  'Risotto',
-  'Pasta',
-  'Pizza',
-  'Risotto',
-]);
-console.log(orderSet);
-console.log(new Set('Jonas'));
-console.log(orderSet.size);
-for (const order of orderSet) console.log(order);
+// // BUG SETS BUG
+// const orderSet = new Set([
+//   'Pasta',
+//   'Pizza',
+//   'Risotto',
+//   'Pasta',
+//   'Pizza',
+//   'Risotto',
+// ]);
+// console.log(orderSet);
+// console.log(new Set('Jonas'));
+// console.log(orderSet.size);
+// for (const order of orderSet) console.log(order);
 
-const staff = ['Waiter', 'Chef', 'Waiter', 'Manager', 'Chef', 'Waiter'];
-const staffUnique = [...new Set(staff)];
-console.log(staffUnique);
+// const staff = ['Waiter', 'Chef', 'Waiter', 'Manager', 'Chef', 'Waiter'];
+// const staffUnique = [...new Set(staff)];
+// console.log(staffUnique);
 
-console.log(
-  new Set(['Waiter', 'Chef', 'Waiter', 'Manager', 'Chef', 'Waiter']).size
-);
-console.log(new Set('jonasschmedtmann').size);
+// console.log(
+//   new Set(['Waiter', 'Chef', 'Waiter', 'Manager', 'Chef', 'Waiter']).size
+// );
+// console.log(new Set('jonasschmedtmann').size);
+
+// //// BUG BUG MAP
+
+// const rest = new Map();
+// rest.set('name', 'Classico Italiano');
+// rest.set(1, 'Firenze, Italy');
+// console.log(rest.set(2, 'Lisbon, Portugal'));
+
+// rest
+//   .set('categories', ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'])
+//   .set('open', 11)
+//   .set('close', 23)
+//   .set(true, 'We are open :D')
+//   .set(false, 'We are closed :(');
+// console.log(rest.get('name'));
+// console.log(rest.get(true));
+
+// const time = 23;
+// console.log(rest.get(time > rest.get('open') && time < rest.get('close')));
+// const question = new Map([
+//   ['question', 'What is the best programming language in the world?'],
+//   [1, 'C'],
+//   [2, 'Java'],
+//   [3, 'JavaScript'],
+//   ['correct', 3],
+//   [true, 'Correct!!!!!!!!!!!!!!!'],
+//   [false, 'Try again :(((((((((('],
+// ]);
+// console.log(question);
+
+// // Convert object to map
+// console.log(Object.entries(openingHours));
+// const hoursMap = new Map(Object.entries(openingHours));
+// console.log(hoursMap);
+
+// // Quiz app
+// console.log(question.get('question'));
+// for (const [key, value] of question) {
+//   if (typeof key === 'number') console.log(`Answer ${key}: ${value}`);
+// }
+// const answer = Number(prompt('Your answer?'));
+// console.log(question.get(question.get('correct') === answer));
+
+// //// COnvert map to an array
+// console.log(...question);
+////// STRINGS BUG BUG BUG WORKING WITH STRINGS BUG
+const airline = 'TAP Air Portugal';
+const plane = 'A320';
+
+// console.log(plane[0]);
+// console.log(plane[1]);
+// console.log(plane[2]);
+// console.log('B737'[0]);
+
+// console.log(airline.length);
+// console.log('B737'.length);
+// console.log(airline.indexOf('r'));
+// console.log(airline.lastIndexOf('r'));
+// console.log(airline.indexOf('Portugal'));
+// console.log(airline.slice(4));
+// console.log(airline.slice(4, 7));
+// console.log(airline.slice(0, airline.indexOf(' ')));
+// console.log(airline.slice(airline.lastIndexOf(' ') + 1));
+
+// const checkMiddleSeat = function (seat) {
+//   // B and E are middle seats
+//   const s = seat.slice(-1);
+//   s == 'B' || s == 'E'
+//     ? console.log('This is middle seat')
+//     : console.log('No middle seat');
+//   console.log(s);
+// };
+
+// checkMiddleSeat('11B');
+// checkMiddleSeat('23C');
+// checkMiddleSeat('3E');
+
+console.log(airline.toLowerCase());
+console.log(airline.toUpperCase());
+
+const passanger = 'jOnAS';
+const passangerLower = passanger.toLowerCase();
+const passangerCorrect =
+  passangerLower[0].toUpperCase() + passangerLower.slice(1);
+console.log(passangerCorrect);
