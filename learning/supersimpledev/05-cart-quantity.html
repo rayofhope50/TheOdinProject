@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart Quantity</title>
+  </head>
+  <body>
+    <p></p>
+    <button class="quantity">Show Quantity</button>
+    <button class="addToCart">Add to Cart</button>
+    <button class="add2">+2</button>
+    <button class="add3">+3</button>
+    <button class="reset">Reset Cart</button>
+    <script>
+      let cartQuantity = 0;
+      //   let cartValue = console.log(`Cart quantity: ${cartQuantity}`);
+      document
+        .querySelector(".quantity")
+        .addEventListener("click", function () {
+          console.log(`Cart quantity: ${cartQuantity}`);
+        });
+      document
+        .querySelector(".addToCart")
+        .addEventListener("click", function () {
+          cartQuantity++;
+          console.log(`Cart quantity: ${cartQuantity}`);
+        });
+      document.querySelector(".add2").addEventListener("click", function () {
+        cartQuantity += 2;
+        console.log(`Cart quantity: ${cartQuantity}`);
+      });
+      document.querySelector(".add3").addEventListener("click", function () {
+        cartQuantity += 3;
+        console.log(`Cart quantity: ${cartQuantity}`);
+      });
+      document.querySelector(".reset").addEventListener("click", function () {
+        cartQuantity = 0;
+        console.log(`Cart was reset. \nCart quantity: ${cartQuantity}`);
+      });
+      let name = "Ray";
+      console.log(`My name is: ${name}`);
+      let cost = 5 + 2 * 3 + 9;
+      let tax = cost * 0.1;
+      console.log(`Cost of food: $${cost}`);
+      console.log(`Tax (10%): $${tax}`);
+      let totalCost = cost + tax;
+      console.log(`Total cost: $${totalCost}`);
+    </script>
+  </body>
+</html>
