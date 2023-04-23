@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors</title>
+  </head>
+  <body>
+    <p>Rock Paper Scissors</p>
+    <button class="rock">Rock</button>
+    <button class="paper">Paper</button>
+    <button class="scissors">Scissors</button>
+
+    <script>
+      const gameAlgo = function () {
+        randomNumber = Math.random();
+        if (randomNumber >= 0 && randomNumber < 1 / 3) {
+          console.log(`Computer picked rock Value ${randomNumber}`);
+        } else if (randomNumber >= 1 / 3 && randomNumber < 2 / 3) {
+          console.log(`Computer picked paper Value ${randomNumber}`);
+        } else if (randomNumber >= 2 / 3 && randomNumber < 1) {
+          console.log(`Computer picked scissors Value ${randomNumber}`);
+        }
+      };
+      document.querySelector(".rock").addEventListener("click", function () {
+        console.log(`You've picked rock`);
+        gameAlgo();
+      });
+      document.querySelector(".paper").addEventListener("click", function () {
+        console.log(`You've picked paper`);
+        gameAlgo();
+      });
+      document
+        .querySelector(".scissors")
+        .addEventListener("click", function () {
+          console.log(`You've picked scissors`);
+          gameAlgo();
+        });
+    </script>
+  </body>
+</html>
