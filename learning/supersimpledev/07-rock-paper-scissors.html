@@ -22,14 +22,14 @@
       document.querySelector(".paper").addEventListener("click", function () {
         playerPick = "paper";
         console.log(`You've picked paper`);
-        gameAlgo();
+        gameAlgo(playerPick);
       });
       document
         .querySelector(".scissors")
         .addEventListener("click", function () {
           playerPick = "scissors";
           console.log(`You've picked scissors`);
-          gameAlgo();
+          gameAlgo(playerPick);
         });
       let computerMove = "";
       let result = "";
