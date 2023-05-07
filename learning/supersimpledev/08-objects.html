@@ -8,23 +8,43 @@
   </head>
   <body>
     <script>
-      const product = {
-        name: "socks",
-        price: 1090,
+      // const product = {
+      //     name: "socks",
+      //     price: 1090,
+      //   };
+      //   // checking whats inside
+      //   console.log(product);
+      //   console.log(product.name);
+      //   console.log(product.price);
+      //   //changing property from this point onward
+      //   product.name = "cotton socks";
+      //   console.log(product);
+      //   // adding new value
+      //   product.newProperty = true;
+      //   console.log(product);
+      //   // remove value
+      //   delete product.newProperty;
+      //   console.log(product);
+      const product2 = {
+        name: "shirt",
+        "delivery-time": "1 day",
+        rating: {
+          stars: 4.5,
+          count: 87,
+        },
+        fun: function function1() {
+          console.log("function inside object");
+        },
       };
-      // checking whats inside
-      console.log(product);
-      console.log(product.name);
-      console.log(product.price);
-      //changing property from this point onward
-      product.name = "cotton socks";
-      console.log(product);
-      // adding new value
-      product.newProperty = true;
-      console.log(product);
-      // remove value
-      delete product.newProperty;
-      console.log(product);
+      console.log(product2);
+      console.log(product2.name);
+      console.log(product2["name"]);
+      //   bracket notation is used with unusual value names
+      // here js would think that this is math
+      console.log(product2["delivery-time"]);
+      console.log(product2.rating.count);
+      // accesing function inside an object
+      product2.fun();
     </script>
   </body>
 </html>
