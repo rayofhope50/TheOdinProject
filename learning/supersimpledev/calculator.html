@@ -21,7 +21,7 @@
       ><button class="btn9">9</button><button class="btnMulti">*</button>
     </p>
     <p>
-      <button class="btn0">0</button><button class="btn.">.</button
+      <button class="btn0">0</button><button class="btnFloat">.</button
       ><button class="btnSum">=</button><button class="btnDiv">/</button>
     </p>
     <p></p>
@@ -29,20 +29,53 @@
     <script>
       let calculation = "";
       document.querySelector(".btn1").addEventListener("click", function () {
-        calculation += "1";
-        console.log(calculation);
+        updateCalculation("1");
       });
       document.querySelector(".btn2").addEventListener("click", function () {
-        calculation += "2";
-        console.log(calculation);
+        updateCalculation("2");
       });
       document.querySelector(".btn3").addEventListener("click", function () {
-        calculation += "3";
-        console.log(calculation);
+        updateCalculation("3");
       });
       document.querySelector(".btnAdd").addEventListener("click", function () {
-        calculation += " + ";
-        console.log(calculation);
+        updateCalculation("+");
+      });
+      document.querySelector(".btn4").addEventListener("click", function () {
+        updateCalculation("4");
+      });
+      document.querySelector(".btn5").addEventListener("click", function () {
+        updateCalculation("5");
+      });
+      document.querySelector(".btn6").addEventListener("click", function () {
+        updateCalculation("6");
+      });
+      document.querySelector(".btnSub").addEventListener("click", function () {
+        updateCalculation("-");
+      });
+      document.querySelector(".btn7").addEventListener("click", function () {
+        updateCalculation("7");
+      });
+      document.querySelector(".btn8").addEventListener("click", function () {
+        updateCalculation("8");
+      });
+      document.querySelector(".btn9").addEventListener("click", function () {
+        updateCalculation("9");
+      });
+      document
+        .querySelector(".btnMulti")
+        .addEventListener("click", function () {
+          updateCalculation("*");
+        });
+      document.querySelector(".btn0").addEventListener("click", function () {
+        updateCalculation("0");
+      });
+      document
+        .querySelector(".btnFloat")
+        .addEventListener("click", function () {
+          updateCalculation(".");
+        });
+      document.querySelector(".btnDiv").addEventListener("click", function () {
+        updateCalculation("/");
       });
       document.querySelector(".btnSum").addEventListener("click", function () {
         calculation = eval(calculation);
@@ -53,6 +86,10 @@
         console.log("Selection was cleared");
         calculation = "";
       });
+      const updateCalculation = function (parameter) {
+        calculation += parameter;
+        console.log(calculation);
+      };
     </script>
   </body>
 </html>
