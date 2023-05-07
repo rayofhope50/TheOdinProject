@@ -33,12 +33,17 @@
           score.losses = 0;
           score.ties = 0;
           alert(`Score has been restarted to 0!`);
+          localStorage.removeItem("score");
         });
-      const score = {
-        wins: 0,
-        losses: 0,
-        ties: 0,
-      };
+      let score = JSON.parse(localStorage.getItem("score"));
+      if (!score) {
+        score = {
+          wins: 0,
+          losses: 0,
+          ties: 0,
+        };
+      }
+
       const gameAlgo = function (playerPick) {
         // complete game algo
         console.log(`You've picked ${playerPick}`);
@@ -83,6 +88,7 @@
           score.wins += 1;
         }
         console.log(score);
+        localStorage.setItem("score", JSON.stringify(score));
         return result;
       };
     </script>

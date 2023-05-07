@@ -45,6 +45,10 @@
       console.log(product2.rating.count);
       // accesing function inside an object
       product2.fun();
+      // converting JS to JSON !!!!!!!!!! BUG BUG
+      console.log(JSON.stringify(product2));
+      // converting JSON to JS !!!!!!!!!! BUG BUG BUG
+      console.log(JSON.parse(JSON.stringify(product2)));
     </script>
   </body>
 </html>
