@@ -11,6 +11,8 @@
     <button class="rock">Rock</button>
     <button class="paper">Paper</button>
     <button class="scissors">Scissors</button>
+    <p class="js-result"></p>
+    <p class="js-moves"></p>
     <p class="js-score"></p>
     <button class="resetScore">Reset Score</button>
 
@@ -33,17 +35,15 @@
           score.wins = 0;
           score.losses = 0;
           score.ties = 0;
-          alert(`Score has been restarted to 0!`);
           localStorage.removeItem("score");
+          updateScoreElement();
         });
       let score = JSON.parse(localStorage.getItem("score")) || {
         wins: 0,
         losses: 0,
         ties: 0,
       };
-      document.querySelector(
-        ".js-score"
-      ).innerHTML = `Wins: ${score.wins} Losses: ${score.losses} Ties: ${score.ties}`;
+      updateScoreElement();
 
       const gameAlgo = function (playerPick) {
         // complete game algo
@@ -51,13 +51,18 @@
         const computerMove = pickComputerMove();
         console.log(`Computer picked ${computerMove}`);
         const result = gameLogic(playerPick, computerMove);
+        updateScoreElement();
+        document.querySelector(".js-result").innerHTML = `${result}`;
+        document.querySelector(
+          ".js-moves"
+        ).innerHTML = `You picked ${playerPick}, and computer picked ${computerMove}`;
+      };
+
+      function updateScoreElement() {
         document.querySelector(
           ".js-score"
         ).innerHTML = `Wins: ${score.wins} Losses: ${score.losses} Ties: ${score.ties}`;
-        alert(
-          `You picked ${playerPick}. Computer picked ${computerMove}. ${result}\n Wins: ${score.wins} Losses: ${score.losses} Ties: ${score.ties}`
-        );
-      };
+      }
       const pickComputerMove = function () {
         // number picking / computer move picker
 

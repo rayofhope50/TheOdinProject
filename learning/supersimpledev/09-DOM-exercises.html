@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Exercises</title>
+  </head>
+  <body>
+    <button class="js-btn-heads">Heads</button>
+    <button class="js-btn-tails">Tails</button>
+    <p class="js-result"></p>
+    <input type="text" class="js-input" placeholder="Name" /><button
+      class="js-submit"
+    >
+      Submit
+    </button>
+    <p class="js-name"></p>
+    <script>
+      const submition = document.querySelector(".js-input");
+      const resultElem = document.querySelector(".js-result");
+      const inner = document.querySelector(".js-name").innerHTML;
+      document
+        .querySelector(".js-btn-heads")
+        .addEventListener("click", function () {
+          resultElem.innerHTML = "You chose: heads";
+        });
+      document
+        .querySelector(".js-btn-tails")
+        .addEventListener("click", function () {
+          resultElem.innerHTML = "You chose: tails";
+        });
+
+      document
+        .querySelector(".js-submit")
+        .addEventListener("click", function () {
+          inner = `Your name is ${submition.value}`;
+        });
+      document
+        .querySelector(".js-input")
+        .addEventListener("keypress", function () {
+          if (event.key === "Enter") {
+            inner = `Your name is ${submition.value}`;
+          }
+        });
+    </script>
+  </body>
+</html>

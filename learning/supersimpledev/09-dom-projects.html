@@ -9,6 +9,10 @@
   <body>
     <p>YouTube Subscribe Button</p>
     <button class="js-sub-btn">Subscribe</button>
+    <p>Amazon Shipping Calculator</p>
+    <input class="js-cost-input" placeholder="Cost of order" />
+    <button class="js-calculate">Calculate</button>
+    <p class="js-total-cost"></p>
     <script>
       const buttonElement = document.querySelector(".js-sub-btn");
       console.log(buttonElement.innerHTML);
@@ -22,6 +26,26 @@
             buttonElement.innerHTML = "Subscribe";
           }
         });
+      document
+        .querySelector(".js-calculate")
+        .addEventListener("click", function () {
+          calculateTotal();
+        });
+      document
+        .querySelector(".js-cost-input")
+        .addEventListener("keypress", function () {
+          if (event.key === "Enter") {
+            calculateTotal();
+          }
+        });
+      function calculateTotal() {
+        const inputElement = document.querySelector(".js-cost-input");
+        let cost = Number(inputElement.value);
+        if (cost < 40) {
+          cost += 10;
+        }
+        document.querySelector(".js-total-cost").innerHTML = `${cost}$`;
+      }
     </script>
   </body>
 </html>
