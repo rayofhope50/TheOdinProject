@@ -25,7 +25,7 @@
       //   // remove value
       //   delete product.newProperty;
       //   console.log(product);
-      const product2 = {
+      /* const product2 = {
         name: "shirt",
         "delivery-time": "1 day",
         rating: {
@@ -48,7 +48,44 @@
       // converting JS to JSON !!!!!!!!!! BUG BUG
       console.log(JSON.stringify(product2));
       // converting JSON to JS !!!!!!!!!! BUG BUG BUG
-      console.log(JSON.parse(JSON.stringify(product2)));
+      console.log(JSON.parse(JSON.stringify(product2))); 
+      */
+      console.log("hello".length);
+      console.log("hello".toUpperCase());
+      const object1 = {
+        message: "hello",
+      };
+      const object2 = object1;
+      object1.message = "Good job!";
+      console.log(object1);
+      const object3 = {
+        message: "Good Job!",
+      };
+      console.log(object3 === object1);
+      console.log(object2 === object1);
+      const object4 = {
+        message: "Good Job!",
+        price: 799,
+      };
+      //   const message = object4.message;
+      // destructuring takes message from inside object4 and saves as a var
+      const { message, price } = object4;
+      console.log(message);
+      console.log(price);
+      const object5 = {
+        // message: message,
+        // if value is the same as var it is the same as writing the one on top something like message +=
+        message,
+        // method: function function1() {
+        //   console.log("method");
+        // },
+        // shortcut for the one above is below
+        method() {
+          console.log("method");
+        },
+      };
+      console.log(object5);
+      object5.method();
     </script>
   </body>
 </html>

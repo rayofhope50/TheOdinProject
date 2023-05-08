@@ -35,14 +35,11 @@
           alert(`Score has been restarted to 0!`);
           localStorage.removeItem("score");
         });
-      let score = JSON.parse(localStorage.getItem("score"));
-      if (!score) {
-        score = {
-          wins: 0,
-          losses: 0,
-          ties: 0,
-        };
-      }
+      let score = JSON.parse(localStorage.getItem("score")) || {
+        wins: 0,
+        losses: 0,
+        ties: 0,
+      };
 
       const gameAlgo = function (playerPick) {
         // complete game algo
