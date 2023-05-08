@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Projects</title>
+  </head>
+  <body>
+    <p>YouTube Subscribe Button</p>
+    <button class="js-sub-btn">Subscribe</button>
+    <script>
+      const buttonElement = document.querySelector(".js-sub-btn");
+      console.log(buttonElement.innerHTML);
+      document
+
+        .querySelector(".js-sub-btn")
+        .addEventListener("click", function () {
+          if (buttonElement.innerText == "Subscribe") {
+            buttonElement.innerHTML = "Subscribed";
+          } else {
+            buttonElement.innerHTML = "Subscribe";
+          }
+        });
+    </script>
+  </body>
+</html>

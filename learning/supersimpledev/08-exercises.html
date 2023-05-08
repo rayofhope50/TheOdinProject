@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>08 Exercises</title>
+  </head>
+  <body>
+    <script>
+      const product = {
+        name: "basketball",
+        price: 2095,
+      };
+      const product2 = {
+        name: "football",
+        price: 3100,
+      };
+      console.log(product);
+      product.price += 500;
+      console.log(product);
+      product["delivery-time"] = "3 days";
+      console.log(product);
+      function comparePrice(a, b) {
+        console.log(`Product ${a < b ? b.name : a.name} is less expensive`);
+      }
+      comparePrice(product, product2);
+      function isSameProduct(one, two) {
+        console.log(
+          `Product ${
+            one.name === two.name
+              ? "has the same name"
+              : `${one.name} and ${two.name} are different products`
+          }`
+        );
+      }
+      isSameProduct(product, product2);
+    </script>
+  </body>
+</html>

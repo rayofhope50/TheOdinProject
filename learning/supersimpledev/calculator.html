@@ -27,7 +27,7 @@
     <p></p>
     <button class="clear">Clear</button>
     <script>
-      let calculation = "";
+      let calculation = localStorage.getItem("calculation") || "";
       document.querySelector(".btn1").addEventListener("click", function () {
         updateCalculation("1");
       });
@@ -85,10 +85,14 @@
       document.querySelector(".clear").addEventListener("click", function () {
         console.log("Selection was cleared");
         calculation = "";
+        localStorage.removeItem("calculation");
       });
       const updateCalculation = function (parameter) {
         calculation += parameter;
         console.log(calculation);
+        console.log(typeof calculation);
+        localStorage.setItem("calculation", calculation);
+        console.log(`Saved to storage ${localStorage.getItem("calculation")}`);
       };
     </script>
   </body>
