@@ -20,6 +20,7 @@ let score = JSON.parse(localStorage.getItem("score")) || {
   losses: 0,
   ties: 0,
 };
+
 updateScoreElement();
 
 const gameAlgo = function (playerPick) {
