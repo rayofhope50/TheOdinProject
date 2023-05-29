@@ -35,19 +35,23 @@
       //   }
       //   run(function () {
       //     console.log("Hello4");
-      //   });
-      // setTimeout(function () {
-      //   console.log("timeout");
-      // }, 3000);
-      // console.log("next line");
-      // setInterval(function () {
-      //   console.log("interval");
-      // }, 3000);
-      // console.log("next line 2");
+      // });
+      setTimeout(function () {
+        console.log("timeout");
+      }, 3000);
+      console.log("next line");
+      setInterval(function () {
+        console.log("interval");
+      }, 3000);
+      console.log("next line 2");
+
       ["make dinner", "wash dishes", "watch youtube"].forEach(function (
         value,
         index
       ) {
+        if (value === "wash dishes") {
+          return;
+        }
         console.log(index + 1);
         console.log(value);
       });
