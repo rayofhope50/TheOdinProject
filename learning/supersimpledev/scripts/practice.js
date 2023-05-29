@@ -26,4 +26,3 @@ function updateButton() {
     button.innerHTML = "Start";
   }
 }
-const 
