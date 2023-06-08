@@ -2,16 +2,21 @@
 
 let computerChoice = "";
 function playRound(computerSelection, playerSelection) {
-  console.log(computerSelection, playerSelection);
+  console.log(`Computer ${computerSelection}, player ${playerSelection}`);
   if (computerSelection.toUpperCase() === playerSelection.toUpperCase()) {
     return console.log("This is a tie");
   } else if (
-    computerSelection === "Scissors" &&
-    playerSelection.toUpperCase() === "PAPER"
+    (computerSelection === "Scissors" &&
+      playerSelection.toUpperCase() === "PAPER") ||
+    (computerSelection === "Rock" &&
+      playerSelection.toUpperCase() === "SCISSORS") ||
+    (computerSelection === "Paper" && playerSelection.toUpperCase() === "ROCK")
   ) {
-    return console.log("You loose Scissors beats paper");
+    return console.log(
+      `You loose ${computerSelection} beats ${playerSelection}`
+    );
   } else {
-    return console.log("You Win Scissors beats paper");
+    return console.log(`You Win ${playerSelection} beats ${computerSelection}`);
   }
 }
 
@@ -26,5 +31,5 @@ function getComputerChoice() {
   }
 }
 const computerSelection = getComputerChoice();
-const playerSelection = "paper";
+const playerSelection = prompt(`What's your pick?`);
 playRound(computerSelection, playerSelection);
