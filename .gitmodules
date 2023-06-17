@@ -1,0 +1,3 @@
+[submodule "submodules/javascript-exercise"]
+	path = submodules/javascript-exercise
+	url = https://github.com/rayofhope50/javascript-exercises-TOP
