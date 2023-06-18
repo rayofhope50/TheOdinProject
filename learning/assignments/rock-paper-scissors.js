@@ -3,6 +3,15 @@ let computerChoice = "";
 let winsPlayer = 0;
 let winsComputer = 0;
 let ties = 0;
+document.querySelector(".rock").addEventListener("click", function () {
+  game("Rock");
+});
+document.querySelector(".paper").addEventListener("click", function () {
+  game("Paper");
+});
+document.querySelector(".scissors").addEventListener("click", function () {
+  game("Scissors");
+});
 
 function playRound(computerSelection, playerSelection) {
   console.log(`Computer ${computerSelection}, player ${playerSelection}`);
@@ -38,19 +47,15 @@ function getComputerChoice() {
   }
 }
 
-function game(num) {
-  for (let i = 1; i <= num; i++) {
-    let computerSelection = getComputerChoice();
-    const playerSelection = prompt(
-      `What's your pick beterrn rock, paper and scissors?`
-    );
-    playRound(computerSelection, playerSelection);
-    console.log(`Current game: ${i}`);
-    console.log(
-      `Current score: ${ties} ties ${winsComputer} computer wins ${winsPlayer} player wins`
-    );
-  }
+function game(selection) {
+  let computerSelection = getComputerChoice();
+  const playerSelection = selection;
+  playRound(computerSelection, playerSelection);
+  console.log(`Current game: ${1}`);
+  console.log(
+    `Current score: ${ties} ties ${winsComputer} computer wins ${winsPlayer} player wins`
+  );
 }
-game(5);
+
 // const computerSelection = getComputerChoice();
 // const playerSelection = prompt(`What's your pick?`);
