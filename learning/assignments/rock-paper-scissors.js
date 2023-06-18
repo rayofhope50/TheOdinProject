@@ -12,12 +12,14 @@ document.querySelector(".paper").addEventListener("click", function () {
 document.querySelector(".scissors").addEventListener("click", function () {
   game("Scissors");
 });
+const score = document.querySelector(".score");
+const result = document.querySelector(".result");
 
 function playRound(computerSelection, playerSelection) {
   console.log(`Computer ${computerSelection}, player ${playerSelection}`);
   if (computerSelection.toUpperCase() === playerSelection.toUpperCase()) {
     ties++;
-    return console.log("This is a tie");
+    return (score.innerHTML = "LADIES AND GENTS A TIE");
   } else if (
     (computerSelection === "Scissors" &&
       playerSelection.toUpperCase() === "PAPER") ||
@@ -27,12 +29,10 @@ function playRound(computerSelection, playerSelection) {
   ) {
     winsComputer++;
 
-    return console.log(
-      `You loose ${computerSelection} beats ${playerSelection}`
-    );
+    return (score.innerHTML = "LOSER COMOUTER SCORES");
   } else {
     winsPlayer++;
-    return console.log(`You Win ${playerSelection} beats ${computerSelection}`);
+    return (score.innerHTML = "BOOM SCORE FOR THE PLAYER");
   }
 }
 
@@ -51,10 +51,12 @@ function game(selection) {
   let computerSelection = getComputerChoice();
   const playerSelection = selection;
   playRound(computerSelection, playerSelection);
-  console.log(`Current game: ${1}`);
-  console.log(
-    `Current score: ${ties} ties ${winsComputer} computer wins ${winsPlayer} player wins`
-  );
+  result.innerHTML = `Current score: ${ties} ties ${winsComputer} computer wins ${winsPlayer} player wins`;
+  if (winsPlayer == 5 || winsComputer == 5) {
+    result.innerHTML = `We have a winner ${
+      winsPlayer == 5 ? `Player wins` : `Computer wins!`
+    }`;
+  }
 }
 
 // const computerSelection = getComputerChoice();
