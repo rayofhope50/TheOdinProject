@@ -140,6 +140,10 @@ h1 {
     color: var(--clr-secondary-white);
 }
 
+.score:after {
+    background-color: var(--clr-primary);
+}
+
 .button {
     cursor: pointer;
     background-color: var(--clr-primary);
