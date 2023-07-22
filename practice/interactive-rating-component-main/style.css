@@ -1,10 +1,5 @@
 :root {
-    --clr-primary--hsl: 25, 97%, 53%;
-    --clr-secondary-white: hsl(0, 0%, 100%);
-    --clr-secondary-light-grey: hsl(217, 12%, 63%);
-    --clr-secondary-medium-gray: hsl(216, 12%, 54%);
-    --clr-secondary-dark-blue: hsl(213, 19%, 18%);
-    --clr-secondary-vdark-blue: hsl(216, 12%, 8%);
+
     --clr-primary: hsl(25, 97%, 53%);
     --clr-secondary-white: hsl(0, 0%, 100%);
     --clr-secondary-light-grey: hsl(217, 12%, 63%);
@@ -85,7 +80,7 @@ html {
 
 body {
     font-family: var(--ff-overpass);
-    width: 450px;
+    width: 400px;
     height: 400px;
     background-color: var(--clr-secondary-dark-blue);
     border-radius: 25px;
@@ -96,9 +91,8 @@ body {
     margin: 2rem;
 }
 
-/* var(--clr-secondary-medium-gray) */
 .wrapper {
-    background-color: hsla(216, 12%, 54%, 1);
+    background-color: hsla(216, 12%, 54%, 0.2);
     height: 45px;
     width: 45px;
     display: flex;
@@ -107,15 +101,59 @@ body {
     border-radius: 25px;
 }
 
-/* .star {
-    background-color: var(--clr-secondary-medium-gray);
-    height: 30px;
-    width: 30px;
-    border-radius: 50px;
-
-} */
-
 .grid {
     display: grid;
-    grid-template-rows: 1fr 2fr 1fr 1fr;
+    grid-template-rows: 1fr 2fr 1fr 0.7fr;
+}
+
+
+.para {
+    color: hsla(0, 0%, 100%, 0.3);
+    font-size: var(--fs-paragraph);
+}
+
+h1 {
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.score {
+    height: 45px;
+    width: 45px;
+    aspect-ratio: 1/1;
+    border-radius: 45px;
+    border: none;
+    background-color: hsla(216, 12%, 54%, 0.2);
+    color: hsla(0, 0%, 100%, 0.3);
+    cursor: pointer;
+    font-weight: bold;
+
+}
+
+.score:active {
+    background-color: var(--clr-primary);
+    color: var(--clr-secondary-white);
+}
+
+.button {
+    cursor: pointer;
+    background-color: var(--clr-primary);
+    border: none;
+    color: white;
+    letter-spacing: 3px;
+    border-radius: 25px;
+}
+
+.button:active {
+    background-color: var(--clr-secondary-white);
+    color: var(--clr-primary);
+}
+
+.nodisplay {
+    display: none;
 }
