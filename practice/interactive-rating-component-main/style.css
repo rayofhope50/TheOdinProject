@@ -1,0 +1,121 @@
+:root {
+    --clr-primary--hsl: 25, 97%, 53%;
+    --clr-secondary-white: hsl(0, 0%, 100%);
+    --clr-secondary-light-grey: hsl(217, 12%, 63%);
+    --clr-secondary-medium-gray: hsl(216, 12%, 54%);
+    --clr-secondary-dark-blue: hsl(213, 19%, 18%);
+    --clr-secondary-vdark-blue: hsl(216, 12%, 8%);
+    --clr-primary: hsl(25, 97%, 53%);
+    --clr-secondary-white: hsl(0, 0%, 100%);
+    --clr-secondary-light-grey: hsl(217, 12%, 63%);
+    --clr-secondary-medium-gray: hsl(216, 12%, 54%);
+    --clr-secondary-dark-blue: hsl(213, 19%, 18%);
+    --clr-secondary-vdark-blue: hsl(216, 12%, 8%);
+    --fs-paragraph: 15px;
+    --fw-smaller: 400;
+    --fw-bigger: 700;
+    --ff-overpass: "Overpass", sans-serif;
+
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1;
+}
+
+#root,
+#__next {
+    isolation: isolate;
+}
+
+html {
+    background-color: var(--clr-secondary-vdark-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    font-family: var(--ff-overpass);
+    width: 450px;
+    height: 400px;
+    background-color: var(--clr-secondary-dark-blue);
+    border-radius: 25px;
+    display: flex;
+}
+
+.content {
+    margin: 2rem;
+}
+
+/* var(--clr-secondary-medium-gray) */
+.wrapper {
+    background-color: hsla(216, 12%, 54%, 1);
+    height: 45px;
+    width: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+}
+
+/* .star {
+    background-color: var(--clr-secondary-medium-gray);
+    height: 30px;
+    width: 30px;
+    border-radius: 50px;
+
+} */
+
+.grid {
+    display: grid;
+    grid-template-rows: 1fr 2fr 1fr 1fr;
+}
