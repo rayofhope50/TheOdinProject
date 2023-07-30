@@ -18,7 +18,7 @@
 
   <!-- Rating state start -->
 
-  <div class="content grid ">
+  <div class="content grid">
     <div class="wrapper">
       <svg class="star" width="17" height="16" xmlns="http://www.w3.org/2000/svg">
         <path
@@ -34,9 +34,7 @@
       </div>
     </div>
     <div class="scorring flex">
-      <label for="myButton" class="button"><span class="score">1</span>
-      </label>
-      <input type="checkbox" id="myButton">
+      <button class="score">1</button>
       <button class="score">2</button>
       <button class="score">3</button>
       <button class="score">4</button>
@@ -46,7 +44,7 @@
   </div>
   <!-- Rating state end -->
   <!-- Thank you state start -->
-  <div class="end__content nodisplay">
+  <div class="end__content flex2 nodisplay ">
     <svg width="162" height="108" xmlns="http://www.w3.org/2000/svg">
       <g fill="none">
         <path
@@ -83,15 +81,15 @@
           fill="#FFF" />
       </g>
     </svg>
+    <div class="scoring">You selected <span>0</span> out of 5</div>
+    <div class="para grid2">
+      <h1 class="thanks">Thank you!</h1>
+      <p class="grid2">
+        We appreciate you taking the time to give a rating. If you ever need more support,
+        don’t hesitate to get in touch!
+      </p>
+    </div>
   </div>
-
-  <!-- Thank you state end -->
-
-  <!-- You selected out of 5
-    Thank you!
-    We appreciate you taking the time to give a rating. If you ever need more support,
-    don’t hesitate to get in touch! -->
-
 
 
 
@@ -99,6 +97,7 @@
 
 
 </body>
-<!-- <script src="functionality.js"></script> -->
+
+<script src="functionality.js"></script>
 
 </html>
