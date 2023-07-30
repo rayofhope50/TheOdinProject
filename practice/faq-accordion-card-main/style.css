@@ -22,7 +22,6 @@
 
 html,
 body {
-    height: 100%;
     font-family: var(--f-f);
 }
 
@@ -71,11 +70,12 @@ h3 {
 
 h1 {
     text-align: center;
+    margin-bottom: 1rem;
 }
 
 html {
     background: linear-gradient(0deg, var(--clr-gradient-blue) 0%, var(--clr-gradient-violet) 100%);
-    padding: 9rem 1rem 0rem 1rem;
+    padding: 9rem 1rem 2rem 1rem;
 
 
 }
@@ -85,11 +85,12 @@ h3,
     font-size: var(--f-fs);
     font-weight: inherit;
     color: var(--clr-text-grayish);
+    line-height: 1.25rem;
 }
 
 body {
-    min-height: 100vw;
     background-color: white;
+    border-radius: 20px;
 }
 
 .shadow {
@@ -118,4 +119,9 @@ body {
 
 .faq__body {
     margin: 0 1rem 0 1rem;
+}
+
+.faq__item {
+    border-bottom: 1px solid var(--clr-dividers);
+    padding: 1rem 0 1rem 0;
 }
