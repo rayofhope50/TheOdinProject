@@ -5,6 +5,8 @@ document.querySelector(".buttonSub").addEventListener("click", function () {
 function submitAction() {
   document.querySelector(".content").classList.add("nodisplay");
   document.querySelector(".end__content").classList.remove("nodisplay");
+  document.getElementById("givenScore").innerHTML =
+    localStorage.getItem("scores");
 }
 const scoreBtn = document.querySelectorAll(".score");
 
