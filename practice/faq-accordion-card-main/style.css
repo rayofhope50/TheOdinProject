@@ -83,6 +83,8 @@ html {
 h3,
 .faq__answear {
     font-size: var(--f-fs);
+    font-weight: inherit;
+    color: var(--clr-text-grayish);
 }
 
 body {
@@ -100,4 +102,20 @@ body {
     aspect-ratio: 1;
     top: 5px;
     right: 48px;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.arrow {
+    height: 8px;
+    width: 10px;
+}
+
+.faq__body {
+    margin: 0 1rem 0 1rem;
 }
