@@ -115,6 +115,12 @@ body {
 .arrow {
     height: 8px;
     width: 10px;
+    transform-origin: center center;
+    transition: transform 0.5s ease;
+}
+
+.rotate180 {
+    transform: rotate(180deg);
 }
 
 .faq__body {
