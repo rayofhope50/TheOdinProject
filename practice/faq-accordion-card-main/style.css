@@ -1,0 +1,103 @@
+:root {
+    --clr-text-dark-blue: hsl(238, 29%, 16%);
+    --clr-text-red: hsl(14, 88%, 65%);
+    --clr-text-dark-grayish: hsl(237, 12%, 33%);
+    --clr-text-grayish: hsl(240, 6%, 50%);
+    --clr-dividers: hsl(240, 5%, 91%);
+    --clr-gradient-violet: hsl(273, 75%, 66%);
+    --clr-gradient-blue: hsl(240, 73%, 65%);
+    --f-fs: 0.75rem;
+    --f-f: 'Kumbh Sans', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+html,
+body {
+    height: 100%;
+    font-family: var(--f-f);
+}
+
+body {
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1;
+}
+
+#root,
+#__next {
+    isolation: isolate;
+}
+
+h1 {
+    text-align: center;
+}
+
+html {
+    background: linear-gradient(0deg, var(--clr-gradient-blue) 0%, var(--clr-gradient-violet) 100%);
+    padding: 9rem 1rem 0rem 1rem;
+
+
+}
+
+h3,
+.faq__answear {
+    font-size: var(--f-fs);
+}
+
+body {
+    min-height: 100vw;
+    background-color: white;
+}
+
+.shadow {
+    margin: 0 auto 2rem auto;
+}
+
+.woman {
+    position: absolute;
+    height: 240px;
+    aspect-ratio: 1;
+    top: 5px;
+    right: 48px;
+}
