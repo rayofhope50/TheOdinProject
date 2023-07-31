@@ -1,6 +1,8 @@
 "use strict";
-const image = document.getElementsByClassName("arrow");
+const images = document.querySelectorAll(".arrow");
 
-image.addEventListener("click", () => {
-  image[0].classList.toggle("rotate180");
+images.forEach(function (image) {
+  image.addEventListener("click", function () {
+    this.classList.toggle("rotate180");
+  });
 });
