@@ -1,8 +1,14 @@
 "use strict";
-const images = document.querySelectorAll(".arrow");
+const headers = document.querySelectorAll(".flex");
 
-images.forEach(function (image) {
-  image.addEventListener("click", function () {
-    this.classList.toggle("rotate180");
+headers.forEach(function (header) {
+  header.addEventListener("click", function () {
+    header.classList.toggle("active");
+    const faqBody = header.nextElementSibling;
+    if (header.classList.contains("active")) {
+      faqBody.style.maxHeight = faqBody.scrollHeight + "px";
+    } else {
+      faqBody.style.maxHeight = 0;
+    }
   });
 });
