@@ -1,0 +1,77 @@
+:root {
+    --clr-grayish-blue: hsl(217, 19%, 35%);
+    --clr-dark-blue: hsl(214, 17%, 51%);
+    --clr-gayish-blue: hsl(212, 23%, 69%);
+    --clr-light-blue: hsl(210, 46%, 95%);
+    --f-fs: 0.8125rem;
+    --f-f: 'Manrope', sans-serif;
+}
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+html,
+body {
+    font-family: var(--f-f);
+}
+
+body {
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.75rem;
+    font-size: 1.125rem;
+}
+
+#root,
+#__next {
+    isolation: isolate;
+}
+
+.right__pannel {
+    padding: 2rem;
+    font-size: var(--f-fs);
+}
+
+.title {
+    margin-bottom: 1rem;
+}
