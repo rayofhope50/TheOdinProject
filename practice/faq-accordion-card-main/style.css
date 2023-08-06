@@ -75,9 +75,8 @@ h1 {
 
 html {
     background: linear-gradient(0deg, var(--clr-gradient-blue) 0%, var(--clr-gradient-violet) 100%);
-    /* background-size: 1440px 1440px; */
-    padding: 9rem 1rem 2rem 1rem;
-    /* background-repeat: no-repeat; */
+    padding: 9rem 1rem 5rem 1rem;
+
 }
 
 h3,
@@ -93,6 +92,7 @@ body {
     border-radius: 20px;
     max-width: 343px;
     margin: 0 auto;
+    height: 560px;
 }
 
 
@@ -119,27 +119,28 @@ body {
 
 .block {
     background-image: url(./images/illustration-box-desktop.svg);
-    height: 191px;
-    width: 184px;
+    height: 210px;
+    width: 202px;
+    background-size: cover;
     display: none;
+    background-repeat: no-repeat;
 }
 
 .right__pannel {
     position: relative;
 }
 
-.flex {
+.faq__header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
+    cursor: pointer;
+    position: relative;
+    color: var(--clr-text-grayish);
 }
 
-.arrow {
-    height: 8px;
-    width: 10px;
-    transform-origin: center center;
-    transition: transform 0.5s ease;
+.faq__header:hover {
+    color: var(--clr-text-red);
 }
 
 .faq__body {
@@ -151,13 +152,19 @@ body {
     padding: 1rem 0 1rem 0;
 }
 
-.flex::after {
+.faq__header::after {
     content: url(./images/icon-arrow-down.svg);
     transition: transform 0.3s ease-out;
 }
 
-.flex.active::after {
+.faq__header.active::after {
     transform: rotate(180deg);
+
+}
+
+.active {
+    color: black;
+    font-weight: bold;
 }
 
 .faq__answear {
@@ -166,17 +173,74 @@ body {
     overflow: hidden;
 }
 
+.faq__answear__body {
+    line-height: 1.5rem;
+}
+
+/* .faq__answear,
+.far__header {
+    font-size: 12px;
+} */
 
 @media (min-width: 1430px) {
+    html {
+        height: 900px;
+        overflow: hidden;
+    }
+
     .woman {
         background-image: url(./images/illustration-woman-online-desktop.svg);
-        width: 472px;
-        height: 359px;
+        width: 519px;
+        height: 394px;
+        background-size: cover;
+        top: 70px;
+        right: 050px;
+        z-index: 1;
+
     }
 
     .shadow {
         background-image: url(./images/bg-pattern-desktop.svg);
-        width: 472px;
-        height: 359px;
+        height: 945px;
+        width: 966px;
+        position: absolute;
+        background-size: cover;
+        top: -270px;
+        left: -570px;
+    }
+
+    .block {
+        display: block;
+        position: absolute;
+        z-index: 2;
+        bottom: 180px;
+        left: 162px;
+
+    }
+
+    body {
+        max-width: 1000px;
+        padding: 0 2rem 4rem 2rem;
+        height: 550px;
+        overflow: hidden;
+
+
+    }
+
+    .faq__body {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding-top: 2rem;
+
+    }
+
+    .left__pannel {
+        padding: 2rem;
+    }
+
+    h1 {
+        text-align: left;
+        margin-bottom: 2rem;
+        font-size: 3rem;
     }
 }
