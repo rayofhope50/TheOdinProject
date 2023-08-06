@@ -91,24 +91,41 @@ h3,
 body {
     background-color: white;
     border-radius: 20px;
-    max-width: 375px;
+    max-width: 343px;
     margin: 0 auto;
 }
 
 
 .shadow {
     margin: 0 auto 2rem auto;
-
+    background-image: url(./images/bg-pattern-mobile.svg);
+    height: 104px;
+    width: 240px;
 }
 
 .woman {
-    position: absolute;
+    /* position: absolute;
     height: 240px;
     width: 100%;
-    /* Add this */
-    aspect-ratio: 1;
     top: 6px;
-    right: 68px;
+    right: 68px; */
+    background-image: url(./images/illustration-woman-online-mobile.svg);
+    height: 180px;
+    width: 237px;
+    position: absolute;
+    top: -106px;
+    right: 38px;
+}
+
+.block {
+    background-image: url(./images/illustration-box-desktop.svg);
+    height: 191px;
+    width: 184px;
+    display: none;
+}
+
+.right__pannel {
+    position: relative;
 }
 
 .flex {
@@ -147,4 +164,19 @@ body {
     max-height: 0px;
     transition: max-height 0.2s ease-out;
     overflow: hidden;
+}
+
+
+@media (min-width: 1430px) {
+    .woman {
+        background-image: url(./images/illustration-woman-online-desktop.svg);
+        width: 472px;
+        height: 359px;
+    }
+
+    .shadow {
+        background-image: url(./images/bg-pattern-desktop.svg);
+        width: 472px;
+        height: 359px;
+    }
 }
