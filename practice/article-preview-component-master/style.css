@@ -21,6 +21,7 @@
 html,
 body {
     font-family: var(--f-f);
+    height: 100%;
 }
 
 body {
@@ -70,9 +71,8 @@ h3 {
 body {
     display: flex;
     justify-content: center;
-    align-content: center;
+    align-items: center;
     background-color: var(--clr-light-blue);
-    padding-top: 5rem;
     font-size: var(--f-fs);
 
 }
@@ -81,8 +81,6 @@ body {
     width: 336px;
     background-color: white;
     border-radius: 10px;
-    overflow: hidden;
-    position: relative;
 }
 
 .title {
@@ -100,6 +98,19 @@ body {
         transform: translateY(-7%);
     }
 
+    .wrapp {
+        position: relative;
+        overflow: hidden;
+
+    }
+
+    .social.active {
+        bottom: -1px;
+    }
+
+    .social {
+        bottom: -80px;
+    }
 }
 
 
@@ -161,7 +172,7 @@ span {
     height: 70px;
     width: 336px;
     background-color: var(--clr-grayish-blue);
-    bottom: -80px;
+
     color: white;
     display: flex;
     align-items: center;
@@ -188,9 +199,7 @@ span {
     padding-right: 1rem;
 }
 
-.social.active {
-    bottom: -1px;
-}
+
 
 .svg__wrapper.active {
     background-color: #6E8098;
@@ -200,35 +209,85 @@ span {
     fill: #b9c9dd;
 }
 
+
 @media (min-width: 1430px) {
     .wrapp {
         width: 720px;
         height: 288px;
         background-color: white;
         border-radius: 10px;
-        overflow: hidden;
         position: relative;
     }
 
     .grid {
         display: grid;
-        grid-template-columns: 300px 420px;
+        grid-template-columns: 290px 430px;
         height: 288px;
     }
 
     .left__pannel {
         width: 300px;
         height: 288px;
-        overflow: hidden;
     }
 
     .left__pannel img {
-        /* transform: scale(1.2);
-        left: 30px;
-        top: 25px;
-        position: relative; */
-        overflow: clip;
-        overflow-clip-margin: content-box;
+        position: absolute;
+        height: 288px;
+        z-index: 0;
+
     }
 
+    .right__pannel {
+        z-index: 1;
+        background-color: white;
+        height: 288px;
+        padding: 2.5rem 2.5rem 2.5rem 2.5rem;
+
+
+    }
+
+    .title {
+        font-size: 1.250rem;
+
+    }
+
+    .text {
+        padding: 1rem 0 1rem 0;
+
+    }
+
+    .social {
+
+        position: absolute;
+        height: 50px;
+        width: 250px;
+        background-color: var(--clr-grayish-blue);
+        bottom: 80px;
+        color: white;
+        display: flex;
+        align-items: center;
+        padding-left: 2rem;
+        right: -80px;
+        z-index: 2;
+        transition: display 2s linear;
+        display: none;
+        border-radius: 10px;
+
+    }
+
+    .social.active {
+        display: block;
+
+    }
+
+    .social__share {
+        letter-spacing: 0.375rem;
+        padding-right: 1rem;
+    }
+
+    .buttons>svg {
+        display: inline-block;
+        margin-right: 0.75rem;
+
+    }
 }
