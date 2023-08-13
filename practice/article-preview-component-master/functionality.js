@@ -6,6 +6,6 @@ const SvgVisible = document.getElementsByClassName("share");
 
 shareBtn.addEventListener("click", () => {
   socialActive.classList.toggle("active");
-  BtnVisible.classList.toggle("active");
+  //   BtnVisible.classList.toggle("active");
   SvgVisible[0].classList.toggle("active");
 });
