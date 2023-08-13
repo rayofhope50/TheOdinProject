@@ -257,7 +257,6 @@ span {
     }
 
     .social {
-
         position: absolute;
         height: 50px;
         width: 250px;
@@ -269,14 +268,25 @@ span {
         padding-left: 2rem;
         right: -80px;
         z-index: 2;
-        transition: display 2s linear;
-        display: none;
+        transition: visibility 0.5s linear;
+        visibility: hidden;
         border-radius: 10px;
 
     }
 
+    .social .triangle {
+        height: 0;
+        width: 0;
+        border: 15px solid transparent;
+        border-bottom: 0;
+        border-top: 15px solid var(--clr-grayish-blue);
+        position: absolute;
+        bottom: -10px;
+        left: 98px;
+    }
+
     .social.active {
-        display: block;
+        visibility: visible;
 
     }
 
