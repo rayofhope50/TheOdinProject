@@ -71,7 +71,7 @@ body {
     display: flex;
     justify-content: center;
     align-content: center;
-    background-color: var(--clr-grayish-blue);
+    background-color: var(--clr-light-blue);
     padding-top: 5rem;
     font-size: var(--f-fs);
 
@@ -79,9 +79,10 @@ body {
 
 .wrapp {
     width: 336px;
-    background-color: var(--clr-light-blue);
+    background-color: white;
     border-radius: 10px;
     overflow: hidden;
+    position: relative;
 }
 
 .title {
@@ -115,6 +116,7 @@ body {
 
 .title {
     margin: 0;
+    color: hsla(0, 0%, 0%, 0.6)
 }
 
 h1 {
@@ -123,14 +125,73 @@ h1 {
 
 .text {
     padding: 1rem 0 2rem 0;
+    color: var(--clr-dark-blue);
 }
 
 span {
     display: block;
-
+    color: var(--clr-grayish-blue);
 }
 
 .name {
     margin-left: 1rem;
+    line-height: 1.25rem;
+}
 
+.svg__wrapper {
+    width: 32px;
+    height: 32px;
+    border-radius: 30px;
+    background-color: var(--clr-light-blue);
+}
+
+.flex2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.social {
+    position: absolute;
+    height: 70px;
+    width: 336px;
+    background-color: var(--clr-grayish-blue);
+    bottom: -80px;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding-left: 2rem;
+    transition: bottom 1s ease;
+}
+
+.buttons {
+    margin-top: 3px;
+}
+
+.buttons>svg {
+    display: inline-block;
+    margin-right: 0.75rem;
+
+}
+
+.share {
+    fill: #6E8098;
+}
+
+.social__share {
+    letter-spacing: 0.375rem;
+    padding-right: 1rem;
+}
+
+.social.active {
+    bottom: -1px;
+}
+
+.svg__wrapper.active {
+    background-color: #6E8098;
+}
+
+.share.active {
+    fill: #b9c9dd;
 }
