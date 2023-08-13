@@ -172,7 +172,6 @@ span {
     height: 70px;
     width: 336px;
     background-color: var(--clr-grayish-blue);
-
     color: white;
     display: flex;
     align-items: center;
@@ -269,7 +268,7 @@ span {
         right: -80px;
         z-index: 2;
         transition: visibility 0.5s linear;
-        visibility: hidden;
+        visibility: hidden !important;
         border-radius: 10px;
 
     }
