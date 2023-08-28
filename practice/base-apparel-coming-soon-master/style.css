@@ -7,6 +7,9 @@
     --f-f: 'Josefin Sans', sans-serif;
     --gradient-one: linear-gradient(135deg, hsl(0, 0%, 100%) 0%, hsl(0, 100%, 98%) 100%);
     --gradient-two: linear-gradient(135deg, hsl(0, 80%, 86%) 0%, hsl(0, 74%, 74%) 100%);
+    --f-fw-300: 300;
+    --f-fw-400: 400;
+    --f-fw-600: 600;
 }
 
 
@@ -24,6 +27,7 @@ html,
 body {
     font-family: var(--f-f);
     height: 100%;
+    font-size: 16px;
 }
 
 body {
@@ -68,4 +72,46 @@ h3 {
 #root,
 #__next {
     isolation: isolate;
+}
+
+@media (max-width: 1000px) {
+    body {
+        display: flex;
+        justify-content: center;
+    }
+
+    .grid {
+        max-width: 375px;
+    }
+
+    .logo>img {
+        height: 20px;
+    }
+
+    .logo {
+        height: 80px;
+        padding-top: 30px;
+        padding-left: 30px;
+
+    }
+
+    .text {
+        text-align: center;
+        margin-top: 3.75rem;
+        margin-left: 1.25rem;
+        margin-right: 1.25rem;
+    }
+
+    .title {
+        font-size: 2.5rem;
+        font-weight: var(--f-fw-600);
+        line-height: 3rem;
+        letter-spacing: 0.5rem;
+        /* padding: 0 1rem 0; */
+    }
+
+    .paragraph {
+        line-height: 1.5rem;
+        font-size: var(--f-fw-300);
+    }
 }
