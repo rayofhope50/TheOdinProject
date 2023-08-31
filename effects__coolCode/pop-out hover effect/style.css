@@ -1,0 +1,78 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+html,
+body {
+    font-family: var(--f-f);
+    height: 100%;
+    font-size: 16px;
+}
+
+body {
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.75rem;
+    font-size: 1.125rem;
+}
+
+#root,
+#__next {
+    isolation: isolate;
+}
+
+.person {
+    max-width: 20rem;
+    margin-inline: auto;
+    position: relative;
+}
+
+.person__circle {
+    position: absolute;
+    height: 70%;
+    bottom: 0;
+    /* because of use inset it allows for use of margin inline to place it in the middle of the parent container */
+    inset: auto 0 0;
+    aspect-ratio: 1 / 1;
+    margin-inline: auto;
+    border-radius: 50%;
+    object-fit: cover;
+}

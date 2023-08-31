@@ -134,6 +134,7 @@ h3 {
         background-image: var(--gradient-two);
         border-radius: 50px;
         border: none;
+        cursor: pointer;
 
     }
 
@@ -173,4 +174,8 @@ h3 {
         font-weight: var(--f-fw-300);
         color: var(--clr-primary-red);
     }
+
+    /* button:hover {} */
 }
+
+@media (min-width: 1001px) {}
