@@ -54,20 +54,41 @@ h3 {
     font-size: 1.125rem;
 }
 
+body {
+    margin-top: 10rem;
+
+
+}
+
 #root,
 #__next {
     isolation: isolate;
 }
 
 .person {
-    max-width: 20rem;
+    max-width: 15rem;
     margin-inline: auto;
     position: relative;
+    --tranform-speed: 250ms;
+}
+
+.person__container {
+    aspect-ratio: 1 / 1.5;
+    display: grid;
+    align-items: end;
+    border-radius: 0 0 100vw 100vw;
+    overflow: hidden;
+    transition: transform var(--tranform-speed) ease-in-out
+}
+
+/* if use scaleX or scaleY it will only gron in those directoins */
+.person__container:hover {
+    transform: scale(1.1);
 }
 
 .person__circle {
     position: absolute;
-    height: 70%;
+    width: 100%;
     bottom: 0;
     /* because of use inset it allows for use of margin inline to place it in the middle of the parent container */
     inset: auto 0 0;
@@ -75,4 +96,12 @@ h3 {
     margin-inline: auto;
     border-radius: 50%;
     object-fit: cover;
+}
+
+.person__img {
+    transition: transform var(--tranform-speed) ease-in-out;
+}
+
+.person__container:hover .person__img {
+    transform: scale(1.1) translateY(-1rem);
 }

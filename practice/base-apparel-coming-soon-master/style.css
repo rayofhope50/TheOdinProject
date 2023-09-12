@@ -7,6 +7,7 @@
     --f-f: 'Josefin Sans', sans-serif;
     --gradient-one: linear-gradient(135deg, hsl(0, 0%, 100%) 0%, hsl(0, 100%, 98%) 100%);
     --gradient-two: linear-gradient(135deg, hsl(0, 80%, 86%) 0%, hsl(0, 74%, 74%) 100%);
+    --gradient-three: linear-gradient(135deg, hsl(0, 80%, 86%) 0%, hsl(0, 100%, 98%) 100%);
     --f-fw-300: 300;
     --f-fw-400: 400;
     --f-fw-600: 600;
@@ -74,10 +75,13 @@ h3 {
     isolation: isolate;
 }
 
+body {
+    display: flex;
+    justify-content: center;
+}
+
 @media (max-width: 1000px) {
     body {
-        display: flex;
-        justify-content: center;
         height: 450px;
     }
 
@@ -142,6 +146,11 @@ h3 {
         margin-left: 1.25rem;
     }
 
+    .button:hover {
+        background-image: var(--gradient-three);
+
+    }
+
     .email {
         border-radius: 50px;
         border: 1px solid var(--clr-primary-red);
@@ -175,7 +184,44 @@ h3 {
         color: var(--clr-primary-red);
     }
 
-    /* button:hover {} */
+    .back {
+        visibility: hidden;
+    }
+
 }
 
-@media (min-width: 1001px) {}
+@media (min-width: 1001px) {
+    html {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    body {
+        height: 600px;
+        max-width: 1440px;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: 0.6fr 0.4fr;
+        grid-template-rows: 100px 1fr;
+        height: 100%;
+        position: relative;
+    }
+
+    .woman {
+        justify-self: stretch;
+        grid-row: span 2;
+    }
+
+    .back {
+        visibility: visible;
+        background-image: url(./images/bg-pattern-desktop.svg);
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 60%;
+        z-index: -1;
+    }
+}
