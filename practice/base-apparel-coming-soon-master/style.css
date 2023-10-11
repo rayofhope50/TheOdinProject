@@ -119,21 +119,31 @@ body {
 
 .email__field {
     display: flex;
-    margin: 1.5rem 2rem 0 2rem;
+    margin: 1.75rem 2rem 0 2rem;
     position: relative;
 }
 
 .email__field>input {
     flex: 1;
-    padding: 0.5rem;
+    padding: 0.5rem 0.5rem 0.5rem 1rem;
     border-radius: 25px;
     border: 1px solid var(--clr-primary-red);
     color: var(--clr-primary-red);
+    opacity: 0.6;
 }
 
 .email__field>button {
     position: absolute;
-    height: 32px;
+    height: 100%;
+    width: 60px;
+    border-radius: 20px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 0;
+    background-image: var(--gradient-two);
+
 }
 
 @media (max-width: 1000px) {
