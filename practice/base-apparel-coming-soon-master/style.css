@@ -75,153 +75,91 @@ h3 {
     isolation: isolate;
 }
 
+/* placeholder for 100% support */
+::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: var(--clr-primary-red);
+}
+
+::-moz-placeholder {
+    /* Firefox 19+ */
+    color: var(--clr-primary-red);
+}
+
+:-ms-input-placeholder {
+    /* IE 10+ */
+    color: var(--clr-primary-red);
+}
+
+:-moz-placeholder {
+    /* Firefox 18- */
+    color: var(--clr-primary-red);
+}
+
 body {
     display: flex;
     justify-content: center;
 }
 
-@media (max-width: 1000px) {
-    body {
-        height: 450px;
-    }
+.title {
+    font-size: 2.6125rem;
+    letter-spacing: 0.5rem;
+    font-weight: var(--f-fw-400);
+    line-height: 2.75rem;
+}
 
+.title>span {
+    font-weight: var(--f-fw-300);
+    color: var(--clr-primary-red);
+}
+
+.paragraph {
+    color: var(--clr-primary-red);
+}
+
+.email__field {
+    display: flex;
+    margin: 1.5rem 2rem 0 2rem;
+    position: relative;
+}
+
+.email__field>input {
+    flex: 1;
+    padding: 0.5rem;
+    border-radius: 25px;
+    border: 1px solid var(--clr-primary-red);
+    color: var(--clr-primary-red);
+}
+
+.email__field>button {
+    position: absolute;
+    height: 32px;
+}
+
+@media (max-width: 1000px) {
     .grid {
-        max-width: 375px;
+        width: 375px;
     }
 
     .logo>img {
         height: 20px;
+
+
     }
 
     .logo {
-        height: 80px;
-        padding-top: 30px;
-        padding-left: 30px;
-
+        margin: 2rem 0 2rem 2rem;
     }
 
     .text {
         text-align: center;
-        padding-top: 3.75rem;
-        padding-left: 1.25rem;
-        padding-right: 1.25rem;
-        background-image: var(--gradient-one);
-        height: 100%;
-    }
-
-    .title {
-        font-size: 2.5rem;
-        font-weight: var(--f-fw-600);
-        line-height: 3rem;
-        letter-spacing: 0.5rem;
+        padding-top: 4rem;
     }
 
     .paragraph {
-        line-height: 1.5rem;
-        color: var(--clr-primary-red);
-    }
-
-    .email__field {
-        display: grid;
-        position: relative;
-        height: 50px;
-        margin-top: 2rem;
-
-    }
-
-    .button {
-        position: absolute;
-        right: -5px;
-        top: 0px;
-        height: 50px;
-        width: 65px;
-        background-image: var(--gradient-two);
-        border-radius: 50px;
-        border: none;
-        cursor: pointer;
-
-    }
-
-    .button>img {
-        margin-left: 1.25rem;
-    }
-
-    .button:hover {
-        background-image: var(--gradient-three);
-
-    }
-
-    .email {
-        border-radius: 50px;
-        border: 1px solid var(--clr-primary-red);
-        margin-right: 0.875rem;
-        padding-left: 2rem;
-    }
-
-    ::placeholder {
-        color: var(--clr-primary-red);
-        opacity: 1;
-        /* Firefox */
-    }
-
-    :-ms-input-placeholder {
-        /* Internet Explorer 10-11 */
-        color: var(--clr-primary-red);
-
-    }
-
-    ::-ms-input-placeholder {
-        /* Microsoft Edge */
-        color: var(--clr-primary-red);
-    }
-
-    input:valid {
-        background-image: var(--gradient-one);
-    }
-
-    span {
-        font-weight: var(--f-fw-300);
-        color: var(--clr-primary-red);
-    }
-
-    .back {
-        visibility: hidden;
-    }
-
-}
-
-@media (min-width: 1001px) {
-    html {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    body {
-        height: 600px;
-        max-width: 1440px;
-    }
-
-    .grid {
-        display: grid;
-        grid-template-columns: 0.6fr 0.4fr;
-        grid-template-rows: 100px 1fr;
-        height: 100%;
-        position: relative;
-    }
-
-    .woman {
-        justify-self: stretch;
-        grid-row: span 2;
-    }
-
-    .back {
-        visibility: visible;
-        background-image: url(./images/bg-pattern-desktop.svg);
-        position: absolute;
-        top: 0;
-        height: 100%;
-        width: 60%;
-        z-index: -1;
+        margin: 0.5rem 2rem 0 2rem;
+        font-size: 0.875rem;
     }
 }
+
+/* @media (min-width: 1001px) {} */
