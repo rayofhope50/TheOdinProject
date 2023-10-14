@@ -117,7 +117,7 @@ body {
     position: relative;
 }
 
-.email__field>input {
+.email {
     flex: 1;
     padding: 0.5rem 0.5rem 0.5rem 1rem;
     border-radius: 25px;
@@ -126,7 +126,7 @@ body {
     opacity: 0.6;
 }
 
-.email__field>button {
+.button {
     position: absolute;
     height: 100%;
     width: 60px;
@@ -141,9 +141,26 @@ body {
 
 }
 
-.email__field>button:active {
+.button:active {
     background-image: var(--gradient-one);
+}
 
+.error__message {
+    margin: 0.5rem 0 0 1rem;
+    color: var(--clr-primary-red);
+    font-size: 0.75rem;
+    position: absolute;
+}
+
+.danger-button {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+
+}
+
+.nodisplay {
+    display: none;
 }
 
 @media (max-width: 1000px) {
@@ -184,6 +201,12 @@ body {
     .paragraph {
         margin: 0.5rem 2rem 0 2rem;
         font-size: 0.875rem;
+    }
+
+    .danger-button {
+
+        left: 223px;
+        top: 10px;
     }
 }
 
@@ -247,5 +270,10 @@ body {
         width: 58%;
         background-size: cover;
         z-index: -1;
+    }
+
+    .danger-button {
+        left: 320px;
+        top: 10px;
     }
 }
