@@ -147,9 +147,17 @@ body {
 }
 
 @media (max-width: 1000px) {
+    /* body {} */
+
     .grid {
         width: 375px;
     }
+
+    input,
+    textarea {
+        background-color: hsla(0, 36%, 70%, 0.05)
+    }
+
 
     .logo>img {
         height: 20px;
@@ -163,7 +171,9 @@ body {
 
     .text {
         text-align: center;
-        padding-top: 4rem;
+        padding: 4rem 0 4rem 0;
+        background-color: hsla(0, 36%, 70%, 0.10);
+
     }
 
     .paragraph {
