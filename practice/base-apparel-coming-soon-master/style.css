@@ -164,6 +164,14 @@ body {
 }
 
 @media (max-width: 1000px) {
+    .display2 {
+        display: none;
+    }
+
+    .display1 {
+        display: block;
+    }
+
     .grid {
         width: 375px;
     }
@@ -211,6 +219,14 @@ body {
 }
 
 @media (min-width: 1001px) {
+    .display1 {
+        display: none;
+    }
+
+    .display2 {
+        display: block;
+    }
+
     body {
         align-items: center;
         width: 1440px;
