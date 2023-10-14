@@ -96,6 +96,10 @@ h3 {
     color: var(--clr-primary-red);
 }
 
+html {
+    margin: auto;
+}
+
 body {
     display: flex;
     justify-content: center;
@@ -229,7 +233,6 @@ body {
 
     body {
         align-items: center;
-        width: 1440px;
     }
 
     .grid {
