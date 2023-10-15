@@ -5,7 +5,6 @@ const errorMessage = document.getElementsByClassName("error__message");
 const form = document.getElementById("form");
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-  console.log("works");
   if (email[0].validity.typeMismatch) {
     errorButton[0].classList.remove("nodisplay");
     errorMessage[0].classList.remove("nodisplay");
