@@ -149,3 +149,42 @@ body {
 .user__name {
     color: var(--clr-white)
 }
+
+.container:hover .overlay {
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.container:hover .eye {
+    cursor: pointer;
+    opacity: 1;
+}
+
+.hero__title:hover,
+.user__name:hover {
+    color: var(--clr-primary-cyan);
+    cursor: pointer;
+}
+
+.card {
+    position: relative;
+}
+
+.eye {
+    position: absolute;
+    top: 112px;
+    left: 113px;
+    opacity: 0;
+    transition: .5s ease;
+}
+
+.overlay {
+    position: absolute;
+    background-color: var(--clr-primary-cyan);
+    height: 273px;
+    width: 273px;
+    top: 0px;
+    opacity: 0;
+    border-radius: 5px;
+    transition: .5s ease;
+}
