@@ -188,3 +188,9 @@ body {
     border-radius: 5px;
     transition: .5s ease;
 }
+
+/* this is another way to do it with transition especially for the eve but i think changing opacity is more elefant 
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+ */
