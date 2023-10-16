@@ -1,0 +1,151 @@
+:root {
+    --clr-primary-blue: hsl(215, 51%, 70%);
+    --clr-primary-cyan: hsl(178, 100%, 50%);
+    --clr-neural-mainBG: hsl(217, 54%, 11%);
+    --clr-neural-cardBG: hsl(216, 50%, 16%);
+    --clr-neural-line: hsl(215, 32%, 27%);
+    --clr-white: hsl(0, 0%, 100%);
+    --f-fs: 1.125rem;
+    --f-f: 'Outfit', sans-serif;
+    --f-fw-300: 300;
+    --f-fw-400: 400;
+    --f-fw-600: 600;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+html,
+body {
+    font-family: var(--f-f);
+    height: 100%;
+    font-size: 16px;
+}
+
+body {
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.75rem;
+    font-size: 1.125rem;
+}
+
+#root,
+#__next {
+    isolation: isolate;
+}
+
+html {
+    background-color: var(--clr-neural-mainBG);
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+body {
+    margin-top: 4rem;
+    max-width: 321px;
+    height: 580px;
+    background-color: var(--clr-neural-cardBG);
+    padding: 1.5rem;
+    border-radius: 15px;
+}
+
+.hero__image {
+    border-radius: 6px;
+}
+
+.hero__title {
+    color: var(--clr-white);
+    font-size: 1.5rem;
+    margin: 1.5rem 0 0.875rem 0;
+    font-weight: var(--f-fw-600);
+}
+
+.description {
+    color: var(--clr-primary-blue);
+}
+
+.flex__price {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 0 0 0;
+    font-size: var(--f-fs);
+}
+
+.flex__left,
+.flex__right {
+    display: flex;
+    align-items: center;
+}
+
+.equ__price {
+    color: var(--clr-primary-cyan);
+    margin-left: .375rem;
+}
+
+.days__left {
+    color: var(--clr-primary-blue);
+    margin-left: .375rem;
+}
+
+.user__flex {
+    border-top: 1px solid var(--clr-neural-line);
+    padding-top: 1rem;
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.user__ava {
+    height: 38px;
+    border: 1px solid white;
+    border-radius: 50px;
+}
+
+.user__creator {
+    margin-left: 1rem;
+    color: var(--clr-primary-blue)
+}
+
+.user__name {
+    color: var(--clr-white)
+}
