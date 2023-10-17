@@ -71,3 +71,26 @@ h3 {
 #__next {
     isolation: isolate;
 }
+
+html {
+    display: flex;
+    justify-content: center;
+}
+
+body {
+    width: 343px;
+    display: flex;
+    align-items: center;
+}
+
+.card {
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+h1,
+p {
+    text-align: center;
+}
