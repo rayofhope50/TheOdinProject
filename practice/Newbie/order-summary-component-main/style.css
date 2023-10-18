@@ -133,4 +133,15 @@ p {
 
 .change_button {
     color: var(--clr-primary-blue);
+    text-decoration: underline;
+}
+
+.payment__aprove {
+    background-color: var(--clr-primary-blue);
+    border: none;
+    margin: 0 1.25rem 1.25rem;
+    padding: 1rem;
+    font-weight: var(--f-fw-600);
+    color: var(--clr-neural-white);
+    border-radius: 10px;
 }
