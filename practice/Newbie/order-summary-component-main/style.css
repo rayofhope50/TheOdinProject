@@ -75,6 +75,7 @@ h3 {
 html {
     display: flex;
     justify-content: center;
+    background-color: var(--clr-primary-white);
 }
 
 body {
@@ -88,9 +89,48 @@ body {
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    background-color: var(--clr-neural-white);
+
 }
 
-h1,
+.hero__title,
 p {
     text-align: center;
+}
+
+.hero__title {
+    font-weight: var(--f-fw-600);
+    font-size: 1.5rem;
+    margin: 2rem 0 1rem 0;
+}
+
+.hero__description {
+    color: var(--clr-neural-blue);
+    margin-bottom: 2rem;
+    padding: 0 2.5rem 0 2.5rem;
+}
+
+.price__card {
+    display: flex;
+    align-items: center;
+    background-color: hsla(224, 23%, 55%, 0.05);
+    margin: 0 1.25rem 1.25rem 1.25rem;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.price__name {
+    padding-left: 1rem;
+    line-height: 1.25rem;
+    font-weight: var(--f-fw-400);
+}
+
+.price__ammount {
+    font-weight: 400;
+    color: var(--clr-neural-blue);
+    font-size: 0.875rem;
+}
+
+.change_button {
+    color: var(--clr-primary-blue);
 }
