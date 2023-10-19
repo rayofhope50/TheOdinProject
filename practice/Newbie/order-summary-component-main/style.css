@@ -75,8 +75,27 @@ h3 {
 html {
     display: flex;
     justify-content: center;
-    background-color: var(--clr-primary-white);
 }
+
+@media (max-width: 999px) {
+    html {
+        background-color: var(--clr-primary-white);
+        background-image: url(./images/pattern-background-mobile.svg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+}
+
+@media (min-width: 1000px) {
+    html {
+        background-image: url(./images/pattern-background-desktop.svg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-color: var(--clr-primary-white);
+    }
+}
+
+
 
 body {
     width: 343px;
