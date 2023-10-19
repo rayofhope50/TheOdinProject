@@ -145,3 +145,11 @@ p {
     color: var(--clr-neural-white);
     border-radius: 10px;
 }
+
+.payment__cancel {
+    background-color: var(--clr-neural-white);
+    border: none;
+    margin-bottom: 2rem;
+    font-weight: var(--f-fw-600);
+    color: var(--clr-neural-blue);
+}
