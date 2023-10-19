@@ -77,6 +77,8 @@ html {
     justify-content: center;
 }
 
+
+
 @media (max-width: 999px) {
     html {
         background-color: var(--clr-primary-white);
@@ -171,4 +173,23 @@ p {
     margin-bottom: 2rem;
     font-weight: var(--f-fw-600);
     color: var(--clr-neural-blue);
+}
+
+.change_button:hover {
+    cursor: pointer;
+    text-decoration: none;
+    opacity: 0.6;
+
+}
+
+.payment__aprove:hover {
+    cursor: pointer;
+    opacity: 0.6;
+
+}
+
+.payment__cancel:hover {
+    cursor: pointer;
+    color: black;
+
 }
