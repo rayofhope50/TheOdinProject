@@ -187,17 +187,34 @@ html {
     .stats {
         grid-column: 1;
         grid-row: 1;
+        margin: 5rem 7rem 0 4rem;
     }
 
     .flex {
-        display: flex
+        display: flex;
+        justify-content: space-between;
+        width: 300px;
+
     }
 
     .hero__title {
-        margin-left: 4rem;
+        margin-bottom: 2rem;
     }
 
     .para {
-        margin-left: 4rem;
+        font-size: var(--f-fs);
+        margin-bottom: 5rem;
+    }
+
+    .stat__para {
+        font-size: 0.75rem
+    }
+
+    .stat__head {
+        line-height: 1.7rem;
+    }
+
+    .flex__third {
+        padding-right: 1rem;
     }
 }
