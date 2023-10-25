@@ -130,6 +130,8 @@ html {
     margin-bottom: 2rem;
 }
 
+
+
 .accent {
     background-color: var(--clr-primary-accent);
     width: 100%;
@@ -145,7 +147,7 @@ html {
     mix-blend-mode: color-burn;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 999px) {
     body {
         width: 345px;
         display: flex;
@@ -216,6 +218,5 @@ html {
 
     .flex__third {
         padding-right: 1rem;
-        /* gogog */
     }
 }

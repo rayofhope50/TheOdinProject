@@ -1,0 +1,75 @@
+:root {
+    --clr-primary-orange: hsl(31, 77%, 52%);
+    --clr-primary-Dark: hsl(184, 100%, 22%);
+    --clr-primary-VeryDark: hsl(179, 100%, 13%);
+    --clr-neural-para: hsla(0, 0%, 100%, 0.75);
+    --clr-neural-rest: hsl(0, 0%, 95%);
+    --f-fs: 0.8725rem;
+    --f-f1: 'Big Shoulders Display', sans-serif;
+    --f-f2: 'Lexend Deca', sans-serif;
+    --f-fw-400: 400;
+    --f-fw-700: 700;
+
+}
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+html,
+body {
+    font-family: var(--f-f1);
+    height: 100%;
+    font-size: var(--f-fs);
+}
+
+body {
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.75rem;
+    font-size: 1.125rem;
+}
+
+#root,
+#__next {
+    isolation: isolate;
+}
