@@ -126,10 +126,18 @@ html {
     color: var(--clr-primary-VeryDark);
 }
 
+.luxury>button:hover,
+.suvs>button:hover,
+.sedans>button:hover {
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+}
+
 .button {
-    padding: 0.5rem 2rem 0.5rem 2rem;
+    padding: 0.5rem 1.5rem 0.5rem 1.5rem;
     border-radius: 50px;
-    border: none;
+    border: 2px solid transparent;
     width: 140px;
     font-family: var(--f-f2);
     margin-top: 2rem;
