@@ -4,7 +4,7 @@
     --clr-primary-VeryDark: hsl(179, 100%, 13%);
     --clr-neural-para: hsla(0, 0%, 100%, 0.75);
     --clr-neural-rest: hsl(0, 0%, 95%);
-    --f-fs: 0.8725rem;
+    --f-fs: 0.938rem;
     --f-f1: 'Big Shoulders Display', sans-serif;
     --f-f2: 'Lexend Deca', sans-serif;
     --f-fw-400: 400;
@@ -72,4 +72,109 @@ h3 {
 #root,
 #__next {
     isolation: isolate;
+}
+
+html {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    background-color: var(--clr-neural-rest);
+}
+
+.cards {
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.title {
+
+    color: var(--clr-neural-rest);
+
+}
+
+.para {
+    color: var(--clr-neural-para);
+    font-family: var(--f-f2);
+    font-size: var(--f-fs);
+}
+
+.sedans {
+    background-color: var(--clr-primary-orange);
+}
+
+.suvs {
+    background-color: var(--clr-primary-Dark);
+}
+
+.luxury {
+    background-color: var(--clr-primary-VeryDark);
+}
+
+.img__car {
+    width: 60px;
+}
+
+.sedans>button {
+    color: var(--clr-primary-orange);
+}
+
+.suvs>button {
+    color: var(--clr-primary-Dark);
+}
+
+.luxury>button {
+    color: var(--clr-primary-VeryDark);
+}
+
+.button {
+    padding: 0.5rem 2rem 0.5rem 2rem;
+    border-radius: 50px;
+    border: none;
+    width: 140px;
+    font-family: var(--f-f2);
+    margin-top: 2rem;
+}
+
+
+.title {
+    font-size: 3rem;
+    text-transform: uppercase;
+    margin: 1rem 0 1rem 0
+}
+
+@media (max-width: 999px) {
+    body {
+        padding-top: 4rem;
+        width: 315px;
+
+    }
+
+    .sedans,
+    .suvs,
+    .luxury {
+        padding: 3rem 4rem 3rem 3rem;
+    }
+}
+
+@media (min-width: 1000px) {
+    body {
+        display: flex;
+        align-items: center;
+    }
+
+    .cards {
+        display: flex;
+        height: 450px;
+        width: 900px;
+
+
+    }
+
+    .sedans,
+    .suvs,
+    .luxury {
+        padding: 3rem 2.5rem 3rem 3rem;
+    }
+
+
 }
