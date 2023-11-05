@@ -105,3 +105,28 @@ h3 {
 #__next {
     isolation: isolate;
 }
+
+@media (max-width: 999px) {
+    body {
+        background-image: url(./images/bg-intro-mobile.png);
+        background-color: hsl(0, 100%, 74%);
+        height: 1000px;
+        width: 375px;
+        margin: auto;
+    }
+
+    main {
+        padding: 6.25rem 1.5rem 4.25rem 1.5rem;
+    }
+
+    .text {
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 2rem;
+        color: white;
+        font-weight: var(--f-fw-700);
+        line-height: 3rem;
+    }
+}
