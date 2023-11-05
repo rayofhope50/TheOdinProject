@@ -1,0 +1,107 @@
+:root {
+    --clr-primary-red: hsl(0, 100%, 74%);
+    --clr-primary-green: hsl(154, 59%, 51%);
+    --clr-primary-accBlue: hsl(248, 32%, 49%);
+    --clr-neural-dBlue: hsl(249, 10%, 26%);
+    --clr-neural-grayBlue: hsl(246, 25%, 77%);
+    --f-fs: 16px;
+    --f-f1: 'Poppins', sans-serif;
+    --f-fw-400: 400;
+    --f-fw-500: 500;
+    --f-fw-600: 600;
+    --f-fw-700: 700;
+
+}
+
+/* placeholder for 100% support */
+::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: black;
+    /* font-size: 0.625rem; */
+}
+
+::-moz-placeholder {
+    /* Firefox 19+ */
+    color: black;
+    /* font-size: 0.625rem; */
+
+}
+
+:-ms-input-placeholder {
+    /* IE 10+ */
+    color: black;
+    /* font-size: 0.625rem; */
+
+}
+
+:-moz-placeholder {
+    /* Firefox 18- */
+    color: black;
+    /* font-size: 0.625rem; */
+
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+html,
+body {
+    font-family: var(--f-f1);
+    height: 100%;
+    font-size: var(--f-fs);
+}
+
+body {
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input {
+    width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.75rem;
+    font-size: 1.125rem;
+}
+
+#root,
+#__next {
+    isolation: isolate;
+}
