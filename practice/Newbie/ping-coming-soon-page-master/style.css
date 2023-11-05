@@ -1,17 +1,44 @@
 :root {
-    --clr-primary-orange: hsl(31, 77%, 52%);
-    --clr-primary-Dark: hsl(184, 100%, 22%);
-    --clr-primary-VeryDark: hsl(179, 100%, 13%);
-    --clr-neural-para: hsla(0, 0%, 100%, 0.75);
-    --clr-neural-rest: hsl(0, 0%, 95%);
-    --f-fs: 0.938rem;
-    --f-f1: 'Big Shoulders Display', sans-serif;
-    --f-f2: 'Lexend Deca', sans-serif;
+    --clr-primary-blue: hsl(223, 87%, 63%);
+    --clr-primary-paleBlue: hsl(223, 100%, 88%);
+    --clr-primary-lightRed: hsl(354, 100%, 66%);
+    --clr-neural-gray: hsl(0, 0%, 59%);
+    --clr-neural-vDarkBlue: hsl(209, 33%, 12%);
+    --f-fs: 1rem;
+    --f-f1: 'Libre Franklin', sans-serif;
+    --f-fw-300: 300;
     --f-fw-400: 400;
     --f-fw-700: 700;
 
 }
 
+/* placeholder for 100% support */
+::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: var(--clr-neural-gray);
+    font-size: 0.625rem;
+}
+
+::-moz-placeholder {
+    /* Firefox 19+ */
+    color: var(--clr-neural-gray);
+    font-size: 0.625rem;
+
+}
+
+:-ms-input-placeholder {
+    /* IE 10+ */
+    color: var(--clr-neural-gray);
+    font-size: 0.625rem;
+
+}
+
+:-moz-placeholder {
+    /* Firefox 18- */
+    color: var(--clr-neural-gray);
+    font-size: 0.625rem;
+
+}
 
 *,
 *::before,
@@ -45,6 +72,10 @@ svg {
     max-width: 100%;
 }
 
+input {
+    width: 100%;
+}
+
 input,
 button,
 textarea,
@@ -75,6 +106,93 @@ h3 {
 }
 
 .fb__svg,
-.twitter__svg {
-    height: 24px;
+.twitter__svg,
+insta__svg {
+    height: 14px;
+}
+
+
+body {
+    max-width: 375px;
+    margin: auto;
+}
+
+main {
+    padding: 0 1.75rem 0 1.75rem;
+    max-width: 375px;
+
+}
+
+.hero__logo {
+    margin: 2.75rem auto;
+    height: 16px;
+    width: 55px;
+}
+
+.information {
+    text-align: center;
+    padding: 0 1rem 0 1rem;
+}
+
+.hero__text {
+    font-weight: var(--f-fw-300);
+    font-size: 1rem;
+    color: var(--clr-neural-gray);
+    margin-bottom: 1.375rem;
+}
+
+span {
+    font-weight: var(--f-fw-700);
+    color: black;
+}
+
+.sub__para {
+    font-size: 0.563rem;
+    margin-bottom: 2.188rem
+}
+
+.email__input {
+    padding: 0.875rem 0 0.875rem 2rem;
+    border-radius: 80px;
+    border: 1px solid var(--clr-primary-blue);
+    margin-bottom: 0.625rem;
+}
+
+.notify {
+    width: 100%;
+    border-radius: 30px;
+    border: none;
+    font-size: 0.625rem;
+    padding: 0.5rem;
+    color: white;
+    background-color: var(--clr-primary-blue);
+    margin-bottom: 4.375rem;
+}
+
+.img__wrap {
+    margin-bottom: 7.438rem;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+}
+
+.svgs {
+    height: 32px;
+    width: 32px;
+    border-radius: 50px;
+    border: 1px solid var(--clr-primary-paleBlue);
+    background-color: white;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0.813rem 0 0.813rem;
+}
+
+.copyright {
+    margin-top: 1.813rem;
+    text-align: center;
+    color: var(--clr-neural-gray)
 }
