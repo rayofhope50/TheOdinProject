@@ -1,34 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+
   <title>Frontend Mentor | Ping coming soon page</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
+
 <body>
 
-  We are launching soon!
+  <main>
+    <div class="logo__wrap"><img src="./images/logo.svg" alt="Ping logo" class="hero__logo"></div>
+    <div class="information">
+      <h1 class="hero__text">We are launching soon!</h1>
+      <p class="sub__para">Subscribe and get notified</p>
+      <button class="notify">Notify Me</button>
+    </div>
+    <div class="img__wrap"><img src="./images/illustration-dashboard.png" alt="Photo of a dashboard"
+        class="img__dashboard"></div>
+    <div class="flex">
+      <button class="svgs">
+        <svg class="fb__svg
+        " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="facebook">
+          <path fill="#1976D2" fill-rule="evenodd"
+            d="M12 5.5H9v-2a1 1 0 0 1 1-1h1V0H9a3 3 0 0 0-3 3v2.5H4V8h2v8h3V8h2l1-2.5z" clip-rule="evenodd"></path>
+        </svg>
+      </button>
+      <button class="svgs"><svg class="twitter__svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+          id="twitter">
+          <path fill="#1976D2"
+            d="M16 3.539a6.839 6.839 0 0 1-1.89.518 3.262 3.262 0 0 0 1.443-1.813 6.555 6.555 0 0 1-2.08.794 3.28 3.28 0 0 0-5.674 2.243c0 .26.022.51.076.748a9.284 9.284 0 0 1-6.761-3.431 3.285 3.285 0 0 0 1.008 4.384A3.24 3.24 0 0 1 .64 6.578v.036a3.295 3.295 0 0 0 2.628 3.223 3.274 3.274 0 0 1-.86.108 2.9 2.9 0 0 1-.621-.056 3.311 3.311 0 0 0 3.065 2.285 6.59 6.59 0 0 1-4.067 1.399c-.269 0-.527-.012-.785-.045A9.234 9.234 0 0 0 5.032 15c6.036 0 9.336-5 9.336-9.334 0-.145-.005-.285-.012-.424A6.544 6.544 0 0 0 16 3.539z">
+          </path>
+        </svg></button>
+      <button class="svgs"><svg class="insta__svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+          id="instagram">
+          <g fill="none" fill-rule="evenodd">
+            <path stroke="#1976D2" d="M6.5 2.5h11a4 4 0 0 1 4 4v11a4 4 0 0 1-4 4h-11a4 4 0 0 1-4-4v-11a4 4 0 0 1 4-4Z">
+            </path>
+            <circle cx="12" cy="12" r="4.5" stroke="#1976D2"></circle>
+            <circle cx="18" cy="6" r="1" fill="#0005F8"></circle>
+          </g>
+        </svg></button>
+    </div>
 
-  Subscribe and get notified
 
-  Notify Me
+    &copy; Copyright Ping. All rights reserved.
+  </main>
 
-  &copy; Copyright Ping. All rights reserved.
-
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </p>
-  </footer>
 </body>
+<script src="./script.js"></script>
+
 </html>
