@@ -16,27 +16,27 @@
 /* placeholder for 100% support */
 ::-webkit-input-placeholder {
     /* Chrome/Opera/Safari */
-    color: black;
+    color: hsla(249, 10%, 26%, 0.5);
     /* font-size: 0.625rem; */
 }
 
 ::-moz-placeholder {
     /* Firefox 19+ */
-    color: black;
+    color: hsla(249, 10%, 26%, 0.5);
     /* font-size: 0.625rem; */
 
 }
 
 :-ms-input-placeholder {
     /* IE 10+ */
-    color: black;
+    color: hsla(249, 10%, 26%, 0.5);
     /* font-size: 0.625rem; */
 
 }
 
 :-moz-placeholder {
     /* Firefox 18- */
-    color: black;
+    color: hsla(249, 10%, 26%, 0.5);
     /* font-size: 0.625rem; */
 
 }
@@ -106,17 +106,26 @@ h3 {
     isolation: isolate;
 }
 
+
 @media (max-width: 999px) {
+    html {
+        display: flex;
+        justify-content: center;
+    }
+
     body {
         background-image: url(./images/bg-intro-mobile.png);
         background-color: hsl(0, 100%, 74%);
-        height: 1000px;
-        width: 375px;
-        margin: auto;
+        max-width: 375px;
+    }
+
+    .main {
+        max-width: 375px;
+
     }
 
     main {
-        padding: 6.25rem 1.5rem 4.25rem 1.5rem;
+        padding: 5.25rem 1.5rem 4.25rem 1.5rem;
     }
 
     .text {
@@ -128,5 +137,46 @@ h3 {
         color: white;
         font-weight: var(--f-fw-700);
         line-height: 3rem;
+        margin-bottom: 2rem;
+    }
+
+    .hero__description {
+        color: white;
+    }
+
+    .trial>span {
+        font-weight: var(--f-fw-700);
+    }
+
+    .trial {
+        background-color: var(--clr-primary-accBlue);
+        color: white;
+        text-align: center;
+        padding: 1rem 3rem 1rem 3rem;
+        border-radius: 10px;
+        margin-top: 3rem;
+        margin-bottom: 1rem;
+        box-shadow: 0 7px 0 rgba(0, 0, 0, 0.1);
+    }
+
+    .form {
+        background-color: white;
+        padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+    }
+
+    .form>input {
+        padding: 0.75rem;
+        margin-bottom: 1rem;
+        font-weight: var(--f-fw-600);
+        font-size: 0.75rem;
+        border: 1px solid hsla(246, 25%, 77%, 0.5);
+        border-radius: 5px;
+    }
+
+    .form__btn {
+        background-color: var(--clr-primary-green);
+        color: white;
+        text-transform: uppercase;
+        font-weight: var(--f-fw-700);
     }
 }
