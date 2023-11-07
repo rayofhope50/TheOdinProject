@@ -173,7 +173,7 @@ h3 {
         border-radius: 5px;
     }
 
-
+    /* important */
     input[type=submit] {
         font-size: 1rem;
         background-color: var(--clr-primary-green);
