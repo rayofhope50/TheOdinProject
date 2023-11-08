@@ -160,6 +160,15 @@ h1 {
 
 }
 
+.form__btn:hover {
+    cursor: pointer;
+}
+
+.form__btn:active {
+    background-color: hsla(154, 59%, 51%, 0.5);
+    box-shadow: 0 3px 0 hsla(154, 59%, 41%, 0.5);
+}
+
 
 
 @media (max-width: 999px) {
@@ -223,6 +232,8 @@ h1 {
 
 
 }
+
+
 
 @media (min-width: 1000px) {
     body {
