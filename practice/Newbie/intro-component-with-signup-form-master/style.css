@@ -162,6 +162,8 @@ h3 {
     .form {
         background-color: white;
         padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+        border-radius: 10px;
+        box-shadow: 0 7px 0 rgba(0, 0, 0, 0.1);
     }
 
     .form>input {
