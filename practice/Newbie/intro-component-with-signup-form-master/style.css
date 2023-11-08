@@ -234,7 +234,7 @@ h1 {
 
     h1 {
         font-size: 3rem;
-        line-height: 3rem;
+        line-height: 3.5rem;
         width: 410px;
     }
 
@@ -253,7 +253,7 @@ h1 {
     }
 
     .form {
-        padding: 2.25rem 2.25rem 2.25rem 2.25rem;
+        padding: 2rem 2rem 2rem 2rem;
     }
 
     .form>input {
