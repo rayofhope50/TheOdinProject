@@ -2,9 +2,9 @@
 
 const submitBtn = document.getElementById("submitBtn");
 const excl1 = document.getElementsByClassName("excl1");
-const excl2 = document.getElementsByClassName("excl2");
-const excl3 = document.getElementsByClassName("excl3");
-const excl4 = document.getElementsByClassName("excl4");
+// const excl2 = document.getElementsByClassName("excl2");
+// const excl3 = document.getElementsByClassName("excl3");
+// const excl4 = document.getElementsByClassName("excl4");
 const name = document.getElementById("name");
 const lastName = document.getElementById("lastName");
 const email = document.getElementById("email");
@@ -15,19 +15,31 @@ const error = document.getElementsByClassName("error");
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   if (name.value === "" || name.value == null) {
-    error[0].classList.toggle("nodisplay");
-    excl1[0].classList.toggle("nodisplay");
+    error[0].classList.remove("nodisplay");
+    excl1[0].classList.remove("nodisplay");
+  } else {
+    error[0].classList.add("nodisplay");
+    excl1[0].classList.add("nodisplay");
   }
   if (lastName.value === "" || lastName.value == null) {
-    error[1].classList.toggle("nodisplay");
-    excl2[0].classList.toggle("nodisplay");
+    error[1].classList.remove("nodisplay");
+    excl1[1].classList.remove("nodisplay");
+  } else {
+    error[1].classList.add("nodisplay");
+    excl1[1].classList.add("nodisplay");
   }
   if (email.value === "" || email.value == null) {
-    error[2].classList.toggle("nodisplay");
-    excl3[0].classList.toggle("nodisplay");
+    error[2].classList.remove("nodisplay");
+    excl1[2].classList.remove("nodisplay");
+  } else {
+    error[2].classList.add("nodisplay");
+    excl1[2].classList.add("nodisplay");
   }
   if (password.value === "" || password.value == null) {
-    error[3].classList.toggle("nodisplay");
-    excl4[0].classList.toggle("nodisplay");
+    error[3].classList.remove("nodisplay");
+    excl1[3].classList.remove("nodisplay");
+  } else {
+    error[3].classList.add("nodisplay");
+    excl1[3].classList.add("nodisplay");
   }
 });

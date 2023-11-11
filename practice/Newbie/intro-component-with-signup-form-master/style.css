@@ -142,7 +142,6 @@ h1 {
     background-color: white;
     border-radius: 10px;
     box-shadow: 0 7px 0 rgba(0, 0, 0, 0.1);
-    position: relative;
 }
 
 .form>.input__wrapper>input {
@@ -176,33 +175,20 @@ h1 {
 
 .excl1 {
     position: absolute;
-    top: 48px;
-    right: 4.188rem;
+    top: 15px;
+    right: 30px;
 }
 
-.excl2 {
-    position: absolute;
-    top: 145px;
-    right: 4.188rem;
-}
-
-.excl3 {
-    position: absolute;
-    top: 242px;
-    right: 4.188rem;
-}
-
-.excl4 {
-    position: absolute;
-    top: 345px;
-    right: 4.188rem;
-}
 
 .error {
     font-size: 0.75rem;
     text-align: right;
     color: var(--clr-primary-red);
     font-weight: var(--f-fw-600);
+}
+
+.input__wrapper {
+    position: relative;
 }
 
 @media (max-width: 999px) {
