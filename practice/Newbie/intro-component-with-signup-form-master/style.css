@@ -142,9 +142,10 @@ h1 {
     background-color: white;
     border-radius: 10px;
     box-shadow: 0 7px 0 rgba(0, 0, 0, 0.1);
+    position: relative;
 }
 
-.form>input {
+.form>.input__wrapper>input {
     border: 1px solid hsla(246, 25%, 77%, 0.5);
     border-radius: 5px;
 }
@@ -169,7 +170,40 @@ h1 {
     box-shadow: 0 3px 0 hsla(154, 59%, 41%, 0.5);
 }
 
+.nodisplay {
+    display: none;
+}
 
+.excl1 {
+    position: absolute;
+    top: 48px;
+    right: 4.188rem;
+}
+
+.excl2 {
+    position: absolute;
+    top: 145px;
+    right: 4.188rem;
+}
+
+.excl3 {
+    position: absolute;
+    top: 242px;
+    right: 4.188rem;
+}
+
+.excl4 {
+    position: absolute;
+    top: 345px;
+    right: 4.188rem;
+}
+
+.error {
+    font-size: 0.75rem;
+    text-align: right;
+    color: var(--clr-primary-red);
+    font-weight: var(--f-fw-600);
+}
 
 @media (max-width: 999px) {
     body {
@@ -203,13 +237,11 @@ h1 {
         padding: 1.5rem 1.5rem 1.5rem 1.5rem;
     }
 
-    .form>input {
+    .form>.input__wrapper>input {
         padding: 0.75rem;
         font-weight: var(--f-fw-600);
         font-size: 0.75rem;
         margin-bottom: 1rem;
-
-
     }
 
     /* important */
@@ -221,6 +253,8 @@ h1 {
         box-shadow: 0 3px 0 hsl(154, 59%, 41%);
         border: none;
         font-size: 1rem;
+        padding: 1rem 1rem 1rem 2rem;
+        font-weight: var(--f-fw-700);
     }
 
     .foot {
@@ -267,13 +301,16 @@ h1 {
         padding: 2rem 2rem 2rem 2rem;
     }
 
-    .form>input {
+    .form>.input__wrapper>input {
         padding: 1rem 1rem 1rem 2rem;
         font-weight: var(--f-fw-700);
         font-size: 0.875rem;
-        margin-bottom: 1.25rem;
-
     }
+
+    .form>.input__wrapper {
+        margin-bottom: 1.25rem;
+    }
+
 
     input[type=submit] {
         background-color: var(--clr-primary-green);
@@ -282,6 +319,8 @@ h1 {
         box-shadow: 0 3px 0 hsl(154, 59%, 41%);
         border: none;
         font-size: 1rem;
+        padding: 1rem 1rem 1rem 2rem;
+        font-weight: var(--f-fw-700);
     }
 
     .foot {

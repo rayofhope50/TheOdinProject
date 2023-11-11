@@ -29,12 +29,29 @@
       <div class="right">
         <div class="trial"><span>Try it free 7 days</span> then $20/mo. thereafter</div>
         <div>
-          <form action="" method="get" class="form">
-            <input type="text" class="first" name="firstname" placeholder="First Name" />
-            <input type="text" name="lastname" placeholder="Last Name" />
-            <input type="email" name="email" placeholder="Email Address" />
-            <input type="password" name="password" placeholder="Password" />
-            <input type="submit" class="form__btn" value="Claim your free trial" />
+
+          <form action="/" method="GET" class="form" id="form">
+            <img src="./images/icon-error.svg" alt="" srcset="" class="excl1 nodisplay">
+            <img src="./images/icon-error.svg" alt="" srcset="" class="excl2 nodisplay">
+            <img src="./images/icon-error.svg" alt="" srcset="" class="excl3 nodisplay">
+            <img src="./images/icon-error.svg" alt="" srcset="" class="excl4 nodisplay">
+            <div class="input__wrapper">
+              <input type="text" class="first" id="name" name="firstname" placeholder="First Name" />
+              <div class="error nodisplay">First Name cannot be empty</div>
+            </div>
+            <div class="input__wrapper">
+              <input type="text" name="lastname" id="lastName" placeholder="Last Name" />
+              <div class="error nodisplay">Last Name cannot be empty</div>
+            </div>
+            <div class="input__wrapper">
+              <input type="email" name="email" id="email" placeholder="Email Address" />
+              <div class="error nodisplay">Looks like this is not an email</div>
+            </div>
+            <div class="input__wrapper">
+              <input type="password" name="password" placeholder="Password" id="password" />
+              <div class="error nodisplay">Password cannot be empty</div>
+            </div>
+            <input type="submit" class="form__btn" value="Claim your free trial" id="submitBtn">
             <div class="foot">By clicking the button, you are agreeing to our <span>Terms and Services</span>
             </div>
           </form>
@@ -45,5 +62,6 @@
   </main>
 
 </body>
+<script src="./main.js"></script>
 
 </html>
