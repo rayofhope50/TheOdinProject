@@ -1,10 +1,6 @@
 "use strict";
-
 const submitBtn = document.getElementById("submitBtn");
 const excl1 = document.getElementsByClassName("excl1");
-// const excl2 = document.getElementsByClassName("excl2");
-// const excl3 = document.getElementsByClassName("excl3");
-// const excl4 = document.getElementsByClassName("excl4");
 const name = document.getElementById("name");
 const lastName = document.getElementById("lastName");
 const email = document.getElementById("email");
