@@ -1,0 +1,237 @@
+:root {
+    --clr-primary-paleBlue: hsl(243, 100%, 93%);
+    --clr-primary-graishBlue: hsl(229, 7%, 55%);
+    --clr-primary-darkBlue: hsl(228, 56%, 26%);
+    --clr-neural-veryDarkBlue: hsl(229, 57%, 11%);
+    /* --clr-neural-vDarkBlue: hsl(209, 33%, 12%); */
+    --f-fs: 16px;
+    --f-f1: 'Raleway', sans-serif;
+    --gradient-one: linear-gradient(270deg, hsl(335, 100%, 65%) 0%, hsl(6, 100%, 80%) 100%);
+    --f-fw-300: 300;
+    --f-fw-400: 400;
+    --f-fw-700: 700;
+
+}
+
+/* ::-webkit-input-placeholder {
+    color: var(--clr-neural-gray);
+    font-size: 0.625rem;
+}
+
+::-moz-placeholder {
+    color: var(--clr-neural-gray);
+    font-size: 0.625rem;
+
+}
+
+:-ms-input-placeholder {
+    color: var(--clr-neural-gray);
+    font-size: 0.625rem;
+
+}
+
+:-moz-placeholder {
+    color: var(--clr-neural-gray);
+    font-size: 0.625rem;
+
+} */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+html,
+body {
+    font-family: var(--f-f1);
+    height: 100%;
+    font-size: var(--f-fs);
+}
+
+body {
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input {
+    width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.75rem;
+    font-size: 1.125rem;
+}
+
+#root,
+#__next {
+    isolation: isolate;
+}
+
+html {
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
+
+@media (max-width: 1000px) {
+
+    body {
+        background-image: url(./images/bg-mobile.png);
+        width: 375px;
+        height: 667px;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    main {
+        padding: 1.563rem;
+    }
+
+    .left {
+        height: 200px;
+        background-color: var(--clr-primary-darkBlue);
+        border-radius: 10px 100px 10px 10px;
+        padding: 2.5rem;
+    }
+
+    .hero__flex {
+        display: flex;
+    }
+
+    .icon__box {
+        width: 48px;
+        height: 48px;
+        background-color: var(--clr-neural-veryDarkBlue);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        margin-right: 1rem;
+        margin-top: 2rem;
+
+    }
+
+    .right {
+        height: 160px;
+        background-color: var(--clr-primary-darkBlue);
+        border-radius: 10px 10px 10px 10px;
+        padding: 2rem;
+        margin-top: 1rem;
+        position: relative;
+    }
+
+    span {
+        font-weight: var(--f-fw-700);
+    }
+
+    .flex__stats {
+        font-weight: var(--f-fw-700);
+        display: flex;
+        justify-content: space-between;
+        font-size: 10px;
+
+    }
+
+    .hero__text {
+        font-size: 14px;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    .loading {
+        width: 100%;
+        height: 20px;
+        background-color: hsla(229, 57%, 11%, 0.5);
+        border-radius: 50px;
+        padding: 3px;
+        margin-bottom: 0.75rem;
+
+    }
+
+    .loading__inside {
+        width: 76%;
+        height: 14px;
+        background-image: var(--gradient-one);
+        border-radius: 50px;
+        display: flex;
+        justify-content: flex-end;
+
+
+    }
+
+    .loading__circle {
+        height: 10px;
+        width: 10px;
+        background-color: white;
+        border-radius: 50px;
+        text-align: right;
+        margin: 2px;
+    }
+
+
+
+    .wrapper {
+        width: 180px;
+        height: 72px;
+        background-color: white;
+        position: absolute;
+        bottom: -36px;
+        font-size: 2rem;
+        color: black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        border-radius: 10px;
+        left: 74px;
+
+    }
+
+
+    .number {
+        font-weight: var(--f-fw-700);
+    }
+
+    .gb {
+        font-size: 12px;
+        font-weight: 700;
+        color: var(--clr-primary-graishBlue);
+    }
+}

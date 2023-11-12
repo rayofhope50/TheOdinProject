@@ -4,8 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
   <title>Frontend Mentor | Fylo data storage component</title>
@@ -13,13 +15,35 @@
 </head>
 
 <body>
+  <main>
+    <div class="left">
+      <img src="./images/logo.svg" alt="" class="stack">
+      <div class="hero__flex">
+        <div class="icon__box"><img src="./images/icon-document.svg" alt="" srcset=""></div>
+        <div class="icon__box"><img src="./images/icon-folder.svg" alt="" srcset=""></div>
+        <div class="icon__box"><img src="./images/icon-upload.svg" alt="" srcset=""></div>
+      </div>
+    </div>
+    <div class="right">
+      <p class="hero__text">You’ve used <span>815 GB</span> of your storage</p>
+      <div class="loading">
+        <div class="loading__inside">
+          <div class="loading__circle"></div>
+        </div>
 
-  You’ve used 815 GB of your storage
+      </div>
+      <div class="flex__stats">
+        <div class="left__stats">0 GB</div>
+        <div class="left__stats">1000 GB</div>
+      </div>
+      <div class="wrapper">
 
-  185 GB Left
-
-  0 GB
-  1000 GB
+        <div class="number">185</div>
+        <div class="gb">GB Left</div>
+      </div>
+      <div class="bubble__tail"></div>
+    </div>
+  </main>
 
 </body>
 
