@@ -235,3 +235,18 @@ html {
         color: var(--clr-primary-graishBlue);
     }
 }
+
+@media (min-width: 1001px) {
+    body {
+        background-image: url(./images/bg-desktop.png);
+        background-repeat: no-repeat;
+        background-position: bottom;
+        background-color: var(--clr-neural-veryDarkBlue);
+        display: flex;
+        align-items: center;
+    }
+
+    main {
+        display: flex;
+    }
+}
