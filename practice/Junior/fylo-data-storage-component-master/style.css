@@ -107,6 +107,64 @@ html {
     color: white;
 }
 
+.hero__flex {
+    display: flex;
+}
+
+.icon__box {
+    width: 48px;
+    height: 48px;
+    background-color: var(--clr-neural-veryDarkBlue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    margin-right: 1rem;
+    margin-top: 2rem;
+
+}
+
+.flex__stats {
+    font-weight: var(--f-fw-700);
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.loading {
+    width: 100%;
+    height: 20px;
+    background-color: hsla(229, 57%, 11%, 0.5);
+    border-radius: 50px;
+    padding: 3px;
+    margin-bottom: 0.75rem;
+
+}
+
+.loading__inside {
+    width: 76%;
+    height: 14px;
+    background-image: var(--gradient-one);
+    border-radius: 50px;
+    display: flex;
+    justify-content: flex-end;
+
+
+}
+
+.loading__circle {
+    height: 10px;
+    width: 10px;
+    background-color: white;
+    border-radius: 50px;
+    text-align: right;
+    margin: 2px;
+}
+
+span {
+    font-weight: var(--f-fw-700);
+}
+
 
 @media (max-width: 1000px) {
 
@@ -131,22 +189,13 @@ html {
         padding: 2.5rem;
     }
 
-    .hero__flex {
-        display: flex;
+    .hero__text {
+        font-size: 14px;
+        text-align: center;
+        margin-bottom: 1rem;
     }
 
-    .icon__box {
-        width: 48px;
-        height: 48px;
-        background-color: var(--clr-neural-veryDarkBlue);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 10px;
-        margin-right: 1rem;
-        margin-top: 2rem;
 
-    }
 
     .right {
         height: 160px;
@@ -157,53 +206,12 @@ html {
         position: relative;
     }
 
-    span {
-        font-weight: var(--f-fw-700);
-    }
+
 
     .flex__stats {
-        font-weight: var(--f-fw-700);
-        display: flex;
-        justify-content: space-between;
         font-size: 10px;
-
     }
 
-    .hero__text {
-        font-size: 14px;
-        text-align: center;
-        margin-bottom: 1rem;
-    }
-
-    .loading {
-        width: 100%;
-        height: 20px;
-        background-color: hsla(229, 57%, 11%, 0.5);
-        border-radius: 50px;
-        padding: 3px;
-        margin-bottom: 0.75rem;
-
-    }
-
-    .loading__inside {
-        width: 76%;
-        height: 14px;
-        background-image: var(--gradient-one);
-        border-radius: 50px;
-        display: flex;
-        justify-content: flex-end;
-
-
-    }
-
-    .loading__circle {
-        height: 10px;
-        width: 10px;
-        background-color: white;
-        border-radius: 50px;
-        text-align: right;
-        margin: 2px;
-    }
 
 
 
@@ -238,15 +246,76 @@ html {
 
 @media (min-width: 1001px) {
     body {
+        height: 800px;
+        width: 1440px;
         background-image: url(./images/bg-desktop.png);
         background-repeat: no-repeat;
         background-position: bottom;
         background-color: var(--clr-neural-veryDarkBlue);
         display: flex;
         align-items: center;
+        justify-content: center;
+
     }
 
     main {
         display: flex;
+        align-items: flex-end;
+        gap: 1.875rem;
+    }
+
+    .left {
+        height: 200px;
+        width: 350px;
+        background-color: var(--clr-primary-darkBlue);
+        border-radius: 10px 100px 10px 10px;
+        padding: 2.5rem;
+    }
+
+    .right {
+        height: 160px;
+        width: 540px;
+        background-color: var(--clr-primary-darkBlue);
+        border-radius: 10px 10px 10px 10px;
+        padding: 2rem;
+        margin-top: 1rem;
+        position: relative;
+    }
+
+    .hero__text {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .flex__stats {
+        font-size: 14px;
+    }
+
+    .wrapper {
+        width: 180px;
+        height: 72px;
+        background-color: white;
+        position: absolute;
+        bottom: -36px;
+        font-size: 3rem;
+        color: black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        border-radius: 10px;
+        right: 2.5rem;
+
+    }
+
+
+    .number {
+        font-weight: var(--f-fw-700);
+    }
+
+    .gb {
+        font-size: 1rem;
+        font-weight: 700;
+        color: var(--clr-primary-graishBlue);
     }
 }
