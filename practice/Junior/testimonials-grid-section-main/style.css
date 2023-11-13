@@ -1,15 +1,15 @@
 :root {
-    --clr-primary-paleBlue: hsl(243, 100%, 93%);
-    --clr-primary-graishBlue: hsl(229, 7%, 55%);
-    --clr-primary-darkBlue: hsl(228, 56%, 26%);
-    --clr-neural-veryDarkBlue: hsl(229, 57%, 11%);
-    /* --clr-neural-vDarkBlue: hsl(209, 33%, 12%); */
+    --clr-primary-violate: hsl(263, 55%, 52%);
+    --clr-primary-graishBlue: hsl(217, 19%, 35%);
+    --clr-primary-darkBlue: hsl(219, 29%, 14%);
+    --clr-neural-lightGray: hsl(0, 0%, 81%);
+    --clr-neural-lightBlue: hsl(210, 46%, 95%);
     --f-fs: 16px;
-    --f-f1: 'Raleway', sans-serif;
-    --gradient-one: linear-gradient(270deg, hsl(335, 100%, 65%) 0%, hsl(6, 100%, 80%) 100%);
+    --f-f1: 'Barlow Semi Condensed', sans-serif;
+    /* --gradient-one: linear-gradient(270deg, hsl(335, 100%, 65%) 0%, hsl(6, 100%, 80%) 100%); */
     --f-fw-300: 300;
-    --f-fw-400: 400;
-    --f-fw-700: 700;
+    --f-fw-500: 500;
+    --f-fw-600: 600;
 
 }
 
