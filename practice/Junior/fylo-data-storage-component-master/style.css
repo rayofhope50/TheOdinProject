@@ -296,14 +296,14 @@ span {
         height: 72px;
         background-color: white;
         position: absolute;
-        bottom: -36px;
+        top: -36px;
         font-size: 3rem;
         color: black;
         display: flex;
         align-items: center;
         justify-content: center;
         gap: 12px;
-        border-radius: 10px;
+        border-radius: 10px 10px 0 10px;
         right: 2.5rem;
 
     }
@@ -317,5 +317,14 @@ span {
         font-size: 1rem;
         font-weight: 700;
         color: var(--clr-primary-graishBlue);
+    }
+
+    .bubble__tail {
+        height: 20px;
+        width: 20px;
+        right: 2.5rem;
+        position: absolute;
+        top: 35px;
+        background-image: linear-gradient(to top right, transparent 50%, white 0);
     }
 }
