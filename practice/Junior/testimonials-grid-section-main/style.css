@@ -7,7 +7,7 @@
     --f-fs: 16px;
     --f-f1: 'Barlow Semi Condensed', sans-serif;
     /* --gradient-one: linear-gradient(270deg, hsl(335, 100%, 65%) 0%, hsl(6, 100%, 80%) 100%); */
-    --f-fw-300: 300;
+    /* --f-fw-300: 300; */
     --f-fw-500: 500;
     --f-fw-600: 600;
 
@@ -99,4 +99,33 @@ h3 {
 #root,
 #__next {
     isolation: isolate;
+}
+
+@media (max-width: 999px) {
+    body {
+        max-width: 375px;
+        padding: 0 1.5rem;
+        background-color: var();
+    }
+
+    .panels {
+        padding: 1.5rem 2rem;
+    }
+
+    .profile {
+        display: flex;
+        gap: 1rem;
+    }
+
+    .name {
+        font-weight: var(--f-fw-600);
+        font-size: 14px;
+    }
+
+    .verification {
+        font-size: 12px;
+        opacity: 0.5;
+    }
+
+
 }
