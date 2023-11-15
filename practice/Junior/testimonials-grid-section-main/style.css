@@ -139,6 +139,10 @@ img {
     border-radius: 50px;
 }
 
+.panel__patrick>.profile>img {
+    border: 2px solid hsla(263, 100%, 49%, 0.452);
+}
+
 
 
 h2 {
@@ -198,14 +202,13 @@ h2 {
 
 @media (min-width: 1001px) {
     html {
-        height: 800px;
         display: flex;
-        align-items: center;
         justify-content: center;
+        align-items: center;
 
     }
 
-    h2 {
+    */ h2 {
         font-size: 1.25rem;
         line-height: 1.25rem;
     }
@@ -220,8 +223,7 @@ h2 {
     }
 
     main {
-        width: 1110px;
-        height: 570px;
+
         display: grid;
         grid-template-columns: repeat(4, 255px);
         grid-template-rows: 266px 266px;
@@ -248,8 +250,4 @@ h2 {
         line-height: 1.125rem;
     }
 
-}
-
-.panel__patrick>img {
-    border: 2px solid hsla(263, 100%, 49%, 0.452);
 }
