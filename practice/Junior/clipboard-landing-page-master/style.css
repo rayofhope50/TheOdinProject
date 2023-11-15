@@ -89,6 +89,11 @@ h6 {
     overflow-wrap: break-word;
 }
 
+ul,
+li {
+    list-style: none;
+}
+
 h1,
 h2,
 h3 {
@@ -100,3 +105,10 @@ h3 {
 #__next {
     isolation: isolate;
 }
+
+/* .grid {
+    display: grid;
+    grid-template-columns: 150px 150px 150px;
+    grid-template-rows: 50px 50px;
+    grid-auto-flow: column;
+} */
