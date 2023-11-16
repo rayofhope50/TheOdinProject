@@ -195,7 +195,7 @@ h3 {
         margin-bottom: 3rem;
     }
 
-    .left__side {
+    .right__side {
         text-align: center;
     }
 
@@ -298,7 +298,8 @@ h3 {
     }
 
     .section__1,
-    .section__2 {
+    .section__2,
+    .section__4 {
         text-align: center;
         width: 700px;
         margin: auto;
@@ -308,7 +309,6 @@ h3 {
         font-size: 18px;
         line-height: 1.75rem;
         opacity: 0.5;
-
     }
 
     .section__1>.para__main,
@@ -348,9 +348,36 @@ h3 {
     .section__3 {
         display: flex;
         position: relative;
+        margin-bottom: 10rem;
     }
 
     .mac__img {
-        position: absolute;
+        object-position: -30px;
     }
+
+    .right__side {
+        text-align: left;
+        padding: 4.625rem 5rem;
+    }
+
+    .h3 {
+        font-size: 1.75rem;
+        margin-bottom: 1rem;
+    }
+
+    .para__sub {
+        margin-bottom: 4.5rem;
+        width: 350px;
+        opacity: 0.5;
+    }
+
+    .devices {
+        width: 810px;
+        height: 471px;
+        margin: auto;
+        margin-top: 7.5rem;
+        margin-bottom: 10.625rem;
+    }
+
+
 }
