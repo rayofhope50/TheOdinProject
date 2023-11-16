@@ -406,27 +406,42 @@ h3 {
         background-color: hsla(201, 11%, 66%, 0.1);
         display: flex;
         align-items: center;
+        margin-right: 0;
     }
 
     .footer__logo {
         height: 55px;
+        margin-left: 165px;
     }
 
     .footer__grid {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: 150px 150px 150px;
+        grid-template-rows: 50px 50px;
+        grid-auto-flow: column;
+        margin-left: 6rem;
     }
 
-    .footer__grid li {
-        width: 40%;
-        background: green;
-        height: 30%;
+    .social-icon__item {
+        align-self: center;
+
+    }
+
+    .end {
+        align-self: end;
     }
 
     .footer__social {
         display: flex;
+        margin-left: 316px;
+        align-items: center;
+
     }
+
+    .footer__social>div {
+        padding: 0 0.5rem;
+    }
+
+
 
 }
