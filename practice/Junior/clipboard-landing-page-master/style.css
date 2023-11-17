@@ -123,6 +123,7 @@ h3 {
         background-image: url(./images/bg-header-mobile.png);
         background-repeat: no-repeat;
         background-position: top right;
+        background-size: contain;
     }
 
     main {
@@ -201,12 +202,14 @@ h3 {
         font-size: 1.5rem;
         margin-bottom: 1.125rem;
         font-weight: var(--f-fw-600);
+        margin: auto;
     }
 
     .para__sub {
         opacity: 0.5;
         margin-bottom: 3rem;
         padding: 0 0.5rem;
+
     }
 
     .section__4 {
@@ -270,7 +273,7 @@ h3 {
 @media (min-width: 1001px) {
     body {
         width: 1440px;
-        padding: 5.875rem 0;
+        padding: 5.875rem 0 0 0;
         background-image: url(./images/bg-header-desktop.png);
         background-repeat: no-repeat;
         background-position: top right;
