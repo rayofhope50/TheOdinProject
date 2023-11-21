@@ -252,12 +252,13 @@ li {
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 5rem;
 }
 
 .content_info_img {
     width: 90%;
     height: 300px;
-    margin-bottom: 5rem;
+    margin-bottom: 6rem;
 }
 
 .content_info {
@@ -296,6 +297,50 @@ li {
     text-decoration: none;
     color: var(--clr-accent-cyan);
     margin-right: 0.4rem;
+}
 
+.content_info_card {
+    background-color: white;
+    height: fit-content;
+    width: 100%;
+    padding: 1.8rem 0.9rem 1rem 1.5rem;
+}
 
+.content_info_card_icon {
+    padding-bottom: 8px;
+}
+
+.content_info_card_comment {
+    font-size: 0.85rem;
+    line-height: 1.46rem;
+    letter-spacing: 0.01rem;
+}
+
+.content_info_card_profile {
+    margin-top: 0.9rem;
+
+    height: 37px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.content_info_card_ava {
+    height: 32px;
+    width: 32px;
+    border-radius: 50px;
+}
+
+.content_info_card_ava_name {
+    padding-top: 0.2rem;
+    font-size: .7rem;
+    letter-spacing: .02rem;
+    line-height: 0.5rem;
+
+}
+
+.content_info_card_ava_usertag {
+    font-size: .55rem;
+    font-weight: 300;
+    line-height: 1.25rem;
 }
