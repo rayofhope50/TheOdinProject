@@ -176,3 +176,24 @@ body {
     transform-origin: left center;
     transition-duration: 0.4s;
 }
+
+section {
+    position: relative;
+    height: 100vh;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-transform: uppercase;
+}
+
+.section-inner {
+    position: absolute;
+    bottom: 200px;
+    left: 150px;
+    max-width: 560px;
+}
+
+/* Backgroun Images */
+.section-a {
+    background-image: url(../img/section-a.webp);
+}
