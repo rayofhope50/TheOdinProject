@@ -314,6 +314,7 @@ li {
     font-size: 0.85rem;
     line-height: 1.46rem;
     letter-spacing: 0.01rem;
+    font-family: var(--f-f2);
 }
 
 .content_info_card_profile {
@@ -329,6 +330,8 @@ li {
     height: 32px;
     width: 32px;
     border-radius: 50px;
+    margin-right: 8px;
+
 }
 
 .content_info_card_ava_name {
