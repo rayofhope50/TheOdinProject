@@ -495,4 +495,54 @@ li {
     position: relative;
 }
 
-.footer_content_menu {}
+.footer_content_menu {
+    width: 100%;
+    color: white;
+
+}
+
+.footer_content_menu_li {
+    margin: 4rem 0 0 0;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.footer_content_menu_li li {
+    color: white;
+    width: fit-content;
+    margin-bottom: 0.6rem;
+
+}
+
+.footer_content_menu_li a {
+    color: white;
+    font-weight: 300;
+    letter-spacing: .01rem;
+
+}
+
+.footer_content_menu_li li:last-of-type {
+    visibility: hidden;
+}
+
+.footer_social {
+    width: 100%;
+    margin: 0 0 3.2rem 0;
+    display: flex;
+    justify-content: center;
+}
+
+.fa-brands {
+    width: 31px;
+    height: 31px;
+    margin-right: 0.83rem;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white;
+    border-radius: 50%;
+
+}
