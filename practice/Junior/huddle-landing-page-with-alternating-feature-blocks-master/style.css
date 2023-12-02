@@ -1,0 +1,107 @@
+:root {
+    --clr-primary-vDarkBlue: hsl(243, 87%, 12%);
+    --clr-primary-desBlue: hsl(238, 22%, 44%);
+    --clr-accent-blue: hsl(224, 93%, 58%);
+    --clr-accent-cyan: hsl(170, 45%, 43%);
+    --clr-neutral-grayBlue: hsl(240, 75%, 98%);
+    --clr-neutral-lightGray: hsl(0, 0%, 75%);
+    --f-fs: 16px;
+    --f-f1: 'Raleway', sans-serif;
+    --f-f2: 'Open Sans', sans-serif;
+    /* --gradient-one: linear-gradient(270deg, hsl(335, 100%, 65%) 0%, hsl(6, 100%, 80%) 100%); */
+    /* --f-fw-300: 300; */
+    --f-fw-400: 400;
+    --f-fw-700: 700;
+    --f-body-fw-400: 400;
+
+}
+
+::-webkit-input-placeholder {
+    font-size: 0.9rem;
+    letter-spacing: .02rem;
+}
+
+::-moz-placeholder {
+    font-size: 0.9rem;
+
+}
+
+:-ms-input-placeholder {
+    font-size: 0.9rem;
+
+}
+
+:-moz-placeholder {
+    font-size: 0.9rem;
+
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: auto;
+    font-size: var(--f-fs);
+    font-family: var(--f-f1);
+
+}
+
+body {
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input {
+    width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.75rem;
+    font-size: 1.125rem;
+}
+
+#root,
+#__next {
+    isolation: isolate;
+}
