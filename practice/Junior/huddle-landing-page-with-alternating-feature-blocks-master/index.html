@@ -4,10 +4,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="style.css">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@600&display=swap"
+    rel="stylesheet">
   <title>Frontend Mentor | Huddle landing page with alternating feature blocks</title>
 </head>
 
@@ -15,22 +18,13 @@
   <!-- HEADER AREA -->
   <header class="header">
     <div class="header_wrap">
-      <!-- background img -->
-      <div class="header_bg">
-        <!-- CSS background image -->
-      </div>
       <!-- Logo and Try it free area -->
       <div class="header_top">
         <figure class="header_top_logo"><img src="./images/logo.svg" alt="Huddle Logo"></figure>
-        <div class="header_top_button">
-          <button>Try It Free</button>
-        </div>
+        <button class="header_top_button">Try It Free</button>
       </div>
       <!-- Hero text and bockup img -->
       <div class="header_bottom">
-        <figure>
-          <img class="header_bottom_bockup " src="./images/illustration-mockups.svg" alt="Mockup photo">
-        </figure>
         <div class="header_bottom_wrap">
           <h1 class="header_bottom_title">Build The Community Your Fans Will Love
           </h1>
@@ -41,6 +35,9 @@
           <button class="header_bottom_btn">Get Started For Free</button>
 
         </div>
+        <figure>
+          <img class="header_bottom_bockup " src="./images/illustration-mockups.svg" alt="Mockup photo">
+        </figure>
       </div>
     </div>
   </header>
@@ -91,9 +88,6 @@
       </div>
     </section>
   </main>
-
-
-
   <footer class="footer">
     <div class="footer_wrap">
       <div class="footer_info">
