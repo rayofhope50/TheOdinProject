@@ -108,6 +108,8 @@ header {
     background-repeat: no-repeat;
     background-position: top;
     background-color: var(--clr-primary-paleCyan);
+    display: flex;
+    height: fit-content;
 }
 
 @media (max-width: 999px) {
@@ -176,4 +178,11 @@ header {
     font-size: .85rem;
     color: white;
     font-weight: var(--f-fw-700);
+}
+
+.header_bottom_mockup {
+    width: 80%;
+    margin: auto;
+    margin-top: 6rem;
+    margin-bottom: 6.5rem;
 }
