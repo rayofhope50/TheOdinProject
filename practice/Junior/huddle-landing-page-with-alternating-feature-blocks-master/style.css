@@ -244,12 +244,31 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     position: relative;
     top: 96px;
     background-color: white;
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.08);
     border-radius: 20px;
+    text-align: center;
 
+}
+
+.section_sign_h3 {
+    margin-top: 1rem;
+    margin-bottom: 2.25rem;
+    font-family: var(--f-f-headings);
+    font-size: 1.1rem;
+}
+
+.section_sign_button {
+    width: 70%;
+    height: 55px;
+    border-radius: 50px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    border: none;
+    color: white;
+    background-color: var(--clr-primary-pink);
 }
 
 .section_users {
@@ -258,4 +277,19 @@ header {
 
 .footer {
     background-color: var(--clr-neutral-vDarkBlue);
+    padding-top: 13rem;
+    color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.footer_info {
+    width: 90%;
+    margin: auto;
+}
+
+.footer_faq {
+    width: 90%;
 }
