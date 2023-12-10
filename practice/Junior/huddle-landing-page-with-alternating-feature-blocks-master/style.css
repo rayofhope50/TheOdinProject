@@ -290,6 +290,68 @@ header {
     margin: auto;
 }
 
+.footer_info_wrap {
+    margin-top: 2.8rem;
+}
+
+
+
+.svgs {
+    display: flex;
+    margin-bottom: 1.5rem;
+}
+
+.svgs>figure {
+    margin-right: 1.5rem;
+}
+
+.footer_info_location>figure {
+    width: 40px;
+    margin: 6px 1.5rem 0 0;
+}
+
+.footer_info_location_p {
+    line-height: 1.5rem;
+
+}
+
+.footer_info_phone>figure {
+    margin: 3px 1.5rem 0 0;
+}
+
+.footer_info_email>figure {
+    margin: 7px 1.5rem 0 0;
+}
+
 .footer_faq {
     width: 90%;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+}
+
+.footer_faq_li>li {
+    margin: 8px 8px 8px 0;
+}
+
+.footer_social {
+    margin-top: 3rem;
+    margin-bottom: 6rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    position: relative;
+}
+
+.footer_social_icons {
+    display: flex;
+}
+
+.fa-brands {
+    border: 1px solid white;
+    width: 31px;
+    height: 31px;
+    margin-right: 0.8rem;
+    border-radius: 50%;
+    text-align: center;
+    padding-top: 6px;
 }
