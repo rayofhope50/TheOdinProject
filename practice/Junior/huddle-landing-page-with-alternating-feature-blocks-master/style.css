@@ -2,6 +2,7 @@
     --clr-primary-pink: hsl(322, 100%, 66%);
     --clr-primary-paleCyan: hsl(193, 100%, 96%);
     --clr-neutral-grayBlue: hsl(208, 11%, 55%);
+    --clr-neutral-vDarkBlue: hsl(192, 100%, 9%);
     --f-fs: 16px;
     --f-f-body-call: 'Open Sans', sans-serif;
     --f-f-headings: 'Poppins', sans-serif;
@@ -103,6 +104,13 @@ h3 {
     isolation: isolate;
 }
 
+.main_wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: fit-content;
+}
+
 header {
     background-size: contain;
     background-repeat: no-repeat;
@@ -185,4 +193,69 @@ header {
     margin: auto;
     margin-top: 6rem;
     margin-bottom: 6.5rem;
+}
+
+
+.section {
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.08);
+    width: 90%;
+    border-radius: 20px;
+    overflow: hidden;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2.5rem;
+}
+
+.card_img {
+    width: 81%;
+    padding: 4rem 0 4rem 0;
+}
+
+.section_txt {
+    width: 85%;
+    text-align: center;
+}
+
+.section_txt_h2 {
+    margin-top: .8rem;
+    margin-bottom: 1.2rem;
+    font-family: var(--f-f-headings);
+    font-weight: var(--f-fw-600);
+    font-size: 1.75rem;
+}
+
+.lh {
+    line-height: 2.5rem;
+
+}
+
+.section_txt_p {
+    font-size: 1rem;
+    color: var(--clr-neutral-grayBlue);
+    letter-spacing: 0.01rem;
+    margin-bottom: 2.75rem;
+}
+
+.section_sign {
+    width: 90%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    top: 96px;
+    background-color: white;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.08);
+    border-radius: 20px;
+
+}
+
+.section_users {
+    margin-bottom: 0;
+}
+
+.footer {
+    background-color: var(--clr-neutral-vDarkBlue);
 }
