@@ -343,6 +343,7 @@ header {
 }
 
 .footer_social_icons {
+    /* flexing */
     display: flex;
 }
 
