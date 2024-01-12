@@ -1,14 +1,21 @@
-function myFunction(a) {
-  a.reduce((acc, val, i) => {
-    acc[val];
-
-    console.log(acc);
-    console.log(val);
-    console.log(i);
-    return acc;
-  }, {});
-  return a;
+function reverseArray(arr) {
+  if (arr.length > 1) {
+    const lastEl = arr.pop();
+    arr.unshift(lastEl);
+  }
+  return arr;
 }
-
-console.log(myFunction([1, 2, 2, 3]));
-console.log(myFunction([9, 9, 9, 99]));
+function reverseArrayInPlace(arr) {
+  if (arr.length > 1) {
+    const lastEl = arr.pop();
+    arr.unshift(lastEl);
+  }
+  return arr;
+  // hello
+}
+console.log(reverseArray(["A", "B", "C"]));
+// → ["C", "B", "A"];
+let arrayValue = [1, 2, 3, 4, 5];
+reverseArrayInPlace(arrayValue);
+console.log(arrayValue);
+// → [5, 4, 3, 2, 1]
