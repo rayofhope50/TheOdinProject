@@ -1,21 +1,13 @@
-function reverseArray(arr) {
-  if (arr.length > 1) {
-    const lastEl = arr.pop();
-    arr.unshift(lastEl);
-  }
-  return arr;
+function myFunction(a, b) {
+  let diff, hrs, min, sec;
+  diff = Math.abs(a - b);
+  hrs = Math.floor(diff / 60 / 60 / 1000);
+  min = Math.floor((diff / 60 / 1000) % 60);
+  sec = Math.floor((diff / 1000) % 60);
+  // console.log(diff, hours, min, sec);
+  return { hrs, min, sec };
 }
-function reverseArrayInPlace(arr) {
-  if (arr.length > 1) {
-    const lastEl = arr.pop();
-    arr.unshift(lastEl);
-  }
-  return arr;
-  // hello
-}
-console.log(reverseArray(["A", "B", "C"]));
-// → ["C", "B", "A"];
-let arrayValue = [1, 2, 3, 4, 5];
-reverseArrayInPlace(arrayValue);
-console.log(arrayValue);
-// → [5, 4, 3, 2, 1]
+
+console.log(myFunction(new Date(2021, 8, 10, 15, 14, 00)));
+console.log(myFunction(new Date(2021, 8, 10, 15, 31, 00)));
+console.log(myFunction(new Date(2021, 8, 10, 15, 22, 00)));
