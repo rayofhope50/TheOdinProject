@@ -1,5 +1,5 @@
 function myFunction() {
-  let set = 
+  let set = trakaka;
 }
 
 console.log(myFunction());
