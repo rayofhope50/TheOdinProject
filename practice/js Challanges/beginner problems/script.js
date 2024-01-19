@@ -1,5 +1,6 @@
 function myFunction() {
   let set = trakaka;
+  const wty = kto;
 }
 
 console.log(myFunction());
