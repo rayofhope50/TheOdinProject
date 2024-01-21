@@ -9,17 +9,19 @@
 </head>
 
 <body>
-    <div class="pom__wrapper">
-        <h1 class="pom__h1">
-            Pomodoro Timer
+    <div class="game__wrapper">
+        <h1 class="game__h1">
+            Rock Paper Scissors Game
         </h1>
-        <p class="pom__timer" id="timer">25:00</p>
-        <div class="pom__wrapBtn">
-            <button type="submit" class="start button" id="start">START</button>
-            <button type="submit" class="stop button" id="stop">STOP</button>
-            <button type="submit" class="reset button" id="reset">RESET</button>
+        <p class="game__timer" id="timer">Choose your move:</p>
+        <div class="game__pic__wrap">
+            <button class="pix rock" id="rock">&#x1F44A;</button>
+            <button class="pix paper" id="paper">&#x1F590;</button>
+            <button class="pix scissors" id="scissors">&#x270C;</button>
         </div>
-
+        <span class="result" id="result"></span>
+        <p class="score" id="score">Your score: <span class="player" id="player">0</span> Computer score: <span
+                class="comp" id="comp">0</span></p>
     </div>
 </body>
 <script src="./script.js"></script>

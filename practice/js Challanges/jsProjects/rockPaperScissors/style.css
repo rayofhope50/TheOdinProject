@@ -117,70 +117,50 @@ h3 {
 }
 
 body {
+    background-color: #f2f2f2;
     display: flex;
     justify-content: center;
     padding-top: 3rem;
     align-items: top;
 }
 
-
-
-.game__wrapper {
+.tip__wrapper {
     background-color: white;
+    width: 350px;
+    height: fit-content;
     border-radius: 20px;
     overflow: hidden;
+    padding: 20px;
+}
+
+.tip__h1 {
+    font-size: 2rem;
     text-align: center;
+    margin-bottom: 1.35rem;
 }
 
-.game__h1 {
-    font-size: 1.7rem;
-    text-align: center;
+.tip__text {
+    margin-bottom: 1rem;
 }
 
-.game__timer {
-    font-size: 1.3rem;
-    font-weight: 600;
-    margin: 2rem 0 1rem 0;
+.tip__inputs__p {
+    margin-bottom: 0.5rem;
 }
 
-.game__pic__wrap {
-    margin-bottom: 2rem;
+.tip__inputs {
+    padding: 5px 0;
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 4px;
+    margin-bottom: .8rem;
 }
 
-.pix {
-    font-size: 3rem;
-    padding-top: 27px;
-    padding-bottom: 27px;
-    margin-left: 0.5rem;
-}
-
-.rock {
-    background-color: red;
-    border: none;
-    border-radius: 6px;
-}
-
-.paper {
-    background-color: #2196f3;
-    border: none;
-    border-radius: 6px;
-}
-
-.scissors {
+.button {
+    width: 100%;
+    padding: 10px;
     background-color: #4caf50;
     border: none;
-    border-radius: 6px;
-}
-
-.score {
-    font-size: 1.5rem;
-    font-weight: 600;
-}
-
-.player {
-    color: #2196f3;
-}
-
-.comp {
-    color: red;
+    color: white;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    margin-top: 0.5rem;
 }

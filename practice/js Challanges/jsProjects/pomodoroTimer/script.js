@@ -1,62 +1,40 @@
-const start = document.getElementById("start");
-const stop = document.getElementById("stop");
-const reset = document.getElementById("reset");
-const timer = document.getElementById("timer");
-let stp = false;
-let isFunctionRunning = false;
-let res = false;
+const rock = document.getElementById("rock");
+const paper = document.getElementById("paper");
+const scissors = document.getElementById("scissors");
+const scorePl = document.getElementById("player");
+const scoreCo = document.getElementById("comp");
+let player;
+let comp;
 
-reset.addEventListener("click", () => {
-  res = true;
-  timer.innerText = "25:00";
-  console.log(`${res} from reset`);
+rock.addEventListener("click", () => {
+  player = "rock";
+  compMove();
+  console.log(`Clicked ${player} comp: ${comp}`);
+});
+paper.addEventListener("click", () => {
+  player = "paper";
+  compMove();
+  gameAlgo(player, comp);
+  console.log(`Clicked ${player} comp: ${comp}`);
+});
+scissors.addEventListener("click", () => {
+  player = "scissors";
+  compMove();
+  console.log(`Clicked ${player} comp: ${comp}`);
 });
 
-stop.addEventListener("click", () => {
-  stp = true;
-
-  console.log(`${stp} from stop`);
-});
-
-start.addEventListener("click", () => {
-  stp = false;
-  res = false;
-  if (isFunctionRunning == true) {
-    return;
-  } else {
-    pomodoro();
+function gameAlgo(player, comp) {
+  if (comp == player) {
+    console.log(`TIE`);
   }
-});
-
-function pomodoro() {
-  isFunctionRunning = true;
-  if (res == false) {
-    if (stp == false) {
-      let time = timer.innerHTML.split(":");
-      let minutes = parseInt(time[0]);
-      let seconds = parseInt(time[1]);
-      console.log(minutes, seconds);
-      if (minutes > 0 || seconds > 0) {
-        if (seconds === 0) {
-          minutes--;
-          seconds = 59;
-        } else {
-          seconds--;
-        }
-        let updatedTime =
-          `${minutes.toString().padStart(2, "0")}` +
-          String.fromCharCode(58) +
-          `${seconds.toString().padStart(2, "0")}`;
-        timer.innerText = updatedTime;
-        console.log(`${stp} from function`);
-      }
-      setTimeout(pomodoro, 1000);
-    } else {
-      isFunctionRunning = false;
-      return;
-    }
+}
+function compMove() {
+  let temp = Math.floor(Math.random() * 10) + 1;
+  if (temp <= 3) {
+    comp = "paper";
+  } else if (temp <= 7) {
+    comp = "scissors";
   } else {
-    isFunctionRunning = false;
-    return;
+    comp = "rock";
   }
 }
