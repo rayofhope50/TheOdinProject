@@ -9,29 +9,19 @@
 </head>
 
 <body>
-    <div class="tip__wrapper">
-        <div class="wrap">
-            <h1 class="tip__h1">
-                Tip Calculator
-            </h1>
-            <p class="tip__text">
-                Enter the bill amunt and tip percentage to calculate the total.
-            </p>
-            <form id="tipForm" class="tip__form">
-                <label for="tipInput">
-                    <p class="tip__inputs__p">Bill amount:</p>
-                </label>
-                <input type="text" id="tipInput" class="tip__inputs">
-                <label for="percentInput">
-                    <p class="tip__inputs__p">Tip percentage:</p>
-                </label>
-                <input type="text" id="percentInput" class="tip__inputs">
-                <button type="submit" class="button" id="button">CALCULATE</button>
-                <label for="total">Total:</label>
-                <span id="total"></span>
-            </form>
-
+    <div class="game__wrapper">
+        <h1 class="game__h1">
+            Rock Paper Scissors Game
+        </h1>
+        <p class="game__timer" id="timer">Choose your move:</p>
+        <div class="game__pic__wrap">
+            <button class="pix rock" id="rock">&#x1F44A;</button>
+            <button class="pix paper" id="paper">&#x1F590;</button>
+            <button class="pix scissors" id="scissors">&#x270C;</button>
         </div>
+        <span class="result" id="result"></span>
+        <p class="score" id="score">Your score: <span class="player" id="player">0</span> Computers score: <span
+                class="comp" id="comp">0</span></p>
     </div>
 </body>
 <script src="./script.js"></script>
