@@ -7,21 +7,23 @@ let seconds = temp[2];
 let timeoutId;
 buttons.forEach((button) => {
   button.addEventListener("click", () => {
-    console.log(button.id);
-    if (button.id == "start") {
-      startTimer();
-    } else if (button.id == "reset") {
-      clearTimeout(timeoutId);
-      hours = 0;
-      minutes = 0;
-      seconds = 0;
-      timerUi();
-    } else if (button.id == "stop") {
-      clearTimeout(timeoutId);
-    }
-    console.log(hours, minutes, seconds);
+    buttonHandle(button);
   });
 });
+
+function buttonHandle(button) {
+  if (button.id == "start") {
+    startTimer();
+  } else if (button.id == "reset") {
+    clearTimeout(timeoutId);
+    hours = 0;
+    minutes = 0;
+    seconds = 0;
+    timerUi();
+  } else if (button.id == "stop") {
+    clearTimeout(timeoutId);
+  }
+}
 
 function startTimer() {
   if (seconds == 59) {
