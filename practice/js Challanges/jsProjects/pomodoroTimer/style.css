@@ -127,8 +127,6 @@ body {
 
 .game__wrapper {
     background-color: white;
-    border-radius: 20px;
-    overflow: hidden;
     text-align: center;
 }
 
@@ -172,9 +170,11 @@ body {
     border-radius: 6px;
 }
 
-.score {
-    font-size: 1.5rem;
+.score,
+.result {
+    font-size: 1.3rem;
     font-weight: 600;
+    margin-top: 2rem;
 }
 
 .player {
