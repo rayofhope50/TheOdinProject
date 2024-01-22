@@ -4,16 +4,20 @@ let temp = timerVal.innerText.split(":");
 let hours = temp[0];
 let minutes = temp[1];
 let seconds = temp[2];
+let timeoutId;
 buttons.forEach((button) => {
   button.addEventListener("click", () => {
     console.log(button.id);
     if (button.id == "start") {
       startTimer();
     } else if (button.id == "reset") {
+      clearTimeout(timeoutId);
       hours = 0;
       minutes = 0;
       seconds = 0;
       timerUi();
+    } else if (button.id == "stop") {
+      clearTimeout(timeoutId);
     }
     console.log(hours, minutes, seconds);
   });
@@ -31,7 +35,7 @@ function startTimer() {
     seconds++;
   }
   timerUi();
-  setTimeout(startTimer, 1000);
+  timeoutId = setTimeout(startTimer, 1000);
 }
 
 function timerUi() {
