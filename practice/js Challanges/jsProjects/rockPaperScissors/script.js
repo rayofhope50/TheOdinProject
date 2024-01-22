@@ -2,6 +2,8 @@ const buttons = document.querySelectorAll("button");
 const scorePl = document.getElementById("player");
 const scoreCo = document.getElementById("comp");
 const result = document.getElementById("result");
+const playerResult = document.getElementById("player");
+const compResult = document.getElementById("comp");
 
 let countPlayer = 0;
 let countComp = 0;
@@ -12,30 +14,29 @@ buttons.forEach((button) => {
     const computerChoice = compMove();
     const winner = gameAlgo(playerChoice, computerChoice);
     updateUI();
-    result.innerText = winner;
+    winner == "You win"
+      ? (result.innerText = `${winner} ${playerChoice} beats ${computerChoice}!`)
+      : (result.innerText = `${winner} ${computerChoice} beats ${playerChoice}!`);
   });
 });
 
+const rules = {
+  rock: { rock: "It's a tie", paper: "You lose", scissors: "You win" },
+  paper: { rock: "You win", paper: "It's a tie", scissors: "You lose" },
+  scissors: { rock: "You lose", paper: "You win", scissors: "It's a tie" },
+};
+
 function gameAlgo(player, comp) {
-  if (comp == player) {
-    return "It's a tie!";
-  }
-  if (
-    (comp == "rock" && player == "scissors") ||
-    (comp == "paper" && player == "rock") ||
-    (comp == "scissors" && player == "paper")
-  ) {
-    countComp++;
-    return `You lose ${comp} beats ${player} `;
-  }
-  if (
-    (comp == "rock" && player == "paper") ||
-    (comp == "paper" && player == "scissors") ||
-    (comp == "scissors" && player == "rock")
-  ) {
+  let winner = rules[player][comp];
+
+  if (winner == "You win") {
     countPlayer++;
-    return `You win ${player} beats ${comp}`;
+    updateUI();
+  } else if (winner == "You lose") {
+    countComp++;
+    updateUI();
   }
+  return winner;
 }
 
 function compMove() {
