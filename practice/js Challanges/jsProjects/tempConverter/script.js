@@ -1,13 +1,43 @@
 "use strict";
 // Great solution my embaracing code is lower
-const inputC = document.
+const inputs = document.querySelectorAll("input");
+const inputC = document.getElementById("inputC");
+const inputF = document.getElementById("inputF");
+const inputK = document.getElementById("inputK");
 
+inputs.forEach((input) => {
+  input.addEventListener("focus", () => {
+    input.value = "";
+    console.log("changed to empty");
+  });
+  input.addEventListener("blur", () => {
+    console.log("deselected");
+    const inputVal = input.value;
+    computeTemp(input.id, input.value);
+  });
+});
 
+function computeTemp(id, value) {
+  console.log("start functoin", id, value);
+  switch (id) {
+    case "inputC":
+      inputF.value = ((parseFloat(value) * 9) / 5 + 32).toFixed(2);
+      inputK.value = (parseFloat(value) + 273.15).toFixed(2);
+      break;
+    case "inputF":
+      inputC.value = (((parseFloat(value) - 32) * 5) / 9).toFixed(2);
+      inputK.value = (((parseFloat(value) - 32) * 5) / 9 + 273.15).toFixed(2);
+      break;
+    case "inputK":
+      inputC.value = (parseFloat(value) - 273.15).toFixed(2);
+      inputF.value = (((parseFloat(value) - 273.15) * 9) / 5 + 32).toFixed(2);
+      break;
+    default:
+      break;
+  }
+}
 
-
-
-
-// MY EMBARACING CODE 
+// MY EMBARACING CODE
 // const inputs = document.querySelectorAll("input");
 // const inputC = document.getElementById("inputC");
 // const inputF = document.getElementById("inputF");
