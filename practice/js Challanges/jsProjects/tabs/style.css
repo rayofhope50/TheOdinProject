@@ -116,10 +116,16 @@ h3 {
     box-shadow: 0 3px 0 hsl(233, 67%, 59%);
 }
 
+html {
+    display: flex;
+    justify-content: center;
+}
+
 body {
     background-color: #f5abc9;
     height: 100%;
     padding-bottom: 5rem;
+    max-width: 1000px;
 }
 
 .section-center {
@@ -141,6 +147,8 @@ body {
     background: #ffe5e2;
     border-radius: 10px;
     overflow: hidden;
+    max-width: 600px;
+    margin: auto;
 
 }
 
