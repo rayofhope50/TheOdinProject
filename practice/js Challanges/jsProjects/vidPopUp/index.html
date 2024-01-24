@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/4e6114881a.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <div class="main__wrap">
-        <img src="./pexels-photo-3062545.jpeg" alt="Pix of a photo">
+        <img class="img" src="./pexels-photo-3062545.jpeg" alt="Pix of a photo">
         <h1 class="main__h1">Movie Title</h1>
         <p class="main__p">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae, vero sequi ipsa, itaque
             aliquid, eaque sunt eius ducimus doloremque harum repellendus tempore illum beatae molestias adipisci
@@ -18,12 +19,11 @@
         <button class="main__btn" id="btn">Watch now</button>
     </div>
     <div class="pop__up hidden">
-        <div class="pop__x hidden">X</div>
-        <video src="./trailer.mp4" class="video hidden" id="video"></video>
-
+        <i class="fa-solid fa-x fav"></i>
+        <video controls src="./trailer.mp4" class="video " id="video"></video>
     </div>
+    <script src="./script.js"></script>
 
 </body>
-<script src="./script.js"></script>
 
 </html>

@@ -119,14 +119,26 @@ h3 {
 body {
     background-color: black;
     color: white;
-    padding: 10px;
     position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.main__wrap {
+    padding: 10px;
+    max-width: 430px;
 }
 
 .main__h1 {
     font-size: 1.8rem;
     font-weight: 300;
     margin: 2rem 0;
+}
+
+.img {
+    max-width: 100%;
 }
 
 .main__p {
@@ -145,21 +157,39 @@ body {
     cursor: pointer;
 }
 
-.pop__x {
-    text-align: right;
-}
+
 
 .pop__up {
-    top: 200px;
+    top: 0;
     position: absolute;
-    padding: 1rem 1rem 1rem 0;
     height: 100%;
-    width: 100%;
+    max-width: 1000px;
     background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
+.pop__x {
+    text-align: right;
+    position: absolute;
+}
 
+.video {
+    max-width: 90%;
+}
 
-/* .hidden {
+.fav {
+    font-size: 1.3rem;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+}
+
+.fav:hover {
+    cursor: pointer;
+}
+
+.hidden {
     display: none;
-} */
+}
