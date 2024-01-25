@@ -157,7 +157,7 @@ body {
     justify-content: center;
 }
 
-.cont__btn__wrap>button {
+.btn {
     margin: 0 .5rem;
     background-color: slateblue;
     color: white;
@@ -168,6 +168,10 @@ body {
     font-size: 0.8rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     cursor: pointer;
+}
+
+.btn:hover {
+    opacity: 0.9;
 }
 
 .progress__bar__back {
