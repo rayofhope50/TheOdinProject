@@ -193,3 +193,12 @@ body {
     top: 16px;
     border: none;
 }
+
+.checked {
+    border: 4px solid green;
+    color: green;
+}
+
+.checked__Btn {
+    background-color: lightgray;
+}
