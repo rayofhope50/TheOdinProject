@@ -122,3 +122,38 @@ h3 {
     background-color: var(--clr-primary-lightBlue);
     box-shadow: 0 3px 0 hsl(233, 67%, 59%);
 }
+
+body {
+    position: relative;
+    background: lightgray;
+}
+
+.fa-bars {
+    font-size: 1.3rem;
+}
+
+.fa-times {
+    font-size: 1.4rem;
+    color: #e94949;
+
+}
+
+.fa-bars:hover {
+    color: #e94949;
+}
+
+.nav__bar {
+    position: absolute;
+    background-color: white;
+    width: 500px;
+    height: 100%;
+    top: 0;
+
+}
+
+.nav__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
