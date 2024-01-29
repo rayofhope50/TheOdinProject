@@ -56,7 +56,6 @@ function updateStepProgress() {
   } else {
     prevEl.disabled = false;
     nextEl.disabled = false;
-    //all works// cheetting
   }
 }
 
