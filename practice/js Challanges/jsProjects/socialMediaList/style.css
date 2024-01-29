@@ -151,6 +151,7 @@ body {
     justify-content: space-between;
     border-radius: 5px;
     padding: 10px 5px 10px 10px;
+    cursor: pointer;
 }
 
 .media__header_p {
@@ -160,11 +161,10 @@ body {
 .media__header__btn {
     border: none;
     background: none;
-    padding-top: 5px;
-    transition: transform .2s linear;
 }
 
 .rotate {
+    transition: all .3s linear;
     transform: rotate(180deg);
 }
 
@@ -172,7 +172,7 @@ body {
     border-radius: 5px;
     padding: 10px;
     margin-top: 2rem;
-    transform: all 0.4s linear;
+    transition: all 0.4s linear;
 }
 
 .media__liEl {
@@ -213,5 +213,6 @@ body {
 }
 
 .hide {
-    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s linear;
 }
