@@ -133,7 +133,7 @@ body {
 }
 
 .fa-times {
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     color: #e94949;
 
 }
@@ -148,12 +148,45 @@ body {
     width: 500px;
     height: 100%;
     top: 0;
+    transform: translate(-100%);
+    transition: all .5s ease-in-out;
+}
 
+.checked {
+    transform: translate(0%);
+    transition: all .5s ease-in-out;
 }
 
 .nav__header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 1rem 1.5rem;
 
+}
+
+.nav__header>img {
+    margin-left: -15px;
+}
+
+.nav__menu>li:hover {
+    background-color: rgba(233, 73, 73, 0.5);
+    transition: all 0.3s linear;
+
+}
+
+.nav__menu>li:hover a {
+    margin-left: .5rem;
+    transition: all 0.3s linear;
+}
+
+.nav__menu>li a {
+    transition: all 0.3s linear;
+}
+
+li {
+    padding: 1rem 1.5rem;
+    font-size: 1.5rem;
+    color: gray;
+    transition: all 0.3s linear;
 }
