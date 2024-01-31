@@ -10,3 +10,6 @@ burgerBtn.addEventListener("click", () => {
     navBar.classList.remove("checked");
   }
 });
+xBtn.addEventListener("click", () => {
+  navBar.classList.remove("checked");
+});

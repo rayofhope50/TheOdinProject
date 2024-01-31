@@ -124,12 +124,20 @@ h3 {
 }
 
 body {
+    text-align: right;
     position: relative;
     background: lightgray;
 }
 
 .fa-bars {
     font-size: 1.3rem;
+    margin-right: 3rem;
+    margin-top: 1.7rem;
+}
+
+.fa-times:hover {
+    cursor: pointer;
+    color: black;
 }
 
 .fa-times {
@@ -143,6 +151,7 @@ body {
 }
 
 .nav__bar {
+    text-align: left;
     position: absolute;
     background-color: white;
     width: 500px;
