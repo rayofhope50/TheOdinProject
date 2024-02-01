@@ -11,6 +11,6 @@ input.addEventListener("input", () => {
 });
 
 function updateUi() {
-  charTotal.innerText = chars.length > 0 ? chars.length : 0;
-  charRemain.innerText = chars.length > 0 ? 50 - chars.length : 50;
+  charTotal.innerText = chars.length;
+  charRemain.innerText = 50 - chars.length;
 }
