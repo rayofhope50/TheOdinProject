@@ -130,6 +130,7 @@ body {
     align-items: center;
     justify-content: center;
     position: relative;
+
 }
 
 .pass__wrap {
@@ -163,6 +164,7 @@ body {
     position: absolute;
     transform: translate(-40px, 10px);
     color: gray;
+    cursor: pointer;
 }
 
 .far:hover {
@@ -176,6 +178,7 @@ body {
     border: none;
     border-radius: 4px;
     margin: 1rem 0;
+    cursor: pointer;
 }
 
 .pass__btn:hover {
@@ -188,18 +191,18 @@ body {
 
 .pass__pop {
     position: fixed;
-    bottom: 200px;
-    right: 0;
+    bottom: 20px;
+    margin-bottom: 2rem;
+    right: 20px;
     background-color: lightgreen;
     padding: 20px 30px;
     font-size: 1.5rem;
     border-radius: 10px;
-    transform: translate(100%);
-    transform: all 0.5s linear;
     font-weight: 600;
+    transition: all 0.3s linear;
+
 }
 
 .active {
-    transform: all 0.5s linear;
-    transform: translate(0);
+    right: -300px;
 }
