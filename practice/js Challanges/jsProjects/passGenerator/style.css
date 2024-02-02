@@ -129,6 +129,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 
 .pass__wrap {
@@ -183,4 +184,22 @@ body {
 
 .pass__btn:active {
     transform: scale(0.95);
+}
+
+.pass__pop {
+    position: fixed;
+    bottom: 200px;
+    right: 0;
+    background-color: lightgreen;
+    padding: 20px 30px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    transform: translate(100%);
+    transform: all 0.5s linear;
+    font-weight: 600;
+}
+
+.active {
+    transform: all 0.5s linear;
+    transform: translate(0);
 }
