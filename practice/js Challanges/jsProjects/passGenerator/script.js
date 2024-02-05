@@ -1,28 +1,40 @@
 "use strict";
-const generateBtn = document.getElementById("generateBtn");
-const copyBtn = document.getElementById("copy");
-const passField = document.getElementById("input");
-const popUp = document.getElementById("popUp");
+const parent = document.getElementById("colours");
+let i = 0;
 
-generateBtn.addEventListener("click", () => {
-  console.log(`Button pressed`);
-  randomPass();
-});
-copyBtn.addEventListener("click", () => {
-  const copied = passField.value;
-  popUp.innerText = `${copied} copied!`;
-  popUp.classList.remove("active");
-  navigator.clipboard.writeText(passField.value);
-});
-
-function randomPass() {
-  let newPass = "";
-  const char =
-    "0123456789abcdefghijklmnopqrstuvwxtz!@#$%^&*()_+?:{}[]ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-  const maxPass = 14;
-  for (let i = 0; i < maxPass; i++) {
-    const temp = char[Math.floor(Math.random() * 79)];
-    newPass += temp;
-  }
-  passField.value = `${newPass}`;
+function createColours() {
+  do {
+    const div = document.createElement("div");
+    parent.appendChild(div);
+    div.className = "colours";
+    div.innerText = `I've been born as ${i}`;
+    const randomised = random();
+    div.style.backgroundColor = `#${randomised}`;
+    div.innerText = `#${randomised}`;
+    i++;
+  } while (i < 30);
 }
+function random() {
+  const chars = "0123456789abcdef";
+  let newColour = "";
+  for (let i = 0; i < 6; i++) {
+    let temp = Math.floor(Math.random() * 16);
+    newColour +=
+      temp == 10
+        ? "a"
+        : temp == 11
+        ? "b"
+        : temp == 12
+        ? "c"
+        : temp == 13
+        ? "d"
+        : temp == 14
+        ? "e"
+        : temp == 15
+        ? "f"
+        : temp;
+  }
+  return newColour;
+}
+createColours();
+// random();
