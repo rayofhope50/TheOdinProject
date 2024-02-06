@@ -125,22 +125,30 @@ h3 {
 }
 
 body {
-    background-color: lightgray;
+    background-color: #ebebeb;
+
     display: flex;
-    align-items: center;
     justify-content: center;
 }
 
 .questions {
     max-width: 620px;
-    margin: 6rem 1.5rem 1.5rem 1.5rem;
+    width: 100%;
+    margin: 3rem 1.5rem 1.5rem 1.5rem;
 }
+
+
 
 .section__wrap {
     padding: 1.5rem 1.5rem 0 1.5rem;
     background-color: white;
     margin-bottom: 1.5rem;
     border-radius: 10px;
+}
+
+.question__text {
+    padding-bottom: 2.5rem;
+    color: grey;
 }
 
 .question__title {
@@ -150,6 +158,7 @@ body {
     font-size: 1.3rem;
     color: yellowgreen;
     font-weight: bold;
+    padding-bottom: 2rem;
 }
 
 .question__btn {
@@ -163,4 +172,10 @@ body {
 hr {
     background-color: black;
     height: 2px;
+    margin-bottom: 2rem;
+}
+
+.hidden {
+    display: none;
+
 }
