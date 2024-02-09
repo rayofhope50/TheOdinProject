@@ -127,47 +127,66 @@ h3 {
 body {
     display: flex;
     justify-content: center;
+    background: linear-gradient(to left, lightblue, lightgreen);
+}
+
+.main__wrap {
+    padding-top: 2rem;
 }
 
 .title__wrap {
-    background-color: #0c2461;
-    color: white;
     text-align: center;
-    height: 80px;
-    padding-top: 1.5rem;
+    color: darkblue;
+    margin-bottom: 3rem;
+
 }
 
 .title__h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
+    margin-bottom: 2rem;
 }
 
-.recipe__wrap {
-    margin: 1rem;
-    box-shadow: 0 0 3px black;
-
+.title__p {
+    font-size: 1.3rem;
 }
 
-.recipe__txt {
-    padding: 1rem;
+.notes__wrap {
+    width: 300px;
+    margin: auto;
 }
 
-.recipe__txt__h2 {
-    text-align: center;
-}
-
-.recipe__txt__p {
-    color: #777;
-}
-
-.recipe__btn {
+.notes__input {
+    display: block;
+    height: 200px;
     width: 100%;
-    background-color: #0c2461;
-    text-align: center;
-    padding: 0.5rem 0 0.5rem 0;
+    font-size: 1.3rem;
+    padding: 17px;
+    margin-bottom: 2.5rem;
+    color: darkblue;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid lightgray;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    outline: none;
 }
 
-.recipe__btn__view {
-    background: none;
-    border: none;
-    color: white;
+.notes__btn {
+    height: 200px;
+    width: 100%;
+    border-radius: 15px;
+    font-size: 4rem;
+    font-weight: bold;
+    color: gray;
+    background: rgba(255, 255, 255, 0.27);
+    border-color: rgba(255, 255, 255, 0.37);
+    transition: all .5s linear;
+
+
+}
+
+.notes__btn:hover {
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.7);
+    color: rgba(0, 0, 0, 0.6);
+    transition: all .5s linear;
 }
