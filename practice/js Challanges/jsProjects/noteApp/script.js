@@ -11,3 +11,4 @@ function addText() {
   newEl.classList.add("notes__input");
   notes.appendChild(newEl);
 }
+// end
