@@ -4,10 +4,12 @@ const num1 = document.getElementById("firstNum");
 const num2 = document.getElementById("secondNum");
 const btn = document.querySelector(".game__btn");
 const input = document.getElementById("input");
-const result = randomNum();
+let result = randomNum();
+let playerScore = 0;
 
 btn.addEventListener("click", () => {
   checkAlgo();
+  result = randomNum();
 });
 
 function randomNum() {
@@ -15,14 +17,17 @@ function randomNum() {
   const second = Math.floor(Math.random() * 10) + 1;
   num1.innerText = first;
   num2.innerText = second;
-  const result = first + second;
+  const result = first * second;
   return result;
 }
 
 function checkAlgo() {
   if (parseInt(input.value) == result) {
-    score.innerText = +1;
+    playerScore++;
+    score.innerText = `${playerScore}`;
   } else {
-    score.innerText = -1;
+    playerScore--;
+    score.innerText = `${playerScore}`;
   }
+  input.value = "";
 }
