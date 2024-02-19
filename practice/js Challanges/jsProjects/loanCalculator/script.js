@@ -14,12 +14,9 @@ inputs.forEach((input) => {
     const loa = parseInt(loan.value);
     const interest = parseInt(interests.value) / 100;
     const month = parseInt(months.value);
-    const extra = loa * interest;
-    console.log(extra);
-    console.log(loa);
-    console.log(interest);
-    console.log(month);
-    const temp = (loa + extra) * (interest / month);
+    const extra = (loa * interest) / month;
+    const temp = (loa / month + extra).toFixed(2);
+    total.innerText = `${temp} $`;
     console.log(temp);
   });
 });
