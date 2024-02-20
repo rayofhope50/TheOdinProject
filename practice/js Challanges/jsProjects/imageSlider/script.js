@@ -2,16 +2,34 @@
 const prev = document.querySelector(".prev");
 const next = document.querySelector(".next");
 const imgs = document.querySelectorAll("img");
+const container = document.querySelector(".img__container");
 let idx = 1;
+let timeout;
 const interval = 3000;
-setInterval(updateI, interval);
-function updateI() {
-  if (idx == 0) {
-    idx++;
-    setInterval(updateI, interval);
-  }
-  imgs[idx].style.transform = `translateX(0%)`;
-  imgs[idx - 1].style.transform = `translateX(-100%)`;
+
+prev.addEventListener("click", () => {
+  console.log(`${idx} finish`);
+  idx--;
+  clearTimeout(timeout);
+  updateI();
+});
+next.addEventListener("click", () => {
   idx++;
-  setInterval(updateI, interval);
+  clearTimeout(timeout);
+  updateI();
+});
+updateI();
+
+function updateI() {
+  console.log(idx);
+  if (idx > imgs.length) {
+    idx = 1;
+  } else if (idx < 0) {
+    idx = imgs.length;
+  }
+  container.style.transform = `translateX(${-((idx - 1) * 500)}px)`;
+  timeout = setTimeout(() => {
+    idx++;
+    updateI();
+  }, interval);
 }

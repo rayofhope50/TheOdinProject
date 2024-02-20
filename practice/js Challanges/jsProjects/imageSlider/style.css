@@ -151,18 +151,11 @@ body {
     position: relative;
     height: 300px;
     width: 500px;
+    display: flex;
+    transform: translateX(0px);
+    transition: transform 0.5s ease-in-out;
 }
 
-img:first-child {
-
-    transform: translateX(0%);
-}
-
-img {
-    position: absolute;
-    transform: translateX(100%);
-    transition: transform 0.5s ease;
-}
 
 .prev {
     top: 130px;
