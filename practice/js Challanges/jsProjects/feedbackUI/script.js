@@ -6,7 +6,7 @@ let rating = "";
 icons.forEach((icon, idx, k) => {
   icon.addEventListener("click", function (e) {
     removeActive();
-    rating = e.target.innerText;
+    rating = e.target.innerText || e.target.parentNode.innerText;
     icons[idx].classList.add("active");
   });
 });
