@@ -1,25 +1,9 @@
 "use strict";
-const stars = document.querySelectorAll(".fa-star");
-const faces = document.querySelectorAll(".far");
+const kits = ["crash", "kick", "snare", "tom"];
+const parent = document.querySelector(".container");
 
-stars.forEach((star, index) => {
-  star.addEventListener("click", function () {
-    console.log(index, `index from clicking`);
-
-    updateRating(index);
-  });
-});
-
-function updateRating(index) {
-  stars.forEach((star, idx) => {
-    console.log(idx, `idx from check`);
-    if (idx < index + 1) {
-      star.classList.add("active");
-    } else {
-      star.classList.remove("active");
-    }
-  });
-  faces.forEach((face) => {
-    face.style.transform = `translateX(${-(index * 48)}px)`;
-  });
-}
+const el = document.createElement("button");
+el.classList.add("btn");
+parent.appendChild(el);
+el.innerText = `${kits[0][0].toUpperCase() + kits[0].slice(1)}`;
+el.style.backgroundImage = `url(./pictures/${kits[0]}.png)`;
