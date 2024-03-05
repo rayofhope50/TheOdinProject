@@ -126,32 +126,44 @@ h3 {
 
 body {
     position: relative;
+    width: 100%;
+
 }
 
-h1 {
-    position: absolute;
-    height: 130px;
+.wrap {
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.3);
-    color: white;
+    height: 100%;
     display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: space-evenly;
-    font-size: 6rem;
-    margin-top: 4rem;
 }
 
 .left__wrap {
     background-image: url(https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-13-pro-family-hero?wid=940&hei=1112&fmt=png-alpha&.v=1631220221000);
+    background-size: cover 150%;
+    background-position: center -150px;
     width: 50%;
     height: 100%;
-    background-position: center -150px;
+    background-color: pink;
 }
 
-.apple {
-    margin-right: 4rem;
+.right__wrap {
+    background-image: url(https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6465/6465022_sd.jpg;maxHeight=640;maxWidth=550);
+    background-size: cover 150%;
+    background-position: center 150px;
+    background-repeat: no-repeat;
+    width: 50%;
+    height: 100%;
+    background-color: white;
 }
 
-.sam {
-    margin-left: 4rem;
+.comp {
+    padding-top: 2.5rem;
+    font-size: 5rem;
+    margin: 5rem 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    height: 100px;
+    text-align: center;
+    font-weight: bold;
+    color: white;
 }
