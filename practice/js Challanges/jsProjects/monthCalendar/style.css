@@ -127,39 +127,63 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: salmon;
 }
 
-.btn {
-    background-color: pink;
-    padding: 1rem 2rem;
-    border-radius: 5px;
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
-    position: relative;
+main {
+    width: 450px;
     overflow: hidden;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+
+
+}
+
+.header {
+    background-color: lightseagreen;
+    text-align: center;
+    padding: 1.5rem 0;
+}
+
+.header__h1 {
+    font-size: 2rem;
+    padding-bottom: 0.5rem;
+}
+
+.calendar__days,
+.calendar__nums {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+
+.calendar__days>p,
+.calendar__nums>p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 50px;
+    width: 64.28px;
+}
+
+.calendar__days>p {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.calendar__nums>p {
+    font-size: 14px;
+}
+
+.calendar__nums>p:hover {
     cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    border: none;
+    border: 3px solid gray;
 }
 
-.btn:hover::before {
-    width: 300px;
-    height: 300px;
-}
-
-span {
-    position: relative;
-}
-
-.btn::before {
-    content: "";
-    position: absolute;
-    background-color: orange;
-    left: var(--xPos);
-    top: var(--yPos);
-    width: 0;
-    height: 0;
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-    transition: width 0.5s ease-in-out, height 0.5s ease-in-out;
-
+.today {
+    background-color: lightseagreen;
 }
