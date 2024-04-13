@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Objects</title>
+</head>
+<p>
+    <button onclick="
+updateCalculation('1');
+">1</button>
+
+    <button onclick="
+updateCalculation('2');
+">2</button>
+
+    <button onclick="
+updateCalculation('3');
+">3</button>
+
+    <button onclick="
+updateCalculation(' + ');
+">+</button>
+</p>
+
+<p>
+    <button onclick="
+updateCalculation('4');
+">4</button>
+
+    <button onclick="
+updateCalculation('5');
+">5</button>
+
+    <button onclick="
+updateCalculation('6');
+">6</button>
+
+    <button onclick="
+updateCalculation(' - ');
+">-</button>
+</p>
+
+<p>
+    <button onclick="
+updateCalculation('7');
+">7</button>
+
+    <button onclick="
+updateCalculation('8');
+">8</button>
+
+    <button onclick="
+updateCalculation('9');
+">9</button>
+
+    <button onclick="
+updateCalculation(' * ');
+">*</button>
+</p>
+
+<p>
+    <button onclick="
+updateCalculation('0');
+">0</button>
+
+    <button onclick="
+updateCalculation('.');
+">.</button>
+
+    <button onclick="
+// Note: eval() takes a string and runs it as code.
+// Avoid using eval() in real world projects since
+// it can potentially be given harmful code to run.
+// Only use eval() for learning purposes.
+calculation = eval(calculation);
+console.log(calculation);
+">=</button>
+
+    <button onclick="
+updateCalculation(' / ');
+">/</button>
+</p>
+
+<p>
+    <button onclick="
+calculation = '';
+localStorage.removeItem('calc')
+console.log(calculation);
+">Clear</button>
+</p>
+
+<body>
+    <script>
+        // const product1 = {
+        //     name: 'basketball',
+        //     price: 2095
+        // }
+
+        // const product2 = {
+        //     name: 'football',
+        //     price: 1090
+        // }
+        // product1.price += 500;
+        // product1['delivery-time'] = '3 days'
+
+        // console.log(product1);
+        // function compare(product1, product2) {
+        //     if (product1.price > product2.price) {
+        //         return product2.name;
+        //     } else { return product1.name }
+        // }
+        // console.log(`${compare(product1, product2)} is less expensive`);
+
+        // const product3 = {
+        //     name: 'basketball',
+        //     price: 2095
+        // }
+        // const product4 = {
+        //     name: 'basketball',
+        //     price: 2095
+        // }
+
+        // function isSameProduct(product3, product4) {
+        //     return product3.name == product4.name && product3.price == product4.price ? true : false;
+
+        // }
+        // console.log(isSameProduct(product3, product4));
+
+        let calculation = JSON.parse(localStorage.getItem('calc')) || "";
+
+        function updateCalculation(value) {
+            calculation += value;
+            localStorage.setItem('calc', JSON.stringify(calculation));
+            console.log(JSON.stringify(calculation));
+            console.log(calculation);
+        }
+
+    </script>
+</body>
+
+</html>

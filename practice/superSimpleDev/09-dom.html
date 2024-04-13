@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Dom Manipulation</title>
+</head>
+
+<body>
+    <button class="">Hello</button>
+    <button class="js-button">Second Button</button>
+
+    <script>
+        console.log(document.querySelector('button').innerHTML);
+        document.querySelector('button').innerHTML = 'Changed';
+        const buttonElement = document.querySelector('.js-button');
+        console.log(buttonElement);
+        // console.log(document.title);
+        // console.log(document.body);
+        // document.body.innerHTML = 'kupa';
+    </script>
+</body>
+
+</html>
