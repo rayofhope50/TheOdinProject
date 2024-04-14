@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Exercesises</title>
+</head>
+
+<body>
+    <div>
+        <button>9a</button>
+        <button class="second">9b</button>
+    </div>
+    <button class="heads" onclick="
+        result.innerHTML = `You chose: heads`;
+    ">Heads</button>
+    <button class="tails" onclick="
+    result.innerHTML = `You chose: tails`;
+">Tails</button>
+    <p class="result"></p>
+
+    <input type="text" placeholder="Name" onkeydown="
+       if (event.key === 'Enter') { display(event)};
+    ">
+    <button class='sub' type="submit" onclick="
+    display(event);
+
+    
+    ">Submit</button>
+    <p class="name"></p>
+
+    <input type="text" onkeyup="  
+        document.querySelector('.keyUp').innerText = `${value}`;
+    ">
+    <p class="keyUp"></p>
+
+    <script>
+        function display(event) {
+            name.innerHTML = `Your name is: ${input.value}`
+        };
+
+        const input = document.querySelector('input');
+        const name = document.querySelector('.name');
+        const head = document.querySelector('.heads')
+        const tail = document.querySelector('.tails')
+        const result = document.querySelector('.result')
+
+        function flip() {
+            console.log(event.innerText);
+        }
+
+
+        // console.log(document.querySelector('button'));
+        // document.querySelector('.second').innerText = `9b done`;
+        // console.log(document.querySelector('.second'));
+
+
+
+    </script>
+</body>
+
+</html>
