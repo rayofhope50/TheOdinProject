@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function removeEgg(foods) {
+            const arr = [];
+            let eggs = 0
+            for (let i = 0; i < foods.length; i++) {
+                if (eggs < 2 && foods[i] == 'egg') {
+                    eggs++;
+                    continue;
+                }
+                arr.push(foods[i]);
+            }
+            const reversed = arr.slice();
+            return console.log(arr.reverse());
+        }
+
+        removeEgg(['egg', 'apple', 'egg', 'egg', 'ham'])
+
+
+
+
+
+        // function countWords(a) {
+        //     let result = {};
+        //     for (let i = 0; i < a.length; i++) {
+        //         const name = a[i];
+        //         let count = 0;
+
+        //         for (let k = 0; k < a.length; k++) {
+        //             if (name == a[k]) {
+        //                 count++;
+        //             }
+        //         }
+        //         result[name] = count;
+
+        //     }
+        //     return result;
+        // };
+        // console.log(countWords(['apple', 'grape', 'apple', 'apple']));
+
+        // function minMax(a) {
+        //     if (a[0] == null) {
+        //         return { 'min': null, 'max': null }
+        //     }
+        //     else {
+        //         const min = Math.min(...a);
+        //         const max = Math.max(...a);
+        //         return { 'min': min, 'max': max }
+        //     }
+        // }
+        // console.log(minMax([1, -3, 5]));
+        // console.log(minMax([-2, 3, -5, 7, 10]));
+        // console.log(minMax([]));
+        // console.log(minMax([3]));
+    </script>
+</body>
+
+</html>
