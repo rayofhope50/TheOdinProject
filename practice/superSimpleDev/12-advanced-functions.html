@@ -35,18 +35,28 @@
         //     param();
         // }
         // run(function () { console.log('hello4'); });
-        let i = 1;
-        setTimeout(function () {
-            console.log('Timeout');
-            console.log('Timeout 2');
-        }, 3000);
+        // let i = 1;
+        // setTimeout(function () {
+        //     console.log('Timeout');
+        //     console.log('Timeout 2');
+        // }, 3000);
 
-        console.log('next line');
+        // console.log('next line');
         // setInterval(function () {
 
         //     console.log(`interval ${i}`);
         //     i++
         // }, 3000);
+
+        ['make dinner',
+            'wash dishes',
+            'watch youtube'
+        ].forEach(function (value, index) {
+            if (value === 'wash dishes') {
+                return;
+            }
+            console.log(value, index);
+        });
 
 
     </script>
