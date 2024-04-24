@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Exercises</title>
+</head>
+
+<body>
+    <button class="js__button" onclick="
+        setTimeout(() => {
+            document.querySelector('.js__button').innerHTML = `Finished`;
+        }, 1000);
+        document.querySelector('.js__button').innerHTML = `Loading...`;
+        ">Start</button>
+
+    <div>
+        <button onclick="
+    display();
+        ">Add to cart</button>
+        <p class="para"></p>
+
+    </div>
+    <script>
+        let timeId;
+        function display() {
+            console.log(timeId);
+            clearTimeout(timeId);
+            document.querySelector('.para').innerText = `Added`;
+            timeId = setTimeout(() => {
+                document.querySelector('.para').innerText = ``;
+
+            }, 2000);
+
+        }
+
+
+    </script>
+
+</body>
+
+</html>

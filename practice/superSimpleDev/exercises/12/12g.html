@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Exercises</title>
+</head>
+
+<body>
+
+    <button class="add" onclick="
+        messages++;
+        ">Add</button>
+    <button class="remove" onclick="
+    if (messages > 0){
+        messages--;}
+    ">Removed</button>
+
+
+    <div>
+        <script>
+            let messages = 0;
+            setInterval(() => {
+                if (document.title === 'App') {
+                    if (messages === 0) {
+                        return;
+                    }
+                    else {
+                        document.title = `(${messages}) New Messagess`;
+                    }
+                } else {
+                    document.title = `App`;
+                }
+
+            }, 1000);
+
+        </script>
+
+</body>
+
+</html>
