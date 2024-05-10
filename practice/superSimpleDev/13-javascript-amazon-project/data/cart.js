@@ -45,3 +45,8 @@ export function removeFromCart(productId) {
 
   saveToStorage();
 }
+
+export function cartQuantity() {
+  const cartQuantityHTML = document.querySelector(".js-cart-item-quantity");
+  cartQuantityHTML.innerHTML = `${cart.length} items`;
+}
