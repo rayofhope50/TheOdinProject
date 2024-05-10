@@ -1,7 +1,14 @@
-"use strict";
 import { cart, removeFromCart, cartQuantity } from "../data/cart.js";
 import { products } from "../data/products.js";
 import { formatCurrency } from "./utils/money.js";
+import { hello } from "https://unpkg.com/supersimpledev@1.0.1/hello.esm.js";
+import dayjs from "https://unpkg.com/dayjs@1.11.10/esm/index.js";
+import { deliveryOptions } from "../data/deliveryOptions.js";
+
+const today = dayjs();
+const deliveryDate = today.add(7, "days");
+console.log(deliveryDate.format("dddd, MMMM DD"));
+
 let cartSummaryHTML = "";
 cartQuantity();
 cart.forEach((cartItem) => {
@@ -95,6 +102,8 @@ cart.forEach((cartItem) => {
     </div>
   `;
 });
+
+function deliveryOptionsHTML() {}
 
 document.querySelector(".js-order-summary").innerHTML = cartSummaryHTML;
 document.querySelectorAll(".js-delete-link").forEach((link) => {
