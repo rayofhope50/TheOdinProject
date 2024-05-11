@@ -1,4 +1,9 @@
-import { cart, removeFromCart, cartQuantity } from "../data/cart.js";
+import {
+  cart,
+  removeFromCart,
+  cartQuantity,
+  updateDeliveryOption,
+} from "../data/cart.js";
 import { products } from "../data/products.js";
 import { formatCurrency } from "./utils/money.js";
 // import { hello } from "https://unpkg.com/supersimpledev@1.0.1/hello.esm.js";
@@ -87,12 +92,15 @@ function deliveryOptionsHTML(matchingProduct, cartItem) {
       deliveryOption.priceCents === 0
         ? "FREE"
         : `$${formatCurrency(deliveryOption.priceCents)}`;
-    console.log(deliveryOption.priceCents);
 
     const isChecked = deliveryOption.id === cartItem.deliveryOptionId;
 
     html += `
-    <div class="delivery-option">
+    <div class="delivery-option js-delivery-option" 
+    data-product-id="${matchingProduct.id}" data-delivery-option-id="${
+      deliveryOption.id
+    }"
+    >
       <input ${
         isChecked ? "checked" : ""
       } type="radio" class="delivery-option-input" name="delivery-option-${
@@ -122,5 +130,12 @@ document.querySelectorAll(".js-delete-link").forEach((link) => {
     );
     container.remove();
     cartQuantity();
+  });
+});
+
+document.querySelectorAll(".js-delivery-option").forEach((element) => {
+  element.addEventListener("click", () => {
+    const { productId, deliveryOptionId } = element.dataset;
+    updateDeliveryOption(productId, deliveryOptionId);
   });
 });
