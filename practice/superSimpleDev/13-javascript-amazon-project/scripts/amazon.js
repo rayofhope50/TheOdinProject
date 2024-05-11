@@ -4,7 +4,8 @@ import { products } from "../data/products.js";
 import { formatCurrency } from "./utils/money.js";
 let productsHTML = "";
 const cartQuantityTop = document.querySelector(".js-cart-quantity");
-cartQuantityTop.innerHTML = `${cart.length}`;
+console.log();
+cartQuantityTop.innerHTML = `${cart === null ? "0" : cart.length}`;
 products.forEach((product) => {
   productsHTML += `      
     <div class="product-container">
