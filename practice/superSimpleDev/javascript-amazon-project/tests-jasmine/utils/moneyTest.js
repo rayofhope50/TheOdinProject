@@ -1,4 +1,4 @@
-import formatCurrency from "../scripts/utils/money.js";
+import formatCurrency from "../../scripts/utils/money.js";
 // descibe is a suite
 describe("test suite: formatCurrency", () => {
   // it is a test
