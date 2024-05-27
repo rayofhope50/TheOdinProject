@@ -1,23 +1,28 @@
-export let cart = JSON.parse(localStorage.getItem("cart"));
+export let cart;
 
-if (cart.length < 1) {
-  cart = [
-    {
-      productId: "e43638ce-6aa0-4b85-b27f-e1d07eb678c6",
+loadFromStorage();
+
+export function loadFromStorage() {
+  cart = JSON.parse(localStorage.getItem('cart'));
+
+  if (!cart) {
+    cart = [{
+      productId: 'e43638ce-6aa0-4b85-b27f-e1d07eb678c6',
       quantity: 2,
-      deliveryOptionId: "1",
-    },
-    {
-      productId: "15b6fc6f-327a-4ec4-896f-486349e85a3d",
+      deliveryOptionId: '1'
+    }, {
+      productId: '15b6fc6f-327a-4ec4-896f-486349e85a3d',
       quantity: 1,
-      deliveryOptionId: "2",
-    },
-  ];
+      deliveryOptionId: '2'
+    }];
+  }
 }
+
 function saveToStorage() {
-  localStorage.setItem("cart", JSON.stringify(cart));
+  localStorage.setItem('cart', JSON.stringify(cart));
 }
-export function addToCart(productId, productQuantity) {
+
+export function addToCart(productId) {
   let matchingItem;
 
   cart.forEach((cartItem) => {
@@ -27,32 +32,30 @@ export function addToCart(productId, productQuantity) {
   });
 
   if (matchingItem) {
-    matchingItem.quantity += Number(productQuantity.value);
+    matchingItem.quantity += 1;
   } else {
     cart.push({
-      productId,
-      quantity: Number(productQuantity.value),
-      deliveryOptionId: "1",
+      productId: productId,
+      quantity: 1,
+      deliveryOptionId: '1'
     });
   }
+
   saveToStorage();
 }
 
 export function removeFromCart(productId) {
   const newCart = [];
+
   cart.forEach((cartItem) => {
     if (cartItem.productId !== productId) {
       newCart.push(cartItem);
     }
   });
+
   cart = newCart;
 
   saveToStorage();
-}
-
-export function cartQuantity() {
-  const cartQuantityHTML = document.querySelector(".js-cart-item-quantity");
-  cartQuantityHTML.innerHTML = `${cart.length > 0 ? cart.length : 0} items`;
 }
 
 export function updateDeliveryOption(productId, deliveryOptionId) {
@@ -65,5 +68,6 @@ export function updateDeliveryOption(productId, deliveryOptionId) {
   });
 
   matchingItem.deliveryOptionId = deliveryOptionId;
+
   saveToStorage();
 }
