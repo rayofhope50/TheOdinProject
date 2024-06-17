@@ -10,8 +10,7 @@
     /* --f-fw-300: 300; */
     --f-fw-400: 400;
     --f-fw-600: 600;
-    --grid-val: 4;
-    --grid-gap: calc(((var(--grid-val) * 2 - 2)* 100%)/ 540);
+
 }
 
 /* ::-webkit-input-placeholder {
@@ -107,128 +106,24 @@ h3 {
     isolation: isolate;
 }
 
-
-
 body {
     background-color: black;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 
-}
-
-.body {
-    height: 800px;
-    width: 1000px;
-    background-color: gray;
-    color: white;
-    border-radius: 20px;
-    overflow: hidden;
-
-}
-
-h1 {
-    font-size: 3rem;
-    text-align: center;
-    margin: 1rem 0;
 }
 
 .main {
-    background-color: pink;
-    height: 100%;
-    display: flex;
-}
-
-.panel,
-.pad {
-    background-color: white;
-    margin-top: 2rem;
-    margin-left: 2rem;
-    border-radius: 10px;
-}
-
-.panel {
-    height: 80%;
-    width: 25%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: black;
-    font-weight: bold;
-}
-
-.picked {
-    height: 50px;
-    width: 50px;
-    border-radius: 30px;
-    border: none;
-    margin-bottom: 1rem;
-    margin-top: 4rem;
-}
-
-.btn {
-    width: 70%;
-    margin: 1rem 0;
-}
-
-.error {
-    font-size: .875rem;
-    color: red;
-    min-height: 1.5rem;
-    margin-top: .5rem;
-    margin-left: -6.7rem;
-}
-
-.grid__size {
-    width: 80%;
-    height: 30px;
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    gap: 1rem;
-}
-
-
-
-.grid__p {
-    font-size: .875rem;
-    margin-bottom: -.5rem;
-    margin-top: -.25rem;
-}
-
-.grid__input {
-    margin-top: -1rem;
-}
-
-.input {
-    width: 30%;
-}
-
-.pad {
-    height: 640px;
-    width: 640px;
-    padding: 3rem;
-}
-
-.parent {
-    background-color: black;
-    height: 544px;
-    width: 544px;
+    background-color: green;
+    height: 550px;
+    width: 550px;
     display: flex;
     flex-wrap: wrap;
-    border: 1.5px solid black;
-
-
+    gap: 1px;
 }
 
-.sketch {
-    flex: 1 0 calc((100%) / var(--grid-val));
-    border: 0.5px solid black;
+.child {
+    flex: 1 0 calc((500px / 2));
     background-color: white;
-
-}
-
-
-.input {
-    text-align: center;
 }
