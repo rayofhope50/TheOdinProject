@@ -223,7 +223,7 @@ h1 {
 
 .sketch {
     flex: 1 0 calc((100%) / var(--grid-val));
-    border: 0.5px solid black;
+    border: 0.1px solid black;
     background-color: white;
 
 }
