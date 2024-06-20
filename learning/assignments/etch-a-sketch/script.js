@@ -10,7 +10,7 @@ const blackBtn = document.querySelector(".js-blackBtn");
 const eraseBtn = document.querySelector(".js-eraser");
 let sketches = document.querySelectorAll(".sketch");
 
-let newColor = "";
+let newColor = "black";
 let mousedown = false;
 
 document.addEventListener("mousedown", () => {
@@ -32,20 +32,24 @@ chageBtn.addEventListener("click", () => {
 //listener for clearing the grid
 clearBtn.addEventListener("click", clearGrid);
 //listener for erasing the cell
-eraseBtn.addEventListener("click", eraseColor);
+eraseBtn.addEventListener("click", () => {
+  attachSketchListeners(eraseColor);
+});
+blackBtn.addEventListener("click", () => {
+  attachSketchListeners(blackColor);
+});
 
 // Listener to grid tick that clears or adds grid lines
 checkedEl.addEventListener("click", () => {
   gridLines();
 });
 
-attachSketchListeners();
 // Main hover mouse clicked logic
-function attachSketchListeners() {
+function attachSketchListeners(functionColor) {
   // const sketches = document.querySelectorAll(".sketch");
   sketches.forEach((sketch) => {
     console.log("mose over");
-    sketch.addEventListener("mousemove", blackColor);
+    sketch.addEventListener("mousemove", functionColor);
   });
 }
 function gridLines() {
@@ -82,13 +86,21 @@ function paintGrid() {
 
 //change color function for black chosen color and rainbow mode
 function blackColor() {
+  console.log("black initiated");
+
   newColor = "black";
+  console.log(newColor);
+
   if (mousedown) {
+    console.log("BLACK in if statement");
+
     this.style.backgroundColor = newColor;
   }
 }
 //change color for eraser
 function eraseColor() {
+  console.log(newColor);
+
   console.log("erase initiated");
   newColor = "white";
   if (mousedown) {
@@ -100,6 +112,7 @@ function eraseColor() {
 
 // function to clear the grid
 function clearGrid() {
+  console.log(newColor);
   console.log("clear grid initiated");
   sketches.forEach((sketch) => {
     console.log("clear grid  changing color to white?");
