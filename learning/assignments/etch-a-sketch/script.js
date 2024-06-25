@@ -13,7 +13,8 @@ let sketches = document.querySelectorAll(".sketch");
 const pickedClr = document.querySelector(".js-picked");
 
 pickedClr.addEventListener("change", () => {
-  console.log(pickedClr.value);
+  newColor = pickedClr.value;
+  attachSketchListeners();
 });
 
 let newColor = "black";
