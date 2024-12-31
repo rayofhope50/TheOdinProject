@@ -1,12 +1,31 @@
-let arr = [1, 2, 3, 4, 5];
-function sumOfTripleEvents(arr) {
-  //   let temp = arr.filter((arr) => arr % 2 === 1);
-  //   let newTemp = temp.map((num) => num * 3);
-  //   let result = newTemp.reduce((total, currentValue) => total * currentValue);
-  //   return result;
-  return arr
-    .filter((arr) => arr % 2 === 1)
-    .map((num) => num * 3)
-    .reduce((acc, curr) => acc + curr);
-}
-console.log(sumOfTripleEvents(arr));
+const people = [
+  {
+    name: "Carly",
+    yearOfBirth: 1942,
+    yearOfDeath: 1970,
+  },
+  {
+    name: "Ray",
+    yearOfBirth: 1962,
+    yearOfDeath: 2011,
+  },
+  {
+    name: "Jane",
+    yearOfBirth: 1912,
+    yearOfDeath: 1941,
+  },
+];
+
+const findTheOldest = function (people) {
+  console.log("start");
+  const oldestPerson = people.reduce((oldest, person) => {
+    const currentPerson = person.yearOfDeath - person.yearOfBirth;
+    const oldestPerson = oldest.yearOfDeath - oldest.yearOfBirth;
+    console.log("start2");
+
+    return currentPerson > oldestPerson ? person : oldest;
+  });
+  return oldestPerson;
+};
+
+console.log(findTheOldest(people));
