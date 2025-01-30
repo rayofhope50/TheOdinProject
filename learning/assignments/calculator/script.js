@@ -19,105 +19,276 @@ const zero = document.getElementById("zero");
 const dot = document.getElementById("dot");
 const equal = document.getElementById("equal");
 const display = document.getElementById("display");
+
+let a;
+let b;
+let oper = "";
+let temp = "";
+let lastKey = ""; // tracks last key to prevent double sign clicking
+
+seven.addEventListener("click", () => {
+  if (lastKey == "=") {
+    display.value = "";
+    temp = "0";
+  }
+  display.value += "7";
+  temp += "7";
+  lastKey = "7";
+});
+eight.addEventListener("click", () => {
+  if (lastKey == "=") {
+    display.value = "";
+    temp = "0";
+  }
+  display.value += "8";
+  temp += "8";
+  lastKey = "8";
+});
+nine.addEventListener("click", () => {
+  if (lastKey == "=") {
+    display.value = "";
+    temp = "0";
+  }
+  display.value += "9";
+  temp += "9";
+  lastKey = "9";
+});
+
+four.addEventListener("click", () => {
+  if (lastKey == "=") {
+    display.value = "";
+    temp = "0";
+  }
+  display.value += "4";
+  temp += "4";
+  lastKey = "4";
+});
+five.addEventListener("click", () => {
+  if (lastKey == "=") {
+    display.value = "";
+    temp = "0";
+  }
+  display.value += "5";
+  temp += "5";
+  lastKey = "5";
+});
+six.addEventListener("click", () => {
+  if (lastKey == "=") {
+    display.value = "";
+    temp = "0";
+  }
+  display.value += "6";
+  temp += "6";
+  lastKey = "6";
+});
+one.addEventListener("click", () => {
+  if (lastKey == "=") {
+    display.value = "";
+    temp = "0";
+  }
+  display.value += "1";
+  temp += "1";
+  lastKey = "1";
+});
+two.addEventListener("click", () => {
+  if (lastKey == "=") {
+    display.value = "";
+    temp = "0";
+  }
+  lastKey = "2";
+
+  display.value += "2";
+  temp += "2";
+});
+
+zero.addEventListener("click", () => {
+  if (lastKey == "=") {
+    display.value = "";
+    temp = "0";
+  }
+  lastKey = "0";
+  display.value += "0";
+  temp += "0";
+});
+dot.addEventListener("click", () => {
+  lastKey = ".";
+
+  display.value += ".";
+  temp += ".";
+});
+equal.addEventListener("click", () => {
+  console.log(
+    ` equal start a = ${a}, b = ${b}, temp = ${temp}, lastKey = ${lastKey}, oper = ${oper}`
+  );
+  // prevents multiple clicks
+  if (lastKey == "=") {
+    return;
+  }
+  b = Number(temp);
+  lastKey = "=";
+  temp = "";
+  const operResult = operate(a, b, oper);
+  temp = operResult.toString();
+  a;
+  b;
+  oper = "";
+});
+sum.addEventListener("click", () => {
+  //prevents multiple clicks of the same button
+  if (lastKey == "=") {
+    return;
+  }
+  lastKey = "+";
+  a = Number(temp);
+  temp = "";
+  oper = "+";
+  display.value += " + ";
+});
+three.addEventListener("click", () => {
+  // checks if last key was = if so when you press that number it clears everything assuming you start new equasion
+  if (lastKey == "=") {
+    lastKey = "3";
+    temp = "3";
+    display.value = "3";
+    return;
+  }
+  lastKey = "3";
+
+  display.value += "3";
+  temp += "3";
+});
+
+subs.addEventListener("click", () => {
+  console.log(
+    ` sub start a = ${a}, b = ${b}, temp = ${temp}, lastKey = ${lastKey}, oper = ${oper}`
+  );
+
+  if (lastKey == "-") {
+    return;
+  }
+
+  lastKey = "-";
+  a = Number(temp);
+  temp = "";
+  oper = "-";
+  display.value += " - ";
+  console.log(
+    `sub end a = ${a}, b = ${b}, temp = ${temp}, lastKey = ${lastKey}, oper = ${oper}`
+  );
+});
+multi.addEventListener("click", () => {
+  if (lastKey == "=") {
+    lastKey = "×";
+    a = Number(temp);
+    temp = "";
+    oper = "×";
+    display.value += " × ";
+  }
+  if (lastKey == "×") {
+    return;
+  }
+  if (a !== undefined && oper !== undefined) {
+    b = Number(temp);
+
+    const operResult = operate(a, b, oper);
+
+    temp = operResult.toString();
+    a;
+    b;
+    oper = "";
+  }
+  lastKey = "×";
+  a = Number(temp);
+  temp = "";
+  oper = "×";
+  display.value += " × ";
+});
+div.addEventListener("click", () => {
+  if (lastKey == "÷") {
+    lastKey = "÷";
+    a = Number(temp);
+    temp = "";
+    oper = "÷";
+    display.value += " ÷ ";
+  }
+  if (lastKey == "÷") {
+    return;
+  }
+  if (a !== undefined && oper !== undefined) {
+    b = Number(temp);
+
+    const operResult = operate(a, b, oper);
+
+    temp = operResult.toString();
+    a;
+    b;
+    oper = "";
+  }
+  lastKey = "÷";
+
+  a = Number(temp);
+  temp = "";
+  oper = "÷";
+  display.value += " ÷ ";
+});
 res.addEventListener("click", () => {
-  console.log("res clicked");
+  lastKey = "res";
+  display.value = "";
+  temp = "";
+  a;
+  b;
+  oper = "";
 });
 change.addEventListener("click", () => {
-  display.value += "1";
+  console.log("res clicked");
 });
 percent.addEventListener("click", () => {
   console.log("res clicked");
 });
-div.addEventListener("click", () => {
-  display.value += "1";
-});
-seven.addEventListener("click", () => {
-  console.log("res clicked");
-});
-eight.addEventListener("click", () => {
-  display.value += "1";
-});
-nine.addEventListener("click", () => {
-  console.log("res clicked");
-});
-multi.addEventListener("click", () => {
-  display.value += "1";
-});
-four.addEventListener("click", () => {
-  console.log("res clicked");
-});
-five.addEventListener("click", () => {
-  display.value += "1";
-});
-six.addEventListener("click", () => {
-  console.log("res clicked");
-});
-subs.addEventListener("click", () => {
-  display.value += "1";
-});
-one.addEventListener("click", () => {
-  console.log("res clicked");
-});
-two.addEventListener("click", () => {
-  display.value += "1";
-});
-three.addEventListener("click", () => {
-  console.log("res clicked");
-});
-sum.addEventListener("click", () => {
-  display.value += "1";
-});
+
 del.addEventListener("click", () => {
   console.log("res clicked");
-});
-zero.addEventListener("click", () => {
-  display.value += "1";
-});
-dot.addEventListener("click", () => {
-  console.log("res clicked");
-});
-equal.addEventListener("click", () => {
-  display.value += "1";
 });
 display.addEventListener("click", () => {
   console.log("res clicked");
 });
 
-let a = 0;
-let b = 0;
-let oper = "";
-
 function add(a, b) {
-  return a + b;
+  const result = a + b;
+  return result;
 }
 
 function substract(a, b) {
-  return a - b;
+  const result = a - b;
+  return result;
 }
 
 function multiply(a, b) {
-  return a * b;
+  const result = a * b;
+  return parseFloat(result.toFixed(6));
 }
 
 function divide(a, b) {
-  return a / b;
+  const result = a / b;
+  return parseFloat(result.toFixed(6));
 }
 
-function operate() {
-  a = +prompt("Give first number:");
-  b = +prompt("Give second number:");
-  oper = prompt("What operation + - * / ?");
+function operate(a, b, oper) {
+  let result;
   if (oper == "+") {
-    console.log(add(a, b));
+    result = add(a, b);
   }
   if (oper == "-") {
-    console.log(substract(a, b));
+    result = substract(a, b);
   }
-  if (oper == "*") {
-    console.log(multiply(a, b));
+  if (oper == "×") {
+    result = multiply(a, b);
   }
-  if (oper == "/") {
-    console.log(divide(a, b));
+  if (oper == "÷") {
+    result = divide(a, b);
   }
+  display.value = result;
+  count = 1;
+  const operResult = result;
+  return operResult;
 }
-// operate();
