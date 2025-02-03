@@ -19,6 +19,14 @@ const zero = document.getElementById("zero");
 const dot = document.getElementById("dot");
 const equal = document.getElementById("equal");
 const display = document.getElementById("display");
+const digits = document.querySelectorAll(".dig");
+
+digits.forEach((digit) => {
+  console.log(`button clicked`);
+  digit.addEventListener("click", function () {
+    digitLogic(this.innerText);
+  });
+});
 
 let a;
 let b;
@@ -26,89 +34,6 @@ let oper = "";
 let temp = "";
 let lastKey = ""; // tracks last key to prevent double sign clicking
 
-seven.addEventListener("click", () => {
-  if (lastKey == "=") {
-    display.value = "";
-    temp = "0";
-  }
-  display.value += "7";
-  temp += "7";
-  lastKey = "7";
-});
-eight.addEventListener("click", () => {
-  if (lastKey == "=") {
-    display.value = "";
-    temp = "0";
-  }
-  display.value += "8";
-  temp += "8";
-  lastKey = "8";
-});
-nine.addEventListener("click", () => {
-  if (lastKey == "=") {
-    display.value = "";
-    temp = "0";
-  }
-  display.value += "9";
-  temp += "9";
-  lastKey = "9";
-});
-
-four.addEventListener("click", () => {
-  if (lastKey == "=") {
-    display.value = "";
-    temp = "0";
-  }
-  display.value += "4";
-  temp += "4";
-  lastKey = "4";
-});
-five.addEventListener("click", () => {
-  if (lastKey == "=") {
-    display.value = "";
-    temp = "0";
-  }
-  display.value += "5";
-  temp += "5";
-  lastKey = "5";
-});
-six.addEventListener("click", () => {
-  if (lastKey == "=") {
-    display.value = "";
-    temp = "0";
-  }
-  display.value += "6";
-  temp += "6";
-  lastKey = "6";
-});
-one.addEventListener("click", () => {
-  if (lastKey == "=") {
-    display.value = "";
-    temp = "0";
-  }
-  display.value += "1";
-  temp += "1";
-  lastKey = "1";
-});
-two.addEventListener("click", function () {
-  digitLogic(this.innerText);
-});
-
-zero.addEventListener("click", () => {
-  if (lastKey == "=") {
-    display.value = "";
-    temp = "0";
-  }
-  lastKey = "0";
-  display.value += "0";
-  temp += "0";
-});
-dot.addEventListener("click", () => {
-  lastKey = ".";
-
-  display.value += ".";
-  temp += ".";
-});
 equal.addEventListener("click", () => {
   console.log(
     ` equal start a = ${a}, b = ${b}, temp = ${temp}, lastKey = ${lastKey}, oper = ${oper}`
@@ -157,21 +82,6 @@ sum.addEventListener("click", () => {
   // console.log(
   //   `a=  ${a} b= ${b} temp= ${temp} oper= ${oper} lastkey = ${lastKey}`
   // );
-});
-three.addEventListener("click", function () {
-  // checks if last key was = if so when you press that number it clears everything assuming you start new equasion
-  digitLogic(this.innerText);
-  // if (lastKey == "=") {
-  //   lastKey = this.innerText;
-  //   temp = this.innerText;
-  //   display.value = this.innerText;
-  //   return;
-  // }
-  // lastKey = this.innerText;
-
-  // display.value += this.innerText;
-  // console.log(this.innerText);
-  // temp += this.innerText;
 });
 
 subs.addEventListener("click", () => {
