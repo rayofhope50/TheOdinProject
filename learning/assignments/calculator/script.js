@@ -90,15 +90,18 @@ one.addEventListener("click", () => {
   temp += "1";
   lastKey = "1";
 });
-two.addEventListener("click", () => {
+two.addEventListener("click", function () {
   if (lastKey == "=") {
-    display.value = "";
-    temp = "0";
+    lastKey = this.innerText;
+    temp = this.innerText;
+    display.value = this.innerText;
+    return;
   }
-  lastKey = "2";
+  lastKey = this.innerText;
 
-  display.value += "2";
-  temp += "2";
+  display.value += this.innerText;
+  console.log(this.innerText);
+  temp += this.innerText;
 });
 
 zero.addEventListener("click", () => {
