@@ -129,20 +129,41 @@ equal.addEventListener("click", () => {
   temp = "";
   const operResult = operate(a, b, oper);
   temp = operResult.toString();
-  a;
-  b;
+  a = "";
+  b = "";
   oper = "";
 });
 sum.addEventListener("click", () => {
   //prevents multiple clicks of the same button
-  if (lastKey == "=") {
+  if (lastKey == "+") {
     return;
+  }
+  // if a oper b trying to press another oper it should execute first operation before attempting a new one
+  if (oper !== "") {
+    // checks if last think done was an equastion and i have number in temp if thats the case i want to keep that numnber anc cary on with my new equasin with the number as an a
+    if (lastKey == "=") {
+      a = Number(temp);
+      temp = "";
+      oper = "+";
+      display.value += " + ";
+    }
+    b = Number(temp);
+    lastKey = "+";
+    temp = "";
+    const operResult = operate(a, b, oper);
+    temp = operResult.toString();
+    a;
+    b;
+    oper = "";
   }
   lastKey = "+";
   a = Number(temp);
   temp = "";
   oper = "+";
   display.value += " + ";
+  console.log(
+    `a=  ${a} b= ${b} temp= ${temp} oper= ${oper} lastkey = ${lastKey}`
+  );
 });
 three.addEventListener("click", () => {
   // checks if last key was = if so when you press that number it clears everything assuming you start new equasion
