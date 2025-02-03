@@ -91,17 +91,7 @@ one.addEventListener("click", () => {
   lastKey = "1";
 });
 two.addEventListener("click", function () {
-  if (lastKey == "=") {
-    lastKey = this.innerText;
-    temp = this.innerText;
-    display.value = this.innerText;
-    return;
-  }
-  lastKey = this.innerText;
-
-  display.value += this.innerText;
-  console.log(this.innerText);
-  temp += this.innerText;
+  digitLogic(this.innerText);
 });
 
 zero.addEventListener("click", () => {
@@ -170,17 +160,18 @@ sum.addEventListener("click", () => {
 });
 three.addEventListener("click", function () {
   // checks if last key was = if so when you press that number it clears everything assuming you start new equasion
-  if (lastKey == "=") {
-    lastKey = this.innerText;
-    temp = this.innerText;
-    display.value = this.innerText;
-    return;
-  }
-  lastKey = this.innerText;
+  digitLogic(this.innerText);
+  // if (lastKey == "=") {
+  //   lastKey = this.innerText;
+  //   temp = this.innerText;
+  //   display.value = this.innerText;
+  //   return;
+  // }
+  // lastKey = this.innerText;
 
-  display.value += this.innerText;
-  console.log(this.innerText);
-  temp += this.innerText;
+  // display.value += this.innerText;
+  // console.log(this.innerText);
+  // temp += this.innerText;
 });
 
 subs.addEventListener("click", () => {
@@ -316,4 +307,18 @@ function operate(a, b, oper) {
   count = 1;
   const operResult = result;
   return operResult;
+}
+
+function digitLogic(text) {
+  if (lastKey == "=") {
+    lastKey = text;
+    temp = text;
+    display.value = text;
+    return;
+  }
+  lastKey = text;
+
+  display.value += text;
+  console.log(text);
+  temp += text;
 }
