@@ -161,22 +161,23 @@ sum.addEventListener("click", () => {
   temp = "";
   oper = "+";
   display.value += " + ";
-  console.log(
-    `a=  ${a} b= ${b} temp= ${temp} oper= ${oper} lastkey = ${lastKey}`
-  );
+  // console.log(
+  //   `a=  ${a} b= ${b} temp= ${temp} oper= ${oper} lastkey = ${lastKey}`
+  // );
 });
-three.addEventListener("click", () => {
+three.addEventListener("click", function () {
   // checks if last key was = if so when you press that number it clears everything assuming you start new equasion
   if (lastKey == "=") {
-    lastKey = "3";
-    temp = "3";
-    display.value = "3";
+    lastKey = this.innerText;
+    temp = this.innerText;
+    display.value = this.innerText;
     return;
   }
-  lastKey = "3";
+  lastKey = this.innerText;
 
-  display.value += "3";
-  temp += "3";
+  display.value += this.innerText;
+  console.log(this.innerText);
+  temp += this.innerText;
 });
 
 subs.addEventListener("click", () => {
