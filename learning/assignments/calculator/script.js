@@ -61,23 +61,27 @@ del.addEventListener("click", () => {
   //   ` del start a= ${a} b= ${b} oper= ${oper} temp= ${temp} lastKey=${lastKey} display= ${display.value}`
   // );
   let value = display.value;
+
   if (
     value.endsWith(" + ") ||
     value.endsWith(" - ") ||
     value.endsWith(" × ") ||
     value.endsWith(" ÷ ")
   ) {
+    // If deleting an operator, remove it and reset the operator variable
     value = value.slice(0, -3);
     oper = "";
+    temp = value; // Keep whatever remains
+  } else if (oper !== "" && temp !== "") {
+    // If there's an operation in progress, delete from temp (b's value)
+    value = value.slice(0, -1);
+    temp = temp.slice(0, -1);
+    b = temp || ""; // Keep it empty instead of undefined
+  } else {
+    // Otherwise, delete from the main number (a)
+    value = value.slice(0, -1);
     temp = value;
-  } else if (oper !== "") {
-    value = value.slice(0, -1);
-    b = "";
-    temp = "";
-  } else if (oper === "") {
-    value = value.slice(0, -1);
-    temp = "";
-    a = "";
+    a = temp || ""; // Keep it empty instead of undefined
   }
   display.value = value;
 });
