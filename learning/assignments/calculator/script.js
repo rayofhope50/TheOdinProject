@@ -9,9 +9,17 @@ const del = document.getElementById("del");
 const equal = document.getElementById("equal");
 const display = document.getElementById("display");
 const digits = document.querySelectorAll(".dig");
+const opers = document.querySelectorAll(".oper");
 
+// function responsible for creating and managing operations like sum div etc
+opers.forEach((oper) => {
+  oper.addEventListener("click", function () {
+    operationLogic(this.innerText);
+  });
+});
+
+// function responsible for creating digit buttons and their operation
 digits.forEach((digit) => {
-  console.log(`button clicked`);
   digit.addEventListener("click", function () {
     digitLogic(this.innerText);
   });
@@ -24,9 +32,6 @@ let temp = "";
 let lastKey = ""; // tracks last key to prevent double sign clicking
 
 equal.addEventListener("click", () => {
-  console.log(
-    ` equal start a = ${a}, b = ${b}, temp = ${temp}, lastKey = ${lastKey}, oper = ${oper}`
-  );
   // prevents multiple clicks
   if (lastKey == "=") {
     return;
@@ -40,112 +45,7 @@ equal.addEventListener("click", () => {
   b = "";
   oper = "";
 });
-sum.addEventListener("click", () => {
-  //prevents multiple clicks of the same button
-  if (lastKey == "+") {
-    return;
-  }
-  // if a oper b trying to press another oper it should execute first operation before attempting a new one
-  if (oper !== "") {
-    // checks if last think done was an equastion and i have number in temp if thats the case i want to keep that numnber anc cary on with my new equasin with the number as an a
-    if (lastKey == "=") {
-      a = Number(temp);
-      temp = "";
-      oper = "+";
-      display.value += " + ";
-    }
-    b = Number(temp);
-    lastKey = "+";
-    temp = "";
-    const operResult = operate(a, b, oper);
-    temp = operResult.toString();
-    a;
-    b;
-    oper = "";
-  }
-  lastKey = "+";
-  a = Number(temp);
-  temp = "";
-  oper = "+";
-  display.value += " + ";
-  // console.log(
-  //   `a=  ${a} b= ${b} temp= ${temp} oper= ${oper} lastkey = ${lastKey}`
-  // );
-});
 
-subs.addEventListener("click", () => {
-  console.log(
-    ` sub start a = ${a}, b = ${b}, temp = ${temp}, lastKey = ${lastKey}, oper = ${oper}`
-  );
-
-  if (lastKey == "-") {
-    return;
-  }
-
-  lastKey = "-";
-  a = Number(temp);
-  temp = "";
-  oper = "-";
-  display.value += " - ";
-  console.log(
-    `sub end a = ${a}, b = ${b}, temp = ${temp}, lastKey = ${lastKey}, oper = ${oper}`
-  );
-});
-multi.addEventListener("click", () => {
-  if (lastKey == "=") {
-    lastKey = "×";
-    a = Number(temp);
-    temp = "";
-    oper = "×";
-    display.value += " × ";
-  }
-  if (lastKey == "×") {
-    return;
-  }
-  if (a !== undefined && oper !== undefined) {
-    b = Number(temp);
-
-    const operResult = operate(a, b, oper);
-
-    temp = operResult.toString();
-    a;
-    b;
-    oper = "";
-  }
-  lastKey = "×";
-  a = Number(temp);
-  temp = "";
-  oper = "×";
-  display.value += " × ";
-});
-div.addEventListener("click", () => {
-  if (lastKey == "÷") {
-    lastKey = "÷";
-    a = Number(temp);
-    temp = "";
-    oper = "÷";
-    display.value += " ÷ ";
-  }
-  if (lastKey == "÷") {
-    return;
-  }
-  if (a !== undefined && oper !== undefined) {
-    b = Number(temp);
-
-    const operResult = operate(a, b, oper);
-
-    temp = operResult.toString();
-    a;
-    b;
-    oper = "";
-  }
-  lastKey = "÷";
-
-  a = Number(temp);
-  temp = "";
-  oper = "÷";
-  display.value += " ÷ ";
-});
 res.addEventListener("click", () => {
   lastKey = "res";
   display.value = "";
@@ -220,4 +120,34 @@ function digitLogic(text) {
   display.value += text;
   console.log(text);
   temp += text;
+}
+
+function operationLogic(text) {
+  //prevents multiple clicks of the same button
+  if (lastKey == text) {
+    return;
+  }
+  // if a oper b trying to press another oper it should execute first operation before attempting a new one
+  if (oper !== "") {
+    // checks if last think done was an equastion and i have number in temp if thats the case i want to keep that numnber anc cary on with my new equasin with the number as an a
+    if (lastKey == "=") {
+      a = Number(temp);
+      temp = "";
+      oper = text;
+      display.value += ` ${text} `;
+    }
+    b = Number(temp);
+    lastKey = text;
+    temp = "";
+    const operResult = operate(a, b, oper);
+    temp = operResult.toString();
+    a;
+    b;
+    oper = "";
+  }
+  lastKey = text;
+  a = Number(temp);
+  temp = "";
+  oper = text;
+  display.value += ` ${text} `;
 }
