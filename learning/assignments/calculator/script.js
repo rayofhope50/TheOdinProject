@@ -48,7 +48,7 @@ res.addEventListener("click", () => {
 
 // change +/- sign for the number
 change.addEventListener("click", () => {
-  console.log("res clicked");
+  let number = Number(temp);
 });
 percent.addEventListener("click", () => {
   console.log("res clicked");
