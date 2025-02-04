@@ -31,6 +31,7 @@ let oper = "";
 let temp = "";
 let lastKey = ""; // tracks last key to prevent double sign clicking
 
+// special buttons that do specific functoins and cannot be multiplied
 equal.addEventListener("click", () => {
   // prevents multiple clicks
   if (lastKey == "=") {
@@ -38,14 +39,8 @@ equal.addEventListener("click", () => {
   }
   b = Number(temp);
   lastKey = "=";
-  temp = "";
-  const operResult = operate(a, b, oper);
-  temp = operResult.toString();
-  a = "";
-  b = "";
-  oper = "";
+  equalityLogic();
 });
-
 res.addEventListener("click", () => {
   lastKey = "res";
   display.value = "";
@@ -67,6 +62,8 @@ del.addEventListener("click", () => {
 display.addEventListener("click", () => {
   console.log("res clicked");
 });
+
+// all of the code functions are below
 
 function add(a, b) {
   const result = a + b;
@@ -138,16 +135,21 @@ function operationLogic(text) {
     }
     b = Number(temp);
     lastKey = text;
-    temp = "";
-    const operResult = operate(a, b, oper);
-    temp = operResult.toString();
-    a;
-    b;
-    oper = "";
+    // part up had to be kept out of the functon below as opers use text and if i had to use that for equality = also it would unnecessarly complicate thinks
+    equalityLogic();
   }
   lastKey = text;
   a = Number(temp);
   temp = "";
   oper = text;
   display.value += ` ${text} `;
+}
+
+function equalityLogic() {
+  temp = "";
+  const operResult = operate(a, b, oper);
+  temp = operResult.toString();
+  a = "";
+  b = "";
+  oper = "";
 }
