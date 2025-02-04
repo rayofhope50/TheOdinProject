@@ -1,13 +1,8 @@
 const res = document.getElementById("res");
 const change = document.getElementById("change");
 const percent = document.getElementById("percent");
-const div = document.getElementById("div");
-const multi = document.getElementById("multi");
-const subs = document.getElementById("subs");
-const sum = document.getElementById("sum");
 const del = document.getElementById("del");
 const equal = document.getElementById("equal");
-const display = document.getElementById("display");
 const digits = document.querySelectorAll(".dig");
 const opers = document.querySelectorAll(".oper");
 
@@ -31,7 +26,7 @@ let oper = "";
 let temp = "";
 let lastKey = ""; // tracks last key to prevent double sign clicking
 
-// special buttons that do specific functoins and cannot be multiplied
+// special buttons that do specific functions and cannot be multiplied
 equal.addEventListener("click", () => {
   // prevents multiple clicks
   if (lastKey == "=") {
@@ -41,6 +36,7 @@ equal.addEventListener("click", () => {
   lastKey = "=";
   equalityLogic();
 });
+// AC button resseting the calculator to 0 state
 res.addEventListener("click", () => {
   lastKey = "res";
   display.value = "";
@@ -49,6 +45,8 @@ res.addEventListener("click", () => {
   b;
   oper = "";
 });
+
+// change +/- sign for the number
 change.addEventListener("click", () => {
   console.log("res clicked");
 });
@@ -56,11 +54,32 @@ percent.addEventListener("click", () => {
   console.log("res clicked");
 });
 
+//delete last insert
 del.addEventListener("click", () => {
-  console.log("res clicked");
-});
-display.addEventListener("click", () => {
-  console.log("res clicked");
+  lastKey = "del";
+  // console.log(
+  //   ` del start a= ${a} b= ${b} oper= ${oper} temp= ${temp} lastKey=${lastKey} display= ${display.value}`
+  // );
+  let value = display.value;
+  if (
+    value.endsWith(" + ") ||
+    value.endsWith(" - ") ||
+    value.endsWith(" × ") ||
+    value.endsWith(" ÷ ")
+  ) {
+    value = value.slice(0, -3);
+    oper = "";
+    temp = value;
+  } else if (oper !== "") {
+    value = value.slice(0, -1);
+    b = "";
+    temp = "";
+  } else if (oper === "") {
+    value = value.slice(0, -1);
+    temp = "";
+    a = "";
+  }
+  display.value = value;
 });
 
 // all of the code functions are below
@@ -106,6 +125,9 @@ function operate(a, b, oper) {
 }
 
 function digitLogic(text) {
+  console.log(
+    ` digit start a= ${a} b= ${b} oper= ${oper} temp= ${temp} lastKey=${lastKey}`
+  );
   if (lastKey == "=") {
     lastKey = text;
     temp = text;
@@ -117,6 +139,9 @@ function digitLogic(text) {
   display.value += text;
   console.log(text);
   temp += text;
+  console.log(
+    ` digit end a= ${a} b= ${b} oper= ${oper} temp= ${temp} lastKey=${lastKey}`
+  );
 }
 
 function operationLogic(text) {
@@ -143,6 +168,9 @@ function operationLogic(text) {
   temp = "";
   oper = text;
   display.value += ` ${text} `;
+  console.log(
+    ` oper end a= ${a} b= ${b} oper= ${oper} temp= ${temp} lastKey=${lastKey}`
+  );
 }
 
 function equalityLogic() {
